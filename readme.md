@@ -34,7 +34,7 @@ Nuestro e-commerce está dirigido todas aquellas personas que busquen objetos de
 - Alejandro Korowiak: Hola! Soy Alejandro Korowiak tengo 52 años, naci en Argentina y vivo actualmente en Gral San Martin Pcia de Buenos Aires junto a mi familia. Trabajo en el area de ventas y atencion a clientes de una mediana empresa que fabrica productos de eva y caucho para distintas industrias. Ademas soy productor de seguros, actividad que realizo de manera part-time. Me decidi a estudiar programacion como desafio profesional porque me gusta y con la idea de dar un giro laboral. Habia estudiado programacion en la decada de los 90' y en el primer año de la carrera de Ingenieria en sistemas.
 - Francisco Campenni: hola, soy Francisco Campenni, tengo 18 años, soy una persona que le gusta investigar todo lo que puede, también me interesa el mundo de la programación aunque no sabia nada hasta este curso pero hice algunos juegos con unity y empecé este curso por mi primo que me lanzó a este mundo.
   
-- Imanol Aparicio: Hola! Soy Imanol, tengo 20 años, vivo actualmente en Cipolletti, Rio Negro. pero por mudarme a cordoba capital. Estoy haciendo este curso porque me gusta y me interesa mucho la programacion y quiero algun dia dedicarme a esto, especificamente al desarrollo en backend, y quiero intentar desarrollar una app para ios movil.
+- Imanol Aparicio: Hola! Soy Imanol, tengo 20 años, vivo actualmente en Cipolletti, Rio Negro, pero por mudarme a Córdoba capital. Estoy haciendo este curso porque me gusta y me interesa mucho la programacion y quiero algun dia dedicarme a esto, especificamente al desarrollo en backend, y quiero intentar desarrollar una app para ios movil.
   
 - Nicolas Dileo
 
