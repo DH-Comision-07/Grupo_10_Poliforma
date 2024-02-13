@@ -32,7 +32,7 @@ Nuestro e-commerce está dirigido todas aquellas personas que busquen objetos de
 	Mi objetivo es seguir creciendo profesionalmente y encontrar oportunidades que me permitan combinar mi pasión por la tecnología con mi creatividad. Estoy emocionado por formar parte de este proyecto!
 
 - Alejandro Korowiak: Hola! Soy Alejandro Korowiak tengo 52 años, naci en Argentina y vivo actualmente en Gral San Martin Pcia de Buenos Aires junto a mi familia. Trabajo en el area de ventas y atencion a clientes de una mediana empresa que fabrica productos de eva y caucho para distintas industrias. Ademas soy productor de seguros, actividad que realizo de manera part-time. Me decidi a estudiar programacion como desafio profesional porque me gusta y con la idea de dar un giro laboral. Habia estudiado programacion en la decada de los 90' y en el primer año de la carrera de Ingenieria en sistemas.
-- Francisco Campenni
+- Francisco Campenni: hola, soy Francisco Campenni, tengo 18 años, soy una persona que le gusta investigar todo lo que puede, también me interesa el mundo de la programación aunque no sabia nada hasta este curso pero hice algunos juegos con unity y empecé este curso por mi primo que me lanzó a este mundo.
 - Imanol Aparicio
 - Nicolas Dileo
 
@@ -61,7 +61,4 @@ La pagina de Trek Argentina me gusta por su diseño minimalista donde los menues
 
 - https://www.xbox.com/es-AR
  Nos gusta esta por como esta organizada y no esta tan cargada
-
-- https://www.papelaria.cl/
-- https://cl.puma.com/
 
