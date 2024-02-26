@@ -22,12 +22,18 @@ header{
 
 .detalle-producto{
     margin: 60px auto;
-    width: 600px;
 }
+
+.menu-desplegable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .detalle-producto li{
     list-style: none;
-    width: 100%;
+    width: 80%;
     margin: 20px;
     padding: 10px;
     border-radius: 8px;
@@ -60,7 +66,18 @@ header{
     color: #555;
     padding: 0 10px;
     line-height: 26px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
 }
+
+.menu-desplegable .abridor[type='radio']:checked + .titulos + .contenido{
+    max-height: 1000px;
+    padding: 10px 10px 20px;
+
+} 
+
+
 
 /*FOOTER*/
 
