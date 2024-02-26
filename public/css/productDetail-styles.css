@@ -20,8 +20,52 @@ header{
 
 /*MAIN*/
 
+/*TABS*/
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.tab-titulo{
+    width:40%;
+    text-align: center;
+    padding: 10px 16px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+.tab-selector{
+    display: none;
+}
+
+.tab-contenido{
+    order: 1;
+    width: 100%;
+    border-bottom: 3px solid #dddd;
+    line-height: 1.5;
+    font-size: 0.9em;
+    display: none;
+    transition: all 250ms;
+}
+
+.tab-selector:checked + .tab-titulo{
+    font-weight: bold;
+    color: white;
+    background-color: #ff4d0cc0;
+    border-radius: 10px;
+}
+
+.tab-selector:checked + .tab-titulo + .tab-contenido{
+    display: block;
+}
+
+/*MENU DETALLES*/
+
 .detalle-producto{
-    margin: 60px auto;
+    margin: 20px auto;
 }
 
 .menu-desplegable{
@@ -38,8 +82,11 @@ header{
     padding: 10px;
     border-radius: 8px;
     background-color: #f5f5f5;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px -10px -1px rgba(255, 255, 255, 0.7);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15);
+}
+
+.primero{
+    margin: 0px 20px 20px 20px ;
 }
 
 .detalle-producto li label{
@@ -77,7 +124,24 @@ header{
 
 } 
 
+.menu-desplegable .abridor[type='radio']:checked + .titulos::before{
+    content: '-';
+}
 
+/*CONFIG IMPRESION*/
+
+.configuraciones-impresion{
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.info-impresion{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 100px;
+    border-bottom: 1px solid black;
+}
 
 /*FOOTER*/
 
