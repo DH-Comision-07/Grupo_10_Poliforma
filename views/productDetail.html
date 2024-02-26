@@ -26,7 +26,7 @@
 
 
         <!--Detalles del producto (Ruben)-->
-    <section class="descripcion-desktop">
+    <section class="descripcion-mobile">
         <div class="tabs">
             <input type="radio" class="tab-selector" name="descripcion-config" id="descripcion-producto" checked>
             <label for="descripcion-producto" class="tab-titulo">Descripción</label>
@@ -34,7 +34,7 @@
                     <section class="detalle-producto">
 
                         <ul class="menu-desplegable">
-                            <li class="primero">
+                            <li class="desplegable-mobile">
                                 <input type="radio" name="desplegable" id="detalles" class="abridor" checked>
                                 <label for="detalles" class="titulos">Detalles</label>
                                 <div class="contenido">
@@ -45,7 +45,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="desplegable-mobile">
                                 <input type="radio" name="desplegable" id="envios" class="abridor">
                                 <label for="envios" class="titulos">Envíos</label>
                                 <div class="contenido">
@@ -58,7 +58,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="desplegable-mobile">
                                 <input type="radio" name="desplegable" id="devoluciones" class="abridor">
                                 <label for="devoluciones" class="titulos">Devoluciones</label>
                                 <div class="contenido">
@@ -102,29 +102,25 @@
 
 
 
-    <section class="descripcion-mobile">
-        <section class="detalle-producto">
+    <section class="descripcion-desktop">
 
+        <section class="detalle-producto">
+            <h3>Descripción del modelo 3D</h3>
             <ul class="menu-desplegable">
-                <li>
-                    <input type="radio" name="desplegable" id="descripcion" class="abridor" checked>
-                    <label for="descripcion" class="titulos">Descripcion</label>
+                <li class="desplegable-desktop">
+                    <input type="radio" name="desplegable-desktop" id="detalles-desktop" class="abridor" checked>
+                    <label for="detalles-desktop" class="titulos">Detalles</label>
                     <div class="contenido">
                         <p>Nuestro mate en forma de huevo de dragón presenta un diseño detallado y realista que captura
                             la esencia de estas míticas criaturas. Cada escama y curva está finamente elaborada para
                             brindarte una experiencia visual única. El mate está fabricado con plástico resistente y
                             seguro para alimentos, lo que garantiza su durabilidad y seguridad.</p>
-
-                        <p>La forma ergonómica del huevo de dragón se adapta perfectamente a tu mano, brindándote
-                            comodidad y facilitando el disfrute de tu mate. Además, el mate está diseñado con un
-                            revestimiento especial en su interior para mantener la temperatura de tu mate por más
-                            tiempo, permitiéndote disfrutar de cada sorbo con la temperatura perfecta.</p>
                     </div>
                 </li>
 
-                <li>
-                    <input type="radio" name="desplegable" id="envios" class="abridor">
-                    <label for="envios" class="titulos">Envios</label>
+                <li class="desplegable-desktop">
+                    <input type="radio" name="desplegable-desktop" id="envios-desktop" class="abridor">
+                    <label for="envios-desktop" class="titulos">Envíos</label>
                     <div class="contenido">
                         <p>Realizamos envíos rápidos y seguros a nivel nacional. Cada mate en forma de huevo de dragón
                             impreso en 3D se empacará cuidadosamente para garantizar su protección durante el
@@ -135,9 +131,9 @@
                     </div>
                 </li>
 
-                <li>
-                    <input type="radio" name="desplegable" id="devoluciones" class="abridor">
-                    <label for="devoluciones" class="titulos">Devoluciones</label>
+                <li class="desplegable-desktop">
+                    <input type="radio" name="desplegable-desktop" id="devoluciones-desktop" class="abridor">
+                    <label for="devoluciones-desktop" class="titulos">Devoluciones</label>
                     <div class="contenido">
                         <p>Tu satisfacción es nuestra prioridad. Si por alguna razón no estás completamente satisfecho
                             con tu mate en forma de huevo de dragón impreso en 3D, ofrecemos una política de devolución
@@ -150,7 +146,9 @@
 
         </section>
 
+        
         <section class="configuraciones-impresion">
+            <h3>Configuraciones de impresora 3D</h3>
             <p class="info-impresion">
                 PLA
             </p>
