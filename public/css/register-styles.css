@@ -28,9 +28,10 @@ header{
     padding: 32px 15px;
     margin: 50px auto;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+    border: 0.5px solid black;
 }
 
 .titulo{
@@ -41,33 +42,53 @@ header{
 .register input{
     width: 90%;
     outline: none;
-    border: 1px solid #fff;
+    border: 1px solid black;
     padding: 12px 20px;
     margin-bottom: 10px;
-    border-radius: 20px;
-    background-color: #e4e4e4;
+
 }
 
 .registro-boton{
     font-size: 1em;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px 0;
-    border-radius: 20px;
     outline: none;
-    border: none;
+    border: 1px solid black;
     color: white;
     cursor: pointer;
     background-color: #ff4c0c;
-    width: 100%;
+    width: 90%;
     transition: all 450ms;
 }
+
+.google-boton{
+    font-size: 1em;
+    font-weight: 550;
+    margin-top: 10px;
+    padding: 10px 0;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 90%;
+    transition: all 450ms;
+}
+
+.google-boton i{
+    margin-right: 15px;
+}
+
 
 .registro-boton:hover{
     background-color: #db3e04ec;
 }
 
+.google-boton:hover{
+    background-color: #dbdbdb;
+}
+
+
 input:focus{
-    border: 1px solid rgb(192, 192, 192);
+    border: 1px solid #ff4c0c
 }
 
 .terminos{
@@ -111,3 +132,12 @@ footer{
     width: 100%;
     bottom: 0px;
     }
+
+@media (min-width: 768px){
+    .logo{
+        width: 25%;
+    }
+    .contenedor{
+        width: 55%;
+    }
+}
