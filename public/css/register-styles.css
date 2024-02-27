@@ -28,6 +28,51 @@ header{
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
+.titulo{
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.register input{
+    width: 90%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #e4e4e4;
+}
+
+.registro-boton{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #ff4c0c;
+    width: 100%;
+    transition: all 450ms;
+}
+
+.registro-boton:hover{
+    background-color: #db3e04ec;
+}
+
+input:focus{
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.terminos{
+    margin-top: 0.2rem;
+    align-items: center;
+    width: 80%;
+}
