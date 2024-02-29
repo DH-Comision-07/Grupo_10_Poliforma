@@ -122,3 +122,26 @@ body {
         animation-play-state: paused;
     }
 }
+
+@media (min-width: 769px){
+    .slider__texto {
+        font-size: 1.2rem;
+        width: 25%;
+    }
+
+    .disenio-fabricacion{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .slider, .disenio-fabricacion{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tarjeta-df{
+        margin: 0;
+    }
+
+}
