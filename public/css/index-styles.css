@@ -88,6 +88,12 @@ body {
 
 }
 
+.marcas p{
+    color: #f7f7f7;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 20px;
+}
 .marcas__slider{
     display: inline-block;
     animation: slider-marcas 15s infinite linear;
