@@ -390,12 +390,63 @@ footer{
     }
     .producPrincipal{
         display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+
     .imgPrincipal{
         width: 50%;
     }
     .infoProduc{
         border-top: solid 1px black;
+        width: 50%;
+        height: 100px;
+    }
+
+    .botonesCompra{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-left: 20px;
+
+    }
+
+    select{
+        width: 10%;
+        height: 37px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        background-color: #ffffffc0;
+        border-radius: 10px;
+        border: solid 1px #000000;
+    }
+
+    .agregar-carrito{
+        width:85%;
+        font-weight: bold;
+        color: white;
+        background-color: #ff4d0cc0;
+        border-radius: 10px;
+        border: solid 1px #000000;
+    }
+
+    .comprar-ahora{
+        width: 100%;
+        margin-top: 10px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        background-color: #ffffffc0;
+        border-radius: 10px;
+        border: solid 1px #000000;
+    }
+
+    .cantidad,
+    .agregar-carrito,
+    .comprar-ahora{
+        padding: 10px;
+        margin-right: 30px;
     }
 
 
