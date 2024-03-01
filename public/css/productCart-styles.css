@@ -1,29 +1,124 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
 
-.cart {
-    width: 300px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.logoHeader {
+    width: 25%;
+
+}
+
+.fa-bars,
+.fa-cart-shopping {
+    font-size: 25px;
+    margin: 10px;
+    display: flex;
+}
+
+.boton-delete {
+    background-color: #ff4d0cc0;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    transition: all 450ms;
+}
+
+.boton-delete:hover {
+    background-color: #d32f2f;
+}
+
+.cart-table {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+
+.titulo,
+.cart-table td {
     padding: 10px;
-    border-radius: 5px;
+    text-align: left;
 }
-.cart h2 {
-    text-align: center;
+
+.titulo {
+    background-color: #ff4d0cc0;
+    color: white;
 }
-.cart-items {
+
+.total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.footer-section p {
+    color: #777;
+}
+
+.social-icons {
     list-style: none;
     padding: 0;
+    display: flex;
 }
-.cart-items li {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+
+.social-icons li {
+    margin-right: 10px;
 }
-.cart-items li:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
+
+.social-icons li a {
+    color: #777;
 }
-.cart-total {
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: right;
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
 }
