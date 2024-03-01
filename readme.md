@@ -12,6 +12,10 @@ El publico objetivo de nuestro proyecto es el publico adolecente en adelante, la
 Este publico en particula lleva años utilizando dispositivos digitales y ha adquirido más en su escencia la cultura POP global.
 Nuestro e-commerce está dirigido todas aquellas personas que busquen objetos decorativos o de uso cotidiano con un diseño distintivo, diferente y particular, que resalte del resto. También todas aquellas personas que busquen personalizar sus objetos ya sea para sí mismos o para regalo.
 
+### *Tablero de trabajo del proyecto*
+
+https://trello.com/b/8YiReV0p
+
 ### *Integrantes del grupo*
 
 - Susan Ganz: 

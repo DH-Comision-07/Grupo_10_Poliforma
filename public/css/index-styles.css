@@ -1,0 +1,234 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f7f7;
+    color:#161419;
+}
+
+a{
+    color: #161419;
+    text-decoration: none;
+}
+
+.imagen__producto {
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider__texto {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+    color: #f7f7f7;
+    font-size: 0.8rem;
+}
+
+.slider__texto p{
+    text-shadow: 0px 0px 6px #161419
+}
+
+.slider__puntitos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntito{
+    background-color: #161419;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 3px;
+}
+
+.puntitos__activo{
+    background-color: #ff4c0c;
+    width: 10px;
+    height: 10px;
+}
+
+.disenio-fabricacion{
+    margin: 15px 0px;
+}
+
+.tarjeta-df{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 15px;
+}
+
+.img-df{
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 3px #161419;
+}
+
+.disenio__texto{
+    text-align: right;
+}
+
+.disenio__texto,
+.fabricacion__texto{
+    font-style: italic;
+}
+
+.fabricacion{
+    position: relative;
+    bottom: 40px;
+}
+
+.marcas{
+    background-color: #161419;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.marcas p{
+    color: #f7f7f7;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 20px;
+}
+.marcas__slider{
+    display: inline-block;
+    animation: slider-marcas 15s infinite linear;
+}
+
+.marcas__slider img{
+    margin: 40px;
+    height: 100px;
+    filter: invert(99%) sepia(26%) saturate(32%) hue-rotate(235deg) brightness(112%) contrast(94%);
+}
+
+@keyframes slider-marcas{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.marcas:hover{
+    .marcas__slider{
+        animation-play-state: paused;
+    }
+}
+.categorias__titulo{
+    width: 95%;
+    text-align: center;
+    margin:auto;
+    margin-bottom: 20px;
+}
+
+.categoria__card{
+    width: 95%;
+    margin: auto;
+    border:#161419 1px solid;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.categoria__card img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.categoria__card p{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 8px 0px;
+    font-weight: 400;
+}
+
+.main{
+    padding: 10px;
+
+    }
+.btn-1 {
+    background-color: rgb(221, 93, 38);
+    padding: 15px 15px;
+    color: #f7f7f7;
+}
+.destacados {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid #161419;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 47%;
+}
+
+.product__title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product__image{
+    width: 100%
+}
+
+.product__description {
+font-size: 30px;
+margin: 20px 10px ;
+}
+
+@media (min-width: 769px){
+    .slider__texto {
+        font-size: 1.2rem;
+        width: 25%;
+    }
+
+    .disenio-fabricacion{
+        font-size: 1.4rem;
+    }
+    .categorias__titulo{
+        font-size: 2rem;
+    }
+    .card-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .categoria__card{
+        width: 47%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px){
+    .slider,
+    .disenio-fabricacion,
+    .card-wrapper{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-wrapper{
+        justify-content: space-between;
+    }
+    .tarjeta-df{
+        margin: 0;
+    }
+    .categoria__card{
+        margin: 0px 0px 30px 0px;
+    }
+
+}

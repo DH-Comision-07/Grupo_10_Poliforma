@@ -1,0 +1,29 @@
+
+.cart {
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+.cart h2 {
+    text-align: center;
+}
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+.cart-items li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.cart-items li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
