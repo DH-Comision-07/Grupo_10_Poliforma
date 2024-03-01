@@ -49,6 +49,54 @@
     padding: 10px 12px;
 }
 
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+  
+  .footer-section h3 {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .footer-section p {
+    color: #777;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    color: #777;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+  }
+
 @media (min-width: 769px){
     .encabezado__superior{
         flex-wrap: nowrap;
@@ -96,6 +144,11 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
     
     
 .explorerfooter__quinessomons,
@@ -103,7 +156,7 @@
 .explorerfooter__contactos,
 .explorerfooter__mensaje{
         font-size: 24px;
-        margin: 0px;
+        width: 20%;
     }
     
     .explorerfooter__nuestrahistoria,
