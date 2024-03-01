@@ -384,6 +384,7 @@ footer {
   .footer-content {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
   }
   
   .footer-section {
@@ -436,6 +437,7 @@ footer {
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        height: 1100px;
     }
 
     .imgPrincipal{
