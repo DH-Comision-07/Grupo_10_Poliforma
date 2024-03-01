@@ -154,6 +154,41 @@ a{
     font-weight: 400;
 }
 
+.main{
+    padding: 10px;
+
+    }
+.btn-1 {
+    background-color: rgb(221, 93, 38);
+    padding: 15px 15px;
+    color: #f7f7f7;
+}
+.destacados {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid #161419;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 47%;
+}
+
+.product__title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product__image{
+    width: 100%
+}
+
+.product__description {
+font-size: 30px;
+margin: 20px 10px ;
+}
 
 @media (min-width: 769px){
     .slider__texto {
