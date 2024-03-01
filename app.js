@@ -13,6 +13,11 @@ app.get('/productDetail.html', (req, res) =>{
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
 })
 
+app.get('/register.html', (req, res) =>{
+    res.sendFile(path.resolve(__dirname, './views/register.html'))
+})
+
+
 app.get('/login.html', (req, res) =>{
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 })
