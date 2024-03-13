@@ -21,6 +21,53 @@
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
+    <main class="contenedor-padre">
+        <section class="contenedor">
+            <h1 class="titulo">Creacion de Producto</h1>
+            <form action="/" method="POST" class="create-form">
+
+                <div class="formularioLabel">
+                    <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
+                    <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario">
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="descripcion" class="titulo-form">Descripcion del Producto</label>
+                    <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"></textarea>
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="tags" class="titulo-form">Tags</label>
+                    <input type="text" name="tags" id="tags" class="relleno-formulario">
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="imagenProducto" class="titulo-form">Imagen del Producto</label>
+                    <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg, .png" multiple
+                        class="relleno-formulario">
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="categoriaProducto" class="titulo-form">Categoria</label>
+                    <select id="categoria" name="categoria" required class="relleno-formulario">
+                        <option value="">-Seleccione una categoría-</option>
+                        <option value="mates">Mates</option>
+                        <option value="jarron">Jarron</option>
+                        <option value="maceta">Maceta</option>
+                        <option value="Figurita">Figurita</option>
+                    </select>
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="precio" class="titulo-form">Precio</label>
+                    <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01">
+                </div>
+            </form>
+
+            <button type="submit" class="login-boton">Crear Producto</button>
+            <button type="submit" class="google-boton">Volver</button>
+        </section>
+    </main>
 </body>
 
 </html>
