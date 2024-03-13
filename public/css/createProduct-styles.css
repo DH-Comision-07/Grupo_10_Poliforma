@@ -2,9 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
 
-body{
+body {
     margin: 0px;
     background-color: #FFFFFF;
     font-family: "Montserrat", sans-serif;
@@ -12,7 +12,7 @@ body{
     background-size: cover;
 }
 
-header{
+header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,19 +20,20 @@ header{
     background-color: white;
     border-bottom: 1px solid black;
 }
-.logoHeader{
+
+.logoHeader {
     width: 25%;
 
 }
 
 .fa-bars,
-.fa-cart-shopping{
+.fa-cart-shopping {
     font-size: 25px;
     margin: 10px;
 }
 
 /*MAiN*/
-.contenedor-padre{
+.contenedor-padre {
     background-color: rgba(255, 255, 255, 0.97);
     width: 100%;
     margin: auto;
@@ -42,7 +43,7 @@ header{
 }
 
 
-.contenedor{
+.contenedor {
     width: 80%;
     padding: 32px 15px;
     margin: auto;
@@ -53,50 +54,46 @@ header{
     text-align: center;
 }
 
-.titulo{
+.titulo {
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
 }
 
-.create-form{
+.create-form {
     width: 100%;
 }
 
-.formularioLabel{
+.formularioLabel {
     width: 90%;
     margin: 20px;
 }
 
-form{
+form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-
-
-
-.relleno-formulario{
+.relleno-formulario {
     width: 100%;
     padding: 12px 10px;
     margin-top: 10px;
-    border: none;
     border: 1px solid black;
+
 }
 
-.relleno-formulario[type=file]{
+.relleno-formulario[type=file] {
     border: none;
     padding-left: 10%;
     font-size: 1rem;
 }
 
-.titulo-form{
+.titulo-form {
     font-weight: 700;
     font-size: 1.2rem;
 }
 
-
-.crear-boton{
+.crear-boton {
     font-size: 1em;
     margin-top: 20px;
     padding: 10px 0;
@@ -109,7 +106,7 @@ form{
     transition: all 450ms;
 }
 
-.volver-boton{
+.volver-boton {
     font-size: 1em;
     font-weight: 550;
     margin-top: 10px;
@@ -121,17 +118,16 @@ form{
     transition: all 450ms;
 }
 
-.crear-boton:hover{
+.crear-boton:hover {
     background-color: #db3e04ec;
 }
 
-.volver-boton:hover{
+.volver-boton:hover {
     background-color: #dbdbdb;
 }
 
-
 .relleno-formulario:focus{
-    border: 1px solid #ff4c0c
+    border: solid 1px #ff4c0c;
 }
 
 /*FOOTER*/
@@ -139,71 +135,69 @@ form{
 footer {
     width: 100%;
     background-color: #f5f5f5;
-    padding: 20px;
-    height: 22vh;
     border-top: 1px solid black;
-  }
-  
-  
-  .footer-content {
+}
+
+
+.footer-content {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-  }
-  
-  .footer-section {
+}
+
+.footer-section {
     flex: 1;
-  }
-  
-  .footer-section h3 {
+}
+
+.footer-section h3 {
     color: #333;
     font-size: 18px;
-  }
-  
-  .footer-section p {
+}
+
+.footer-section p {
     color: #777;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     list-style: none;
     padding: 0;
     display: flex;
-  }
-  
-  .social-icons li {
+}
+
+.social-icons li {
     margin-right: 10px;
-  }
-  
-  .social-icons li a {
+}
+
+.social-icons li a {
     color: #777;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     margin-top: 20px;
     text-align: center;
     color: #777;
-  }
+}
 
-    @media (min-width: 768px) {
+@media (min-width: 768px) {
 
-    .contenedor-padre{
+    .contenedor-padre {
         width: 80%;
     }
-    .contenedor{
+
+    .contenedor {
         text-align: left;
     }
-    .formularioLabel{
+
+    .formularioLabel {
         width: 40%;
         margin: 20px;
     }
-    .formularioLabel:first-child{
+
+    .formularioLabel:first-child {
         width: 90%;
     }
-    
-    .formularioLabel:last-child{
+
+    .formularioLabel:last-child {
         width: 90%;
     }
-    footer{
-        height: 35vh;
-    }
-  }
+}
