@@ -109,7 +109,7 @@ form{
     transition: all 450ms;
 }
 
-.google-boton{
+.volver-boton{
     font-size: 1em;
     font-weight: 550;
     margin-top: 10px;
@@ -121,16 +121,11 @@ form{
     transition: all 450ms;
 }
 
-.google-boton i{
-    margin-right: 15px;
-}
-
-
 .crear-boton:hover{
     background-color: #db3e04ec;
 }
 
-.google-boton:hover{
+.volver-boton:hover{
     background-color: #dbdbdb;
 }
 
