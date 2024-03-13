@@ -144,7 +144,7 @@ form{
 footer {
     background-color: #f5f5f5;
     padding: 20px;
-    height: 30vh;
+    height: 22vh;
     border-top: 1px solid black;
   }
   
@@ -186,4 +186,25 @@ footer {
     margin-top: 20px;
     text-align: center;
     color: #777;
+  }
+
+  @media (min-width: 768px) {
+
+    .contenedor-padre{
+        width: 80%;
+    }
+    .contenedor{
+        text-align: left;
+    }
+    .formularioLabel{
+        width: 40%;
+        margin: 20px;
+    }
+    .formularioLabel:first-child{
+        width: 90%;
+    }
+    
+    .formularioLabel:last-child{
+        width: 90%;
+    }
   }
