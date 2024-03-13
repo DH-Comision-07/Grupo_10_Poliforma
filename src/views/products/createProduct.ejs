@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/createProduct-styles.css">
+    <title>Creación de Producto</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logoHeader" src="./images/logos/Poliforma-horizontal-color.svg">
+        <div class="iconos-header">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <main class="contenedor-padre">
+        <section class="contenedor">
+            <h1 class="titulo">Creación de Producto</h1>
+            <form action="/" method="POST" class="create-form">
+
+                <div class="formularioLabel">
+                    <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
+                    <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario">
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="descripcion" class="titulo-form">Descripción</label>
+                    <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"></textarea>
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="tags" class="titulo-form">Tags</label>
+                    <input type="text" name="tags" id="tags" class="relleno-formulario">
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="imagenProducto" class="titulo-form">Imagen del Producto</label>
+                    <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg, .png" multiple
+                        class="relleno-formulario">
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="categoriaProducto" class="titulo-form">Categoría</label>
+                    <select id="categoria" name="categoria" required class="relleno-formulario">
+                        <option value="">-Seleccione una categoría-</option>
+                        <option value="mates">Mates</option>
+                        <option value="jarron">Jarron</option>
+                        <option value="maceta">Maceta</option>
+                        <option value="Figurita">Figurita</option>
+                    </select>
+                </div>
+
+                <div class="formularioLabel">
+                    <label for="precio" class="titulo-form">Precio</label>
+                    <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01">
+                </div>
+            </form>
+
+            <button type="submit" class="crear-boton">Crear Producto</button>
+            <button type="submit" class="volver-boton">Volver</button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Acerca de Nosotros</h3>
+                <p>¡Bienvenido a Poliforma! Somos una empresa dedicada a Impresiones 3D</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p>Correo electrónico: Contacto@Poliforma.com</p>
+                <p>Teléfono: +54 9 11 5560-3519</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
