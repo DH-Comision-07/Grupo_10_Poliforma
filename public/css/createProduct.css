@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    margin: 0px;
+    background-color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(/images/Patron-positivo-fondo.png);
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.logoHeader{
+    width: 25%;
+
+}
+
+.fa-bars,
+.fa-cart-shopping{
+    font-size: 25px;
+    margin: 10px;
+}
