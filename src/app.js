@@ -10,10 +10,10 @@ app.use( express.static("public") );
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "./views"));
 
-app.get("/", mainRoutes);
+app.use("/", mainRoutes);
 
-app.get("/products", productsRoutes);
+app.use("/products", productsRoutes);
 
-app.get("/users",usersRoutes);
+app.use("/users",usersRoutes);
 
 app.listen(3030,() => console.log("servidor corriendo en el puerto 3030"));
