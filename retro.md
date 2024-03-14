@@ -36,5 +36,38 @@
 
 -   Reuniones largas que no llegan a una definición concreta.
 
+RETRO SPRINT 3
+
+1. Comenzar a hacer.
+
+Definir roles con urgencia
+Líder guiar las reuniones 
+Organizador cada reunión 
+Responsable de Trello
+Supervisor de tareas y chequear avance asignado para cada integrante
+Definir un calendario inamovible para concretar las reuniones semanales. 
+Dividir equitativamente tareas de sprint. 
+
+2. Hacer más.
+
+Realizar reuniones más seguido.
+Mostrar más iniciativa por parte de cada integrante del grupo.
+Intentar realizar reuniones productivas.
+
+3. Continuar haciendo.
+
+Mantener la cooperacion entre los integrantes del equipo. 
+
+4. Hacer menos.
+
+Reuniones muy largas, poco concisas y productivas.
+
+
+5. Dejar de hacer.
+
+No hacer la tarea que le correspondía a otro compañero.
+Dejar de organizarnos con poca anticipación a la fecha de entrega del sprint. 
+No responder los mensajes en el grupo de whatssap. 
+Mostrar desinterés y falta de iniciativa
 
 
