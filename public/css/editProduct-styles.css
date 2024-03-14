@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    background-color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(/images/Patron-positivo-fondo.png);
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.logoHeader {
+    width: 25%;
+
+}
+
+.fa-bars,
+.fa-cart-shopping {
+    font-size: 25px;
+    margin: 10px;
+}
+
+/*MAiN*/
+.contenedor-padre {
+    background-color: rgba(255, 255, 255, 0.97);
+    width: 100%;
+    margin: auto;
+    border: 1px black solid;
+    border-top: none;
+    border-bottom: none;
+}
+
+
+.contenedor {
+    width: 80%;
+    padding: 32px 15px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.create-form {
+    width: 100%;
+}
+
+.formularioLabel {
+    width: 90%;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.relleno-formulario {
+    width: 100%;
+    padding: 12px 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+
+}
+
+.relleno-formulario[type=file] {
+    border: none;
+    padding-left: 10%;
+    font-size: 1rem;
+}
+
+.titulo-form {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.crear-boton {
+    font-size: 1em;
+    margin-top: 20px;
+    padding: 10px 0;
+    outline: none;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    background-color: #ff4c0c;
+    width: 47%;
+    transition: all 450ms;
+}
+
+.volver-boton {
+    font-size: 1em;
+    font-weight: 550;
+    margin-top: 10px;
+    padding: 10px 0;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 47%;
+    transition: all 450ms;
+}
+
+.crear-boton:hover {
+    background-color: #db3e04ec;
+}
+
+.volver-boton:hover {
+    background-color: #dbdbdb;
+}
+
+.relleno-formulario:focus{
+    border: solid 1px #ff4c0c;
+}
+
+.imgProduc{
+    width: 40%;
+}
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-top: 1px solid black;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.footer-section p {
+    color: #777;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: #777;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+}
+
+@media (min-width: 768px) {
+
+    .contenedor-padre {
+        width: 80%;
+    }
+
+    .contenedor {
+        text-align: left;
+    }
+
+    .formularioLabel {
+        width: 40%;
+        margin: 20px;
+    }
+
+    .formularioLabel:first-child {
+        width: 90%;
+    }
+
+    .formularioLabel:last-child {
+        width: 90%;
+    }
+}

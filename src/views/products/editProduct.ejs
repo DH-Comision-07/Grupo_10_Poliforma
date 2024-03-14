@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/createProduct-styles.css">
+    <link rel="stylesheet" href="/css/editProduct-styles.css">
     <title>Creación de Producto</title>
 </head>
 
 <body>
     <header class="header">
-        <img class="logoHeader" src="./images/logos/Poliforma-horizontal-color.svg">
+        <img class="logoHeader" src="/images/logos/Poliforma-horizontal-color.svg">
         <div class="iconos-header">
             <i class="fa-solid fa-cart-shopping"></i>
             <i class="fa-solid fa-bars"></i>
@@ -21,22 +21,22 @@
     </header>
     <main class="contenedor-padre">
         <section class="contenedor">
-            <h1 class="titulo">Creación de Producto</h1>
+            <h1 class="titulo">Edicion de Producto</h1>
             <form action="/" method="POST" class="create-form">
 
                 <div class="formularioLabel">
                     <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
-                    <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario">
+                    <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario" value="Mate Dragon">
                 </div>
 
                 <div class="formularioLabel">
                     <label for="descripcion" class="titulo-form">Descripción</label>
-                    <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"></textarea>
+                    <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario" value="Mate con nuestro exclusivo diseño impreso en 3D de escamas de dragón en negro, Ideal para los amantes del mate que buscan un toque de fantasía."></textarea>
                 </div>
 
                 <div class="formularioLabel">
                     <label for="tags" class="titulo-form">Tags</label>
-                    <input type="text" name="tags" id="tags" class="relleno-formulario">
+                    <input type="text" name="tags" id="tags" class="relleno-formulario" value="2">
                 </div>
 
                 <div class="formularioLabel">
@@ -48,7 +48,7 @@
                 <div class="formularioLabel">
                     <label for="categoriaProducto" class="titulo-form">Categoría</label>
                     <select id="categoria" name="categoria" required class="relleno-formulario">
-                        <option value="">-Seleccione una categoría-</option>
+                        <option value="">Mates</option>
                         <option value="mates">Mates</option>
                         <option value="jarron">Jarron</option>
                         <option value="maceta">Maceta</option>
@@ -58,11 +58,11 @@
 
                 <div class="formularioLabel">
                     <label for="precio" class="titulo-form">Precio</label>
-                    <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01">
+                    <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01" value="15">
                 </div>
             </form>
 
-            <button type="submit" class="crear-boton">Crear Producto</button>
+            <button type="submit" class="crear-boton">Editar Producto</button>
             <button type="submit" class="volver-boton">Volver</button>
         </section>
     </main>
