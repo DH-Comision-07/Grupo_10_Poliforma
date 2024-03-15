@@ -2,84 +2,46 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/productCart-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <title>Log in</title>
+    <%- include('../partials/partialHead.ejs') %>
+        <link rel="stylesheet" href="../css/productCart-styles.css">
+        <link rel="stylesheet" href="../css/createProduct-styles">
+        <title>Log in</title>
 </head>
 
 <body>
-    <header class="header">
-        <img class="logoHeader" src="./images/logos/Poliforma-horizontal-color.svg">
-        <div class="iconos-header">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </header>
+    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
 
-    <table class="cart-table">
-        <tr>
-            <th class="titulo">Producto</th>
-            <th class="titulo">Imagen</th>
-            <th class="titulo">Precio</th>
-            <th class="titulo"></th>
-        </tr>
-        <tr>
-            <td class="nombre-producto">Mate Metalizado</td>
-            <td class="foto-producto"><img class="product-image" src="/images/mate-metalizado.png" alt="Camiseta"></td>
-            <td class="precio-producto">$20</td>
-            <td><button class="boton-delete">Eliminar</button></td>
-        </tr>
-        <tr>
-            <td class="nombre-producto">Jarron Blanco</td>
-            <td class="foto-producto"><img class="product-image" src="/images/jarron-blanco.jpg" alt="Jeans"></td>
-            <td class="precio-producto">$50</td>
-            <td><button class="boton-delete">Eliminar</button></td>
-        </tr>
-        <tr>
-            <td class="nombre-producto">Maceta Weed</td>
-            <td class="foto-producto"><img class="product-image" src="/images/maceta-weed.jpeg" alt="Zapatos"></td>
-            <td class="precio-producto">$30</td>
-            <td><button class="boton-delete">Eliminar</button></td>
-        </tr>
-    </table>
+        <table class="cart-table">
+            <tr>
+                <th class="titulo">Producto</th>
+                <th class="titulo">Imagen</th>
+                <th class="titulo">Precio</th>
+                <th class="titulo"></th>
+            </tr>
+            <tr>
+                <td class="nombre-producto">Mate Metalizado</td>
+                <td class="foto-producto"><img class="product-image" src="/images/mate-metalizado.png" alt="Camiseta">
+                </td>
+                <td class="precio-producto">$20</td>
+                <td><button class="boton-delete">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td class="nombre-producto">Jarron Blanco</td>
+                <td class="foto-producto"><img class="product-image" src="/images/jarron-blanco.jpg" alt="Jeans"></td>
+                <td class="precio-producto">$50</td>
+                <td><button class="boton-delete">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td class="nombre-producto">Maceta Weed</td>
+                <td class="foto-producto"><img class="product-image" src="/images/maceta-weed.jpeg" alt="Zapatos"></td>
+                <td class="precio-producto">$30</td>
+                <td><button class="boton-delete">Eliminar</button></td>
+            </tr>
+        </table>
 
-    <div class="total">Total: $150</div>
+        <div class="total">Total: $150</div>
 
-    <footer class="pie">
-        <br>
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section about">
-                        <h3>Acerca de Nosotros</h3>
-                        <p>¡Bienvenido a Poliforma! Somos una empresa dedicada a Impresiones 3D</p>
-                    </div>
-                    <div class="footer-section contact">
-                        <h3>Contacto</h3>
-                        <p>Correo electrónico: Contacto@Poliforma.com</p>
-                        <p>Teléfono: +54 9 11 5560-3519</p>
-                    </div>
-                    <div class="footer-section social">
-                        <h3>Síguenos</h3>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>Derechos de autor &copy; 2024 | Poliforma</p>
-                </div>
-            </div>
-        </footer>
-    </footer>
+        <%- include('../partials/partialsFooter.ejs') %>
 </body>
 
 </html>

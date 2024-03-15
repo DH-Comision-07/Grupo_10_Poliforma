@@ -12,24 +12,24 @@ body{
     background-size: cover;
 }
 
-header{
+header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    border-bottom: solid black 1px;
+    border-bottom: 1px solid black;
 }
-.logoHeader{
+
+.logoHeader {
     width: 25%;
 
 }
 
 .fa-bars,
-.fa-cart-shopping{
+.fa-cart-shopping {
     font-size: 25px;
     margin: 10px;
-    display: flex;
 }
 
 /*FORM*/
