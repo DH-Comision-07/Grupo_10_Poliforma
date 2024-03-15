@@ -90,37 +90,4 @@
     .navbar__burger-menu{
         display: none;
     }
-
-    .explorerfooter__listado{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
-    
-.explorerfooter__quinessomons,
-.explorerfooter__nuestrahistoria,
-.explorerfooter__contactos,
-.explorerfooter__mensaje{
-        font-size: 24px;
-        margin: 0px;
-    }
-    
-    .explorerfooter__nuestrahistoria,
-    .explorerfooter__contactos,
-    .explorerfooter__mensaje{
-        padding: 20px 80px;
-    }
-    
-    .explorerfooter__nuestrahistoria,
-    .explorerfooter__contactos,
-    .explorerfooter__mensaje{
-        max-width: 1200px;
-    }
-    
-    .explorerfooter__nuestrahistoria,
-    .explorerfooter__contactos,
-    .explorerfooter__mensaje{
-            width: 30%;
-    }
 }

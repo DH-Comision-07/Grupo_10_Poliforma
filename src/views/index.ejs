@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('./partials/partialHead.ejs') %>
+        <title>Home</title>
+        <link rel="stylesheet" href="./css/navbar-footer.css">
+        <link rel="stylesheet" href="./css/index-styles.css">
+        <link rel="stylesheet" href="./css/createProduct-styles">
+
+</head>
+
+<body>
+    <%- include('./partials/partialsHeader.ejs') %>
+        <main class="cuerpo">
+            <section class="slider">
+                <article class="slider__imagen">
+                    <img src="/images/mate-dragon-rojo-crop.jpg" alt="mate poliforma" class="imagen__producto">
+                </article>
+                <article class="slider__texto">
+                    <p>Diseños vanguardistas</p>
+                    <p>En tu color favorito</p>
+                </article>
+                <article class="slider__puntitos">
+                    <div class="puntitos__activo puntito"></div>
+                    <div class="puntito"></div>
+                    <div class="puntito"></div>
+                    <div class="puntito"></div>
+                    <div class="puntito"></div>
+                </article>
+            </section>
+            <section class="disenio-fabricacion">
+                <article class="disenio tarjeta-df">
+                    <img src="/images/disenio-pelotas2.jpg" class="disenio__img img-df">
+                    <p class="disenio__texto">Diseñados por profesionales</p>
+                </article>
+                <article class="fabricacion tarjeta-df">
+                    <p class="fabricacion__texto">Fabricados con bioplásticos 100% reciclables</p>
+                    <img src="/images/print-pelotas2.jpeg" class="fabricacion__img img-df">
+                </article>
+            </section>
+            <section class="categorias">
+                <h3 class="categorias__titulo">Categorías</h3>
+                <div class="card-wrapper">
+                    <article class="categoria__card">
+                        <a href="#">
+                            <img src="/images/mate-turquesa-crop.png" alt="mates">
+                            <p>Mates</p>
+                        </a>
+                    </article>
+                    <article class="categoria__card">
+                        <a href="#">
+                            <img src="/images/maceta-beige.jpg" alt="macetas">
+                            <p>Macetas</p>
+                        </a>
+                    </article>
+                    <article class="categoria__card">
+                        <a href="#">
+                            <img src="/images/jarron-blanco.jpg" alt="jarrones">
+                            <p>Jarrones</p>
+                        </a>
+                    </article>
+                    <article class="categoria__card">
+                        <a href="#">
+                            <img src="/images/lampara-gris.jpg" alt="lamparas">
+                            <p>Lámparas</p>
+                        </a>
+                    </article>
+                </div>
+            </section>
+            <div class="header-content container">
+                <div class="header-txt">
+                    <h4>DISEÑOS PERSONALIZADOS</h4>
+                    <p>Podés personalizar tu mate con diferentes diseños, texturas y tus colores preferidos</p>
+                </div>
+            </div>
+
+            <section class="destacados">
+
+                <article class="product">
+                    <h1 class="product__title">producto 1</h1>
+                    <img src="/images/pm1.jpg" alt="Producto 1" class="product__image">
+                    <p class="product__description">Mate Greyscales</p>
+                    <a href="#" class="agregar al carrito btn-1" data-id="1">Agregar al carrito</a>
+                </article>
+
+                <article class="product">
+                    <h1 class="product__title">producto 2</h1>
+                    <img src="/images/pm2.jpg" alt="Producto 2" class="product__image">
+                    <p class="product__description">Mate Wavy</p>
+                    <a href="#" class="agregar al carrito btn-1" data-id="1">Agregar al carrito</a>
+                </article>
+
+                <article class="product">
+                    <h1 class="product__title">producto 3</h1>
+                    <img src="/images/pm3.jpeg" alt="producto 3" class="product__image">
+                    <p class="product__description">Lapicero Fins</p>
+                    <a href="#" class="agregar al carrito btn-1" data-id="1">Agregar al carrito</a>
+                </article>
+
+                <article class="product">
+                    <h1 class="product__title">producto 4</h1>
+                    <img src="/images/pm4.jpeg" alt="producto 4" class="product__image">
+                    <p class="product__description">Maceta We3d</p>
+                    <a href="#" class="agregar al carrito btn-1" data-id="1">Agregar al carrito</a>
+                </article>
+            </section>
+
+
+
+
+
+
+            <section class="marcas">
+                <p>Marcas que confían en nosotros</p>
+                <div class="marcas__slider">
+                    <img src="/images/marcas/adidas-9-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/apple-black-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/uber-12-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/under-armour-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/bose-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/tesla-motors-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/honda-automobiels-1-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/lenovo-1-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/spotify-1-logo-svgrepo-com.svg">
+                </div>
+                <div class="marcas__slider">
+                    <img src="/images/marcas/adidas-9-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/apple-black-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/uber-12-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/under-armour-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/bose-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/tesla-motors-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/honda-automobiels-1-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/lenovo-1-logo-svgrepo-com.svg">
+                    <img src="/images/marcas/spotify-1-logo-svgrepo-com.svg">
+                </div>
+            </section>
+        </main>
+
+        <%- include('./partials/partialsFooter.ejs') %>
+</body>
+
+</html>
