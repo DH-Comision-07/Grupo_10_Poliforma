@@ -33,7 +33,10 @@ header {
 }
 
 /*MAIN*/
-
+a{
+    text-decoration: none;
+    color: black;
+}
 .ordenar{
     font-weight: bold;
 }
@@ -86,6 +89,7 @@ article:hover{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
+    text-decoration: none;
 
 }
 
