@@ -9,7 +9,7 @@ body {
     background-color: #FFFFFF;
     font-family: "Montserrat", sans-serif;
     background-image: url(/images/Patron-positivo-fondo.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 header {
@@ -31,6 +31,102 @@ header {
     font-size: 25px;
     margin: 10px;
 }
+
+/*MAIN*/
+
+.ordenar{
+    font-weight: bold;
+}
+
+
+.contenedor-productos{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resultados-filtros{
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+.producto-carta{
+    width: 20%;
+    margin: 15px;
+    border: 1px solid #b1b1b1;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+article:hover{
+    box-shadow: 5px 7px 7px rgb(134, 134, 134);
+}
+
+.contendor-imagen img{
+    width: 100%;
+    height: auto;
+    border-radius:  10px 10px 0px 0px;
+    border-bottom: solid 1px #ebebeb
+}
+
+.contendor-imagen{
+    width: 100%;
+    position: relative;
+}
+
+.producto-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.producto-nombre{
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.precio{
+    font-weight: 500;
+}
+
+.precio,
+.descuento{
+    font-size: 0.8em;
+    width: 50%;
+}
+
+.descuento{
+    color: #42ae52;
+    text-align: right;
+}
+.carrito{
+    width: 100%;
+}
+.boton-carrito{
+    width: 90%;
+    font-size: 0.7em;
+    border: 1px solid black;
+    color: white;
+    background-color: #ff4c0c;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.boton-carrito:hover{
+    background-color: #db3e04ec;
+}
+
 
 /*FOOTER*/
 
