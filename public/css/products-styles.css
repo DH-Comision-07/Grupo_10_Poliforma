@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    background-color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(/images/Patron-positivo-fondo.png);
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.logoHeader {
+    width: 25%;
+
+}
+
+.fa-bars,
+.fa-cart-shopping {
+    font-size: 25px;
+    margin: 10px;
+}
+
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-top: 1px solid black;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.footer-section p {
+    color: #777;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: #777;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+}

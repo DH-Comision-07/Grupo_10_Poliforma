@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('../partials/partialHead.ejs') %>
+        <link rel="stylesheet" href="/css/products-styles.css">
+        <title>Productos - Poliforma</title>
 </head>
+
 <body>
-    <p>hola</p>
+    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
+        
+    <main>
+        <section class="contenedor-productos">
+            <span class="resultados">x resultados</span>
+            <div class="filtro">
+                <span>Ordenar por:</span>
+                <select name="filtro" id="filtro">
+                    <option value="relevancia" selected>Mas relevantes/option>
+                    <option value="mayor">Mayor precio</option>
+                    <option value="menor">Menor precio</option>
+                </select>
+            </div>
+            <article class="producto-carta">
+                <div class="contendor-imagen">
+                    <img src="" alt="">
+                </div>
+                <p class="descripcion">descripcion</p>
+                <p class="precio">precio</p>
+                <p class="descuento">10% OFF</p>
+                <h4 class="producto-nombre">nombre producto</h4>
+            </article>
+        </section>
+    </main>
+
+    <%- include('../partials/partialsFooter.ejs') %>
 </body>
+
 </html>
