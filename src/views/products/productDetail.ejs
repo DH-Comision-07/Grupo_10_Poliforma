@@ -11,7 +11,7 @@
 <body>
     <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
 
-        <main class="Contenedor-padre">
+        <main class="contenedor-padre">
 
             <!--Producto (Imanol)-->
 
@@ -27,41 +27,38 @@
                     </div>
                     <p class="descripProducto">Mate con nuestro exclusivo diseño impreso en 3D de escamas de dragón
                         en negro, Ideal para los amantes del mate que buscan un toque de fantasía.</p>
-                </div>
-                </div>
-
-                <div class="etiqueta-caja">
-                    <div class="icono-tag">
-                        <i class="fa-solid fa-tag"></i>
+                    <div class="etiqueta-caja">
+                        <div class="icono-tag">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                        <div class="etiqueta">
+                            <p class="etiqueta-item">mate</p>
+                            <p class="etiqueta-item">dragon</p>
+                            <p class="etiqueta-item">negro</p>
+                            <p class="etiqueta-item">3D</p>
+                            <p class="etiqueta-item">descuento</p>
+                            <p class="etiqueta-item">arg</p>
+                        </div>
                     </div>
-                    <div class="etiqueta">
-                        <p class="etiqueta-item">mate</p>
-                        <p class="etiqueta-item">dragon</p>
-                        <p class="etiqueta-item">negro</p>
-                        <p class="etiqueta-item">3D</p>
-                        <p class="etiqueta-item">descuento</p>
-                        <p class="etiqueta-item">arg</p>
+
+                    <div class="botones-compra">
+                        <select name="cantidad" id="cantidad" class="selector-cantidad">
+                            <option value="1">Qty: 1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <button type="submit" class="agregar-carrito">Agregar al carrito</button>
+                        <button type="submit" class="comprar-ahora">Comprar ahora</button>
+                    </div>
+
+                    <div class="interacciones-producto">
+                        <p class="intera"><i class="fa-regular fa-eye"></i> 5,5k Vista</p>
+                        <p class="intera"><i class="fa-regular fa-heart"></i> 2,5k Likes</p>
+                        <p class="intera"><i class="fa-solid fa-cloud-arrow-up"></i> 1k Descargas</p>
                     </div>
                 </div>
-
-                <div class="botones-compra">
-                    <select name="cantidad" id="cantidad" class="selector-cantidad">
-                        <option value="1">Qty: 1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <button type="submit" class="agregar-carrito">Agregar al carrito</button>
-                    <button type="submit" class="comprar-ahora">Comprar ahora</button>
-                </div>
-
-                <div class="interacciones-producto">
-                    <h4 class="intera"><i class="fa-regular fa-eye"></i> 5,5k Vista</h4>
-                    <h4 class="intera"><i class="fa-regular fa-heart"></i> 2,5k Likes</h4>
-                    <h4 class="intera"><i class="fa-solid fa-cloud-arrow-up"> 251 Descargas</i></h4>
-                </div>
-
             </section>
 
 
@@ -122,50 +119,51 @@
 
                 </section>
 
+
+                <section class="carrusel">
+                    <div class="titulo-boton">
+                        <h2 class="titulo-contenedor">Catálogo de productos</h2>
+                        <button type="submit" class="boton-catalogo">Ver todos</button>
+                    </div>
+                    <div class="contenedor">
+                        <article class="producto">
+                            <img src="/images/mate-celeste.png" alt="mate celeste">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate celeste</h4>
+                                <p class="precio">15$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-argentina.png" alt="mate argentina">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Vamos!</h4>
+                                <p class="precio">20$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-metalizado.png" alt="Mate Metalizado">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Metalizado</h4>
+                                <p class="precio">30$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-rosado.png" alt="mate rosado">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Rosado</h4>
+                                <p class="precio">15$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-turquesa.png" alt="mate turquesa">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Turquesa</h4>
+                                <p class="precio">15$</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
         </main>
-        <section class="carrusel">
-            <div class="titulo-boton">
-                <h2 class="titulo-contenedor">Catálogo de productos</h2>
-                <button type="submit" class="boton-catalogo">Ver todos</button>
-            </div>
-            <div class="contenedor">
-                <article class="producto">
-                    <img src="/images/mate-celeste.png" alt="mate celeste">
-                    <div class="info-producto">
-                        <h4 class="nombre-producto">Mate celeste</h4>
-                        <p class="precio">15$</p>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="/images/mate-argentina.png" alt="mate argentina">
-                    <div class="info-producto">
-                        <h4 class="nombre-producto">Mate Vamos!</h4>
-                        <p class="precio">20$</p>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="/images/mate-metalizado.png" alt="Mate Metalizado">
-                    <div class="info-producto">
-                        <h4 class="nombre-producto">Mate Metalizado</h4>
-                        <p class="precio">30$</p>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="/images/mate-rosado.png" alt="mate rosado">
-                    <div class="info-producto">
-                        <h4 class="nombre-producto">Mate Rosado</h4>
-                        <p class="precio">15$</p>
-                    </div>
-                </article>
-                <article class="producto">
-                    <img src="/images/mate-turquesa.png" alt="mate turquesa">
-                    <div class="info-producto">
-                        <h4 class="nombre-producto">Mate Turquesa</h4>
-                        <p class="precio">15$</p>
-                    </div>
-                </article>
-            </div>
-        </section>
         <%- include('../partials/partialsFooter.ejs') %>
 </body>
 
