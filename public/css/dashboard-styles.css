@@ -1,65 +1,168 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    background-color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(/images/Patron-positivo-fondo.png);
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.logoHeader {
+    width: 25%;
+
+}
+
+.fa-bars,
+.fa-cart-shopping {
+    font-size: 25px;
+    margin: 10px;
+}
 
 /*MAIN*/
 
-.contenedor-dashboard{
-    margin: 2rem 0;
+h1{
+    text-align: center;
+    padding: 20px;
 }
 
-.contenedor-dashboard .dashboard{
+.contenedor-dashboard{
+    background-color: white;
     width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+
+.dashboard{
     text-align: center;
     margin: auto;
+    padding: 10px;
 }
 
 .contenedor-dashboard .dashboard thead{
-    background-color: rgb(216, 216, 216);
+    background-color: #f7f7f7;
 }
 
 .contenedor-dashboard .dashboard th{
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1em;
 }
 
 .contenedor-dashboard .dashboard td{
     padding: 1rem;
-    font-size: 2rem;
-    border-bottom: 1px solid black;
+    font-size: 1em;
+    border-top: 1px solid black;
 }
 
-.btn{
-    text-align: center;
-    display: block;
-    width: 80%;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    font-size: 1.7rem;
-    padding: 1rem 1rem;
-    background-color: green;
-    color: white;
-    text-decoration: none;
-    
-}
+
 
 .btn:first-child{
     margin-top: 0;
 }
 
 .btn:last-child{
-    background-color: orangered;
+    background-color: #ff4c0c;
 }
 
 .btn:hover{
-    background-color: grey;
+    background-color: #0fa2b3;
 }
 
-i{
+.btn:hover:last-child{
+    background-color: #c93d0a;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+.name i{
     font-size: 0.8em;
     margin-left: 10px;
+    color: #10adc0;
 }
 
 td a i{
     margin-left: 0;
+    color: white;
+}
+
+.btn{
+    text-align: center;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 0.8em;
+    padding: 1rem 1rem;
+    background-color: #10adc0;
+    color: white;
+    text-decoration: none;
+    
+}
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-top: 1px solid black;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.footer-section p {
+    color: #777;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: #777;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
 }
