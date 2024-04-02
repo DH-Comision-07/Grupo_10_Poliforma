@@ -15,9 +15,9 @@
 
             <!--Producto (Imanol)-->
 
-            <section class="producto">
+            <section class="contenedor-producto">
                 <div class="contendor-imagen">
-                    <img class="imgPrincipal" src="/images/mate-dragon.png">
+                    <img src="/images/mate-dragon.png" alt="mate dragon" class="img-principal">
                 </div>
                 <div class="infoProduc">
                     <h4 class="nomProduc">Mate Dragon</h4>
@@ -30,20 +30,38 @@
                 </div>
                 </div>
 
-                <div class="compra">
-                    <input type="radio" class="cantidad-selector" name="cantidad-config" id="cantidad-producto" checked>
-                    <label for="cantidad-producto" class="cantidad-titulo">Qty: 1</label>
-
-                    <input type="radio" class="carrito-selector" name="carrito-config" id="agregar-carrito" checked>
-                    <label for="agregar-carrito" class="carrito-titulo">Agregar al carrito</label>
+                <div class="etiqueta-caja">
+                    <div class="icono-tag">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div class="etiqueta">
+                        <p class="etiqueta-item">mate</p>
+                        <p class="etiqueta-item">dragon</p>
+                        <p class="etiqueta-item">negro</p>
+                        <p class="etiqueta-item">3D</p>
+                        <p class="etiqueta-item">descuento</p>
+                        <p class="etiqueta-item">arg</p>
+                    </div>
                 </div>
 
-                <div class="comprarAhora">
-                    <input type="radio" class="comprar-selector" name="comprar-config" id="comprar-ahora" checked>
-                    <label for="comprar-ahora" class="comprar-titulo">Comprar ahora</label>
-
-
+                <div class="botones-compra">
+                    <select name="cantidad" id="cantidad" class="selector-cantidad">
+                        <option value="1">Qty: 1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="submit" class="agregar-carrito">Agregar al carrito</button>
+                    <button type="submit" class="comprar-ahora">Comprar ahora</button>
                 </div>
+
+                <div class="interacciones-producto">
+                    <h4 class="intera"><i class="fa-regular fa-eye"></i> 5,5k Vista</h4>
+                    <h4 class="intera"><i class="fa-regular fa-heart"></i> 2,5k Likes</h4>
+                    <h4 class="intera"><i class="fa-solid fa-cloud-arrow-up"> 251 Descargas</i></h4>
+                </div>
+
             </section>
 
 
