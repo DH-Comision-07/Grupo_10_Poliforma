@@ -1,0 +1,65 @@
+
+
+/*MAIN*/
+
+.contenedor-dashboard{
+    margin: 2rem 0;
+}
+
+.contenedor-dashboard .dashboard{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.contenedor-dashboard .dashboard thead{
+    background-color: rgb(216, 216, 216);
+}
+
+.contenedor-dashboard .dashboard th{
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.contenedor-dashboard .dashboard td{
+    padding: 1rem;
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+}
+
+.btn{
+    text-align: center;
+    display: block;
+    width: 80%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 1.7rem;
+    padding: 1rem 1rem;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.btn:first-child{
+    margin-top: 0;
+}
+
+.btn:last-child{
+    background-color: orangered;
+}
+
+.btn:hover{
+    background-color: grey;
+}
+
+i{
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+td a i{
+    margin-left: 0;
+}
