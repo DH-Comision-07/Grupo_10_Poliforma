@@ -4,7 +4,7 @@ const productsService = require("../data/productsService");
 const controller = {
 
     home: function (req,res){
-        res.rebder("products/products");
+        res.render("products/products");
     },
     detail: function (req,res)  {
         res.render("products/productDetail");
