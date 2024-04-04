@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/partialHead.ejs') %>
+        <link rel="stylesheet" href="/css/products-styles.css">
+        <title>Productos - Poliforma</title>
+</head>
+
+<body>
+    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
+
+        <main>
+            <section class="contenedor-productos">
+                <div class="resultados-filtros">
+                    <span class="resultados">x resultados</span>
+                    <div class="filtro">
+                        <span class="ordenar">Ordenar por:</span>
+                        <select name="filtro" id="filtro">
+                            <option value="relevancia" selected>Mas relevantes</option>
+                            <option value="mayor">Mayor precio</option>
+                            <option value="menor">Menor precio</option>
+                        </select>
+                    </div>
+                </div>
+                <article class="producto-carta">
+                    <a href="products/productDetail">
+                        <div class="contendor-imagen">
+                            <img src="/images/mate-dragon.png" alt="">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Mate Dragon</p>
+                            <p class="precio">25$</p>
+                            <p class="descuento">10% OFF</p>
+                        </div>
+                    </a>
+                    <div class="carrito">
+                        <button class="boton-carrito">Agregar al Carrito</button>
+                    </div>
+                </article>
+                <article class="producto-carta">
+                    <div class="contendor-imagen">
+                        <img src="/images/mate-dragon.png" alt="">
+                    </div>
+                    <div class="producto-info">
+                        <p class="producto-nombre">Mate Dragon</p>
+                        <p class="precio">25$</p>
+                        <p class="descuento">10% OFF</p>
+                    </div>
+                    <div class="carrito">
+                        <button class="boton-carrito">Agregar al Carrito</button>
+                    </div>
+                </article>
+                <article class="producto-carta">
+                    <div class="contendor-imagen">
+                        <img src="/images/mate-dragon.png" alt="">
+                    </div>
+                    <div class="producto-info">
+                        <p class="producto-nombre">Mate Dragon</p>
+                        <p class="precio">25$</p>
+                        <p class="descuento">10% OFF</p>
+                    </div>
+                    <div class="carrito">
+                        <button class="boton-carrito">Agregar al Carrito</button>
+                    </div>
+                </article>
+                <article class="producto-carta">
+                    <div class="contendor-imagen">
+                        <img src="/images/mate-dragon.png" alt="">
+                    </div>
+                    <div class="producto-info">
+                        <p class="producto-nombre">Mate Dragon</p>
+                        <p class="precio">25$</p>
+                        <p class="descuento">10% OFF</p>
+                    </div>
+                    <div class="carrito">
+                        <button class="boton-carrito">Agregar al Carrito</button>
+                    </div>
+                </article>
+                <article class="producto-carta">
+                    <div class="contendor-imagen">
+                        <img src="/images/mate-dragon.png" alt="">
+                    </div>
+                    <div class="producto-info">
+                        <p class="producto-nombre">Mate Dragon</p>
+                        <p class="precio">25$</p>
+                        <p class="descuento">10% OFF</p>
+                    </div>
+                    <div class="carrito">
+                        <button class="boton-carrito">Agregar al Carrito</button>
+                    </div>
+                </article>
+                <article class="producto-carta">
+                    <div class="contendor-imagen">
+                        <img src="/images/mate-dragon.png" alt="">
+                    </div>
+                    <div class="producto-info">
+                        <p class="producto-nombre">Mate Dragon</p>
+                        <p class="precio">25$</p>
+                        <p class="descuento">10% OFF</p>
+                    </div>
+                    <div class="carrito">
+                        <button class="boton-carrito">Agregar al Carrito</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <%- include('../partials/partialsFooter.ejs') %>
+</body>
+
+</html>

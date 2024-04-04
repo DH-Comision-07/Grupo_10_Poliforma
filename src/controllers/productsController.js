@@ -37,7 +37,6 @@ const controller = {
         productsService.save(newProduct);
         res.send(products);
     }
-
 }
 
 module.exports = controller;
