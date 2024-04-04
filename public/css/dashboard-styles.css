@@ -56,22 +56,25 @@ h1{
     padding: 10px;
 }
 
-.contenedor-dashboard .dashboard thead{
+.dashboard thead{
     background-color: #f7f7f7;
 }
 
-.contenedor-dashboard .dashboard th{
+.dashboard th{
     padding: 1rem;
     font-size: 1em;
 }
 
-.contenedor-dashboard .dashboard td{
+.dashboard td{
     padding: 1rem;
     font-size: 1em;
     border-top: 1px solid black;
 }
 
-
+.dashboard td img{
+    border: 1px black solid;
+    border-radius: 10px;
+}
 
 .btn:first-child{
     margin-top: 0;
