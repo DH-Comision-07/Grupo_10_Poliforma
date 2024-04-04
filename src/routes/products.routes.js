@@ -6,7 +6,8 @@ router.get("/", productsController.home);
 router.get("/productDetail",productsController.getDetail);
 router.get("/productCart",productsController.getCart);
 router.get("/createProduct", productsController.getCreate);
-router.get("/editProduct", productsController.getEdit)
+router.get("/editProduct", productsController.getEdit);
+router.get("/dashboard", productsController.dashboard)
 
 
 module.exports = router;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partialHead.ejs') %>
+    <link rel="stylesheet" href="../css/dashboard-styles.css">
+    <title>Dashboard - Poliforma</title>
+</head>
+<body>
+    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>>
+
+
+    <section class="contenedor-dashboard">
+            <h1>Dashboard Productos</h1>
+        <table class="dashboard">
+            <thead>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Nombre Producto</th>
+                <th>Precio</th>
+                <th colspan="3">Accion</th>
+            </thead>
+
+            <tr>
+                <td>1</td>
+                <td><img src="/images/mate-dragon.png" alt="" height="100px"></td>
+                <td>Mate Dragon<a href="productDetail" class="name"><i class="fa-solid fa-eye"></i></a></td>
+                <td>25$</td>
+                <td>
+                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="/images/mate-argentina.png" alt="" height="100px"></td>
+                <td>Mate Argentina<a href="productDetail" class="name"><i class="fa-solid fa-eye"></i></a></td>
+                <td>25$</td>
+                <td>
+                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="/images/maceta-beige.jpg" alt="" height="100px"></td>
+                <td>Maceta Beige<a href="productDetail" class="name"><i class="fa-solid fa-eye"></i></a></td>
+                <td>30$</td>
+                <td>
+                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
+                </td>
+            </tr>
+
+
+        </table>
+    </section>
+    <%- include('../partials/partialsFooter.ejs') %>
+</body>
+</html>
