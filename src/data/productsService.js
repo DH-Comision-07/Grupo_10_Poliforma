@@ -14,6 +14,7 @@ productService= {
     },
     save: function(product){
         this.products.push(product);
+        fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
     }
 }
 

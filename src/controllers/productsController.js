@@ -26,7 +26,7 @@ const controller = {
             }
         };
         let newProduct = {
-            id: mayorId,
+            id: mayorId+1,
             nombre: req.body.NombreProducto,
             descripcion:req.body.descripcion,
             tags: req.body.tags,
