@@ -4,7 +4,7 @@ const productsService = require("../data/productsService");
 const controller = {
 
     home: function (req,res){
-        res.render("products/products");
+        res.render("products/products", {products: productsService.getAll()});
     },
     detail: function (req,res)  {
         res.render("products/productDetail");
@@ -37,6 +37,9 @@ const controller = {
         }
         productsService.save(newProduct);
         res.send(products);
+    },
+    dashboard: function(req,res){
+        res.render("products/dashboard",{products: productsService.products})
     }
 }
 

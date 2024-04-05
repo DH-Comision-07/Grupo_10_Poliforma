@@ -19,39 +19,18 @@
                 <th>Precio</th>
                 <th colspan="3">Accion</th>
             </thead>
-
+            <% products.forEach(product => { %>
             <tr>
-                <td>1</td>
-                <td><img src="/images/mate-dragon.png" alt="" height="100px"></td>
-                <td>Mate Dragon<a href="productDetail" class="name"><i class="fa-solid fa-eye"></i></a></td>
-                <td>25$</td>
+                <td><%= product.id %></td>
+                <td><img src="/images/<%= product.imagen %>" alt="<%= product.name%>" height="100px"></td>
+                <td><%= product.nombre %><a href="products/detail/<%= product.id %>" class="name"><i class="fa-solid fa-eye"></i></a></td>
+                <td><%= product.precio%>$</td>
                 <td>
                     <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
                     <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
                 </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td><img src="/images/mate-argentina.png" alt="" height="100px"></td>
-                <td>Mate Argentina<a href="productDetail" class="name"><i class="fa-solid fa-eye"></i></a></td>
-                <td>25$</td>
-                <td>
-                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
-                    <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><img src="/images/maceta-beige.jpg" alt="" height="100px"></td>
-                <td>Maceta Beige<a href="productDetail" class="name"><i class="fa-solid fa-eye"></i></a></td>
-                <td>30$</td>
-                <td>
-                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
-                    <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
-                </td>
-            </tr>
-
-
+            <% }) %>
         </table>
     </section>
     <%- include('../partials/partialsFooter.ejs') %>
