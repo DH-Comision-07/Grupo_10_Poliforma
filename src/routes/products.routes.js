@@ -7,6 +7,9 @@ router.get("/",productsController.home);
 router.get("/productDetail",productsController.detail);
 router.get("/productCart",productsController.cart);
 router.get("/createProduct", productsController.create);
+router.post("/", productsController.store)
+router.get("/editProduct", productsController.edit)
+router.get("/dashboard", productsController.dashboard)
 router.post("/", uploadFile.single("imagenProducto"), productsController.store);
 router.get("/editProduct", productsController.edit);
 

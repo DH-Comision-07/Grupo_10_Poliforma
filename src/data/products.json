@@ -1,1 +1,65 @@
-[{"id":1,"nombre":"Mate Dragon","descripcion":"Mate de diseño con forma de dragón, ideal para disfrutar de tu bebida favorita.","tags":["mate","dragón","diseño"],"imagen":"ruta-a-la-imagen-del-producto1.jpg","categoria":"mate","precio":25.99},{"id":2,"nombre":"Mate Wavy","descripcion":"Mate moderno con forma ondulada, perfecto para disfrutar del tradicional mate argentino.","tags":["mate","moderno","ondulado"],"imagen":"ruta-a-la-imagen-del-producto2.jpg","categoria":"mate","precio":19.99},{"id":3,"nombre":"Lapicero Fins","descripcion":"Lapicero elegante y sofisticado con diseño de aletas de pez.","tags":["lapicero","elegante","diseño"],"imagen":"ruta-a-la-imagen-del-producto3.jpg","categoria":"oficina","precio":9.99},{"id":4,"nombre":"Jarrón Blanco","descripcion":"Jarrón minimalista de color blanco, perfecto para decorar tu hogar u oficina.","tags":["jarrón","minimalista","decoración"],"imagen":"ruta-a-la-imagen-del-producto4.jpg","categoria":"jarron","precio":34.99},{"id":5,"nombre":"jarron azul","descripcion":"un jarron azul muy bonito","tags":"jarron, azul, diseño","imagen":"algo.jpg","categoria":"jarron","precio":"300"},{"id":6,"nombre":"regadera pelota","descripcion":"una regadera esferica con hojas","tags":"jardin, diseño","imagen":"image1712273427205.jpg","categoria":"maceta","precio":"40"}]
+
+[
+    {
+        "id": 1,
+        "nombre": "Mate Dragon",
+        "descripcion": "Mate de diseño con forma de dragón, ideal para disfrutar de tu bebida favorita.",
+        "tags": [
+            "mate",
+            "dragón",
+            "diseño"
+        ],
+        "imagen": "mate-dragon.png",
+        "categoria": "mate",
+        "precio": 25.99
+    },
+    {
+        "id": 2,
+        "nombre": "Mate Wavy",
+        "descripcion": "Mate moderno con forma ondulada, perfecto para disfrutar del tradicional mate argentino.",
+        "tags": [
+            "mate",
+            "moderno",
+            "ondulado"
+        ],
+        "imagen": "pm2.jpg",
+        "categoria": "mate",
+        "precio": 19.99
+    },
+    {
+        "id": 3,
+        "nombre": "Lapicero Fins",
+        "descripcion": "Lapicero elegante y sofisticado con diseño de aletas de pez.",
+        "tags": [
+            "lapicero",
+            "elegante",
+            "diseño"
+        ],
+        "imagen": "pm4.jpeg",
+        "categoria": "oficina",
+        "precio": 9.99
+    },
+    {
+        "id": 4,
+        "nombre": "Jarrón Blanco",
+        "descripcion": "Jarrón minimalista de color blanco, perfecto para decorar tu hogar u oficina.",
+        "tags": [
+            "jarrón",
+            "minimalista",
+            "decoración"
+        ],
+        "imagen": "jarron-blanco.jpg",
+        "categoria": "jarron",
+        "precio": 34.99
+    },
+    {
+        "id": 5,
+        "nombre": "jarron azul",
+        "descripcion": "un jarron azul muy bonito",
+        "tags": "jarron, azul, diseño",
+        "imagen": "algo.jpg",
+        "categoria": "jarron",
+        "precio": "300"
+    }
+]
+
