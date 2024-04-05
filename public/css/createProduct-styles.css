@@ -68,6 +68,10 @@ header {
     margin: 20px;
 }
 
+.formularioLabel-ultimo{
+    width: 90%;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -102,14 +106,14 @@ form {
     color: white;
     cursor: pointer;
     background-color: #ff4c0c;
-    width: 47%;
+    width: 50%;
     transition: all 450ms;
 }
 
 .volver-boton {
     font-size: 1em;
     font-weight: 550;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px 0;
     outline: none;
     border: 1px solid black;
@@ -197,7 +201,7 @@ footer {
         width: 90%;
     }
 
-    .formularioLabel:last-child {
+    .formularioLabel-ultimo {
         width: 90%;
     }
 }

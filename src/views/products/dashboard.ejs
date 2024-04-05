@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partialHead.ejs') %>
+    <link rel="stylesheet" href="../css/dashboard-styles.css">
+    <title>Dashboard - Poliforma</title>
+</head>
+<body>
+    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>>
+
+
+    <section class="contenedor-dashboard">
+            <h1>Dashboard Productos</h1>
+        <table class="dashboard">
+            <thead>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Nombre Producto</th>
+                <th>Precio</th>
+                <th colspan="3">Accion</th>
+            </thead>
+            <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.id %></td>
+                <td><img src="/images/<%= product.imagen %>" alt="<%= product.name%>" height="100px"></td>
+                <td><%= product.nombre %><a href="products/detail/<%= product.id %>" class="name"><i class="fa-solid fa-eye"></i></a></td>
+                <td><%= product.precio%>$</td>
+                <td>
+                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
+                </td>
+            </tr>
+            <% }) %>
+        </table>
+    </section>
+    <%- include('../partials/partialsFooter.ejs') %>
+</body>
+</html>

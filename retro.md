@@ -71,3 +71,33 @@ No responder los mensajes en el grupo de whatssap.
 Mostrar desinterés y falta de iniciativa
 
 
+Retro Sprint 4
+
+1. Comenzar a hacer.
+
+Organizarnos mejor entre un Sprint y el siguiente
+Definir roles con bastante más urgencia
+Utilizar más el Trello
+
+
+2. Hacer más.
+
+Realizar reuniones más seguido.
+Mostrar más iniciativa y participación por parte de cada integrante del grupo.
+
+3. Continuar haciendo.
+
+Mantener la cooperacion entre los integrantes del equipo.
+Seguir teniendo interes por parte de todos los integrantes del grupo en querer completar y subir su parte que le corresponde; por más que muchas veces no nos comunicamos de manera casi diaria y muchas veces nos cuesta hacer las partes que nos corresponden a cada uno, es un orgullo formar parte de un grupo que esta interesado en querer completar y presentar su parte, eso es algo para destacar por parte de este grupo que creo que no se ve en otros grupos a razon de que en este grupo no se a dividido en comparación a otros grupos.
+
+4. Hacer menos.
+
+Mandar pocos mensajes al grupo.
+Responde con varios minutos y/o horas los mensajes que se mandar por Whatsapp
+
+5. Dejar de hacer.
+
+No hacer la tarea que le correspondía a otro compañero.
+Dejar de organizarnos con poca anticipación a la fecha de entrega del sprint. 
+No responder los mensajes en el grupo de whatssap. 
+Mostrar desinterés y falta de iniciativa.

@@ -12,7 +12,7 @@
         <main class="contenedor-padre">
             <section class="contenedor">
                 <h1 class="titulo">Creación de Producto</h1>
-                <form action="/" method="POST" class="create-form">
+                <form action="/products/" method="POST" class="create-form" enctype="multipart/form-data">
 
                     <div class="formularioLabel">
                         <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
@@ -46,14 +46,15 @@
                         </select>
                     </div>
 
-                    <div class="formularioLabel">
+                    <div class="formularioLabel-ultimo">
                         <label for="precio" class="titulo-form">Precio</label>
                         <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01">
                     </div>
+                    <button type="submit" class="crear-boton">Crear Producto</button>
+                    <button type="submit" class="volver-boton">Volver</button>
                 </form>
 
-                <button type="submit" class="crear-boton">Crear Producto</button>
-                <button type="submit" class="volver-boton">Volver</button>
+
             </section>
         </main>
     <%- include('../partials/partialsFooter.ejs') %>
