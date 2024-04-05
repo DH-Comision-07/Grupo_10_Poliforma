@@ -31,7 +31,7 @@ const controller = {
             nombre: req.body.NombreProducto,
             descripcion:req.body.descripcion,
             tags: req.body.tags,
-            imagen: "algo.jpg",
+            imagen: req.file.filename,
             categoria: req.body.categoria,
             precio: req.body.precio,
         }
