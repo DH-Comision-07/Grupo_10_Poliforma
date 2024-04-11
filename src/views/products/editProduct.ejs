@@ -12,24 +12,24 @@
     <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
         <main class="contenedor-padre">
             <section class="contenedor">
-                <h1 class="titulo">Edicion de Producto</h1>
-                <form action="/" method="POST" class="create-form">
+                <h1 class="titulo">Edicion de Producto: <%= productToEdit.nombre %></h1>
+                <form action="/products/editProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
 
                     <div class="formularioLabel">
                         <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
                         <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario"
-                            value="Mate Dragon">
+                            value="<%= productToEdit.nombre %>">
                     </div>
 
                     <div class="formularioLabel">
                         <label for="descripcion" class="titulo-form">Descripción</label>
                         <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"
-                            value="">Mate con nuestro exclusivo diseño impreso en 3D de escamas de dragón en negro, Ideal para los amantes del mate que buscan un toque de fantasía.</textarea>
+                            value=""><%= productToEdit.descripcion %></textarea>
                     </div>
 
                     <div class="formularioLabel">
                         <label for="tags" class="titulo-form">Tags</label>
-                        <input type="text" name="tags" id="tags" class="relleno-formulario" value="Mate, Dragon, Negro, 3D, descuento, arg">
+                        <input type="text" name="tags" id="tags" class="relleno-formulario" value="<%= productToEdit.tags %>">
                     </div>
 
                     <div class="formularioLabel">
@@ -42,17 +42,17 @@
                         <label for="categoriaProducto" class="titulo-form">Categoría</label>
                         <select id="categoria" name="categoria" required class="relleno-formulario">
                             <option value="">-Seleccione una categoría-</option>
-                            <option value="mates" selected>Mates</option>
-                            <option value="jarron">Jarron</option>
-                            <option value="maceta">Maceta</option>
-                            <option value="Figurita">Figurita</option>
+                            <option value="mates" <%= productToEdit.categoria === "mates" ? "selected" : "" %>>Mates</option>
+                            <option value="jarron" <%= productToEdit.categoria === "jarron" ? "selected" : "" %>>Jarron</option>
+                            <option value="maceta" <%= productToEdit.categoria === "maceta" ? "selected" : "" %>>Maceta</option>
+                            <option value="figurita" <%= productToEdit.categoria === "figurita" ? "selected" : "" %>>Figurita</option>
                         </select>
                     </div>
 
                     <div class="formularioLabel-ultimo">
                         <label for="precio" class="titulo-form">Precio</label>
                         <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01"
-                            value="15">
+                            value="<%= productToEdit.precio %>">
                     </div>
                     <button type="submit" class="crear-boton">Editar Producto</button>
                     <button type="submit" class="volver-boton">Volver</button>

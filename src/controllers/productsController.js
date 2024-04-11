@@ -16,7 +16,7 @@ const controller = {
         res.render("products/createProduct")
     },
     edit: function (req, res){
-        res.render("products/editProduct")
+        res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
     },
     store: function (req, res){
         let products = productsService.getAll();
@@ -36,10 +36,14 @@ const controller = {
             precio: req.body.precio,
         }
         productsService.save(newProduct);
-        res.send(products);
+        res.redirect("/products/dashboard");
     },
     dashboard: function(req,res){
         res.render("products/dashboard",{products: productsService.products})
+    },
+    modify: function(req, res){
+        productsService.update( req.body, req.params.id, req.file);
+        res.redirect("/products/dashboard");
     }
 }
 

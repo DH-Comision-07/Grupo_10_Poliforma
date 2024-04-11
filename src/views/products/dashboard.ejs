@@ -26,7 +26,7 @@
                 <td><%= product.nombre %><a href="products/detail/<%= product.id %>" class="name"><i class="fa-solid fa-eye"></i></a></td>
                 <td><%= product.precio%>$</td>
                 <td>
-                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <a href="/products/editProduct/<%= product.id %>" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
                     <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
                 </td>
             </tr>
