@@ -1,4 +1,3 @@
-
 [
     {
         "id": 1,
@@ -51,15 +50,5 @@
         "imagen": "jarron-blanco.jpg",
         "categoria": "jarron",
         "precio": 34.99
-    },
-    {
-        "id": 5,
-        "nombre": "jarron azul",
-        "descripcion": "un jarron azul muy bonito",
-        "tags": "jarron, azul, diseño",
-        "imagen": "algo.jpg",
-        "categoria": "jarron",
-        "precio": "300"
     }
 ]
-

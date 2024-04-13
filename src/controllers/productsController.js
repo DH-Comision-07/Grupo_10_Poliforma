@@ -40,6 +40,10 @@ const controller = {
     },
     dashboard: function(req,res){
         res.render("products/dashboard",{products: productsService.products})
+    },
+    delete: (req, res) => {
+        productService.delete(req.params.id);
+        res.redirect("/products/dashboard")
     }
 }
 
