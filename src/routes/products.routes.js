@@ -4,7 +4,7 @@ const productsController = require("../controllers/productsController");
 const uploadFile = require("../middlewares/multerMid");
 
 router.get("/",productsController.home);
-router.get("/productDetail",productsController.detail);
+router.get("/productDetail/:id",productsController.detail);
 router.get("/productCart",productsController.cart);
 router.get("/createProduct", productsController.create);
 router.post("/", productsController.store)
