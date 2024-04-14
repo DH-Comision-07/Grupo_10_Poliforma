@@ -6,8 +6,9 @@ const controller = {
     home: function (req,res){
         res.render("products/products", {products: productsService.getAll()});
     },
-    detail: function (req,res)  {
-        res.render("products/productDetail");
+    detail: (req, res) => {
+        const product = productsService.getOneBy(req.params.id);
+        res.render('products/productDetail', {product: productsService.getOneBy(req.params.id)})
     },
     cart: function (req,res) {
         res.render("products/productCart");
