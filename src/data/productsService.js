@@ -15,6 +15,12 @@ productService= {
     save: function(product){
         this.products.push(product);
         fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
+    },
+    delete: function (id) {
+        let newProducts = this.products.filter((product) => product.id != id);
+        this.products = newProducts;
+        fs.writeFileSync( path.join( __dirname, "products.json"), JSON.stringify(this.products));
+        return newProducts;
     }
 }
 
