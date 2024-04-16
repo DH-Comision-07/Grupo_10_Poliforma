@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/partialHead.ejs') %>
-    <link rel="stylesheet" href="../css/dashboard-styles.css">
-    <title>Dashboard - Poliforma</title>
+        <link rel="stylesheet" href="../css/dashboard-styles.css">
+        <title>Dashboard - Poliforma</title>
 </head>
+
 <body>
     <%- include('../partials/partialsHeaderLoginRegister.ejs') %>>
 
 
-    <section class="contenedor-dashboard">
+        <section class="contenedor-dashboard">
             <h1>Dashboard Productos</h1>
         <table class="dashboard">
             <thead>
@@ -26,13 +28,17 @@
                 <td><%= product.nombre %><a href="products/detail/<%= product.id %>" class="name"><i class="fa-solid fa-eye"></i></a></td>
                 <td><%= product.precio%>$</td>
                 <td>
-                    <a href="editProduct" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
-                    <a href="delateProduct" class="btn"><i class="fa-solid fa-trash"></i> Borrar</a>
+                    <a href="/products/editProduct/<%= product.id %>" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <form action="/products/dashboard/<%=product.id%>?_method=DELETE" method="POST">
+                                <button class="btn" type="submit" onclick="return confirm('¿Estás seguro que quieres eliminar este producto?')"><i class="fa-solid fa-trash"></i> Borrar</button>
+                            </form>
                 </td>
             </tr>
             <% }) %>
         </table>
     </section>
     <%- include('../partials/partialsFooter.ejs') %>
+
 </body>
+
 </html>

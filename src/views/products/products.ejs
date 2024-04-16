@@ -25,8 +25,8 @@
                 </div>
                 <% products.forEach((product) => { %>
                 <article class="producto-carta">
-                    <a href="products/productDetail">
-                        <div class="contendor-imagen">
+                    <a href="products/productDetail/<%= product.id %>">
+                    <div class="contendor-imagen">
                             <img src="/images/<%= product.imagen %>" alt="imagen <%= product.name %>" height="100px">
                         </div>
                         <div class="producto-info">
@@ -35,7 +35,7 @@
                             <p class="descuento">10% OFF</p>
                         </div>
                     </a>
-                    <div class="carrito">
+                    <div class="carrito"> 
                         <button class="boton-carrito">Agregar al Carrito</button>
                     </div>
                 </article>
