@@ -7,8 +7,10 @@ router.get("/productDetail/:id",productsController.detail);
 router.get('/dashboard', productsController.dashboard);
 router.get("/productCart",productsController.cart);
 router.get("/createProduct", productsController.create);
-router.post("/", productsController.store);
-router.get("/editProduct", productsController.edit);
+router.get("/editProduct/:id", productsController.edit)
+router.get("/dashboard", productsController.dashboard)
+router.post("/", uploadFile.single("imagenProducto"), productsController.store);
+router.put("/editProduct/:id",uploadFile.single("imagenProducto"), productsController.modify)
 router.delete("/dashboard/:id", productsController.delete);
 
 module.exports = router;
