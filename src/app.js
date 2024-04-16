@@ -4,8 +4,9 @@ const path = require("path");
 const mainRoutes = require("./routes/main.routes");
 const productsRoutes = require("./routes/products.routes");
 const usersRoutes = require("./routes/users.routes");
-const methodOverride = require("method-override");
 
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
 app.use(methodOverride("_method"));
 
 app.use(express.urlencoded({extended:false}));

@@ -6,8 +6,9 @@ const controller = {
     home: function (req,res){
         res.render("products/products", {products: productsService.getAll()});
     },
-    detail: function (req,res)  {
-        res.render("products/productDetail");
+    detail: (req, res) => {
+        const product = productsService.getOneBy(req.params.id);
+        res.render('products/productDetail', {product: productsService.getOneBy(req.params.id)})
     },
     cart: function (req,res) {
         res.render("products/productCart");
@@ -41,9 +42,15 @@ const controller = {
     dashboard: function(req,res){
         res.render("products/dashboard",{products: productsService.products})
     },
+
     modify: function(req, res){
         productsService.update( req.body, req.params.id, req.file);
         res.redirect("/products/dashboard");
+    },
+    delete: (req, res) => {
+        productService.delete(req.params.id);
+        res.redirect("/products/dashboard")
+
     }
 }
 

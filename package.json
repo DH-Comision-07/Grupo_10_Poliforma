@@ -1,7 +1,7 @@
 {
   "name": "proyecto-integrador-dh",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nuestro proyecto consiste en el desarrollo de un sitio web E-commerce dedicado a la venta de productos decorativos o de uso cotidiano impresos en 3d. Algunos ejemplos de los mismos son mates y kits de mates, macetas, lámparas, jarrones, lapiceros, entre otros.",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./src/app.js",

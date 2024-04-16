@@ -16,6 +16,7 @@ productService= {
         this.products.push(product);
         fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
     },
+
     update: function(product, idProd, imageFile){
         let prodIndex = this.products.findIndex(product => product.id == idProd)
         this.products[prodIndex] = {
@@ -28,6 +29,13 @@ productService= {
             precio: product.precio,
         }
         fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
+
+    },
+    delete: function (id) {
+        let newProducts = this.products.filter((product) => product.id != id);
+        this.products = newProducts;
+        fs.writeFileSync( path.join( __dirname, "products.json"), JSON.stringify(this.products));
+        return newProducts;
 
     }
 }

@@ -50,6 +50,7 @@
         "imagen": "jarron-blanco.jpg",
         "categoria": "jarron",
         "precio": 34.99
+
     },
     {
         "id": 5,
@@ -113,5 +114,6 @@
         "imagen": "image1712351997306.PNG",
         "categoria": "mates",
         "precio": "14"
+
     }
 ]
