@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const  productsController = require("../controllers/productsController");
+const uploadFile = require('../middlewares/multerMid');
 
 router.get("/",productsController.home);
 router.get("/productDetail/:id",productsController.detail);

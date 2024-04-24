@@ -47,6 +47,7 @@ h1{
     border: 1px solid black;
     border-radius: 30px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 
@@ -81,6 +82,7 @@ h1{
 }
 
 .btn:last-child{
+    margin-top: 5px;
     background-color: #ff4c0c;
 }
 
@@ -121,6 +123,33 @@ td a i{
     color: white;
     text-decoration: none;
     
+}
+
+.btn-crear{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 20%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 0.8em;
+    padding: 0.8rem 0.8rem;
+    background-color: #ff4c0c;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 450ms;
+}
+
+.btn-crear:hover{
+    background-color: #c93d0a;
+}
+
+.btn-crear i {
+    margin-right: 5px;
 }
 /*FOOTER*/
 
