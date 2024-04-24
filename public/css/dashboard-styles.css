@@ -127,7 +127,9 @@ td a i{
 
 .btn-crear{
     text-align: center;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 20%;
     cursor: pointer;
     border: none;
@@ -138,6 +140,16 @@ td a i{
     background-color: #ff4c0c;
     color: white;
     text-decoration: none;
+    font-weight: 600;
+    transition: all 450ms;
+}
+
+.btn-crear:hover{
+    background-color: #c93d0a;
+}
+
+.btn-crear i {
+    margin-right: 5px;
 }
 /*FOOTER*/
 
