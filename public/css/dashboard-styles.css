@@ -124,6 +124,21 @@ td a i{
     text-decoration: none;
     
 }
+
+.btn-crear{
+    text-align: center;
+    display: block;
+    width: 20%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 0.8em;
+    padding: 0.8rem 0.8rem;
+    background-color: #ff4c0c;
+    color: white;
+    text-decoration: none;
+}
 /*FOOTER*/
 
 footer {
