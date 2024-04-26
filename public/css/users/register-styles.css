@@ -132,6 +132,14 @@ input:focus{
     color: #636363;
 }
 
+.label-form{
+    display: block;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
 /*FOOTER*/
 
 footer {

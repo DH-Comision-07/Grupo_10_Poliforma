@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/partialHead.ejs') %>
-        <link rel="stylesheet" href="../css/login-styles.css">
+        <link rel="stylesheet" href="../css/users/login-styles.css">
         <link rel="stylesheet" href="../css/createProduct-styles">
         <title>Log in</title>
 </head>
@@ -19,6 +19,10 @@
 
                     <input type="text" placeholder="Usuario">
                     <input type="text" placeholder="Contraseña">
+                    <div class="recordarme">
+                        <input type="checkbox" id="recordarme">
+                        <label for="terminos">Recordarme</label>
+                    </div>
 
                     <button type="submit" class="login-boton">Inicia Sesión</button>
                     <button type="submit" class="google-boton"><i class="fa-brands fa-google"

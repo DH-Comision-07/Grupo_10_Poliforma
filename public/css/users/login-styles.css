@@ -32,6 +32,21 @@ header {
   margin: 10px;
 }
 
+.recordarme{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 5px;
+}
+
+#recordarme{
+  width: 5%;
+  cursor: pointer;
+}
+
+
+
 
 /*FORM*/
 .logo{
