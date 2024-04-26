@@ -61,6 +61,7 @@ a{
 
 .producto-carta{
     width: 20%;
+    height: 350px;
     margin: 15px;
     border: 1px solid #b1b1b1;
     border-radius: 10px;
@@ -69,7 +70,7 @@ a{
 }
 
 article:hover{
-    box-shadow: 5px 7px 7px rgb(134, 134, 134);
+    box-shadow: 5px 7px 7px rgba(134, 134, 134, 0.5);
 }
 
 .contendor-imagen img{
