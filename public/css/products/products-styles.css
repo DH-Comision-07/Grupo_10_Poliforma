@@ -12,25 +12,7 @@ body {
     background-size: contain;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    border-bottom: 1px solid black;
-}
 
-.logoHeader {
-    width: 25%;
-
-}
-
-.fa-bars,
-.fa-cart-shopping {
-    font-size: 25px;
-    margin: 10px;
-}
 
 /*MAIN*/
 a{
@@ -61,6 +43,7 @@ a{
 
 .producto-carta{
     width: 20%;
+    height: 350px;
     margin: 15px;
     border: 1px solid #b1b1b1;
     border-radius: 10px;
@@ -69,7 +52,7 @@ a{
 }
 
 article:hover{
-    box-shadow: 5px 7px 7px rgb(134, 134, 134);
+    box-shadow: 5px 7px 7px rgba(134, 134, 134, 0.5);
 }
 
 .contendor-imagen img{

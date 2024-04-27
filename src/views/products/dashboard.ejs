@@ -3,12 +3,12 @@
 
 <head>
     <%- include('../partials/partialHead.ejs') %>
-        <link rel="stylesheet" href="../css/dashboard-styles.css">
+        <link rel="stylesheet" href="../css/products/dashboard-styles.css">
         <title>Dashboard - Poliforma</title>
 </head>
 
 <body>
-    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
+    <%- include('../partials/partialsHeader.ejs') %>
 
 
         <section class="contenedor-dashboard">
@@ -27,7 +27,7 @@
             <tr>
                 <td><%= product.id %></td>
                 <td><img src="/images/<%= product.imagen %>" alt="<%= product.name%>" height="100px"></td>
-                <td><%= product.nombre %><a href="products/detail/<%= product.id %>" class="name"><i class="fa-solid fa-eye"></i></a></td>
+                <td><%= product.nombre %><a href="/products/productDetail/<%= product.id %>" class="name"><i class="fa-solid fa-eye"></i></a></td>
                 <td><%= product.precio%>$</td>
                 <td>
                     <a href="/products/editProduct/<%= product.id %>" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>

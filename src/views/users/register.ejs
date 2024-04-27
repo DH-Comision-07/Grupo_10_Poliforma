@@ -4,7 +4,7 @@
 <head>
     <%- include('../partials/partialHead') %>
         <title>Register</title>
-        <link rel="stylesheet" href="../css/register-styles.css">
+        <link rel="stylesheet" href="../css/users/register-styles.css">
         <link rel="stylesheet" href="../css/createProduct-styles">
 </head>
 
@@ -20,6 +20,10 @@
                     <input type="text" placeholder="E-mail*" name="email" id="email">
                     <input type="text" placeholder="Contraseña*" name="password" id="password">
                     <input type="text" placeholder="Confirmar contraseña*" name="repassword" id="repassword">
+                    <label for="imagenDePerfil" class="label-form">Imagen de Perfil</label>
+                    <input type="file" placeholder="imagen de perfil*" name="imagenDePerfil" id="imagenDePerfil">
+                    <label for="imagenDePerfil" class="label-form">Fecha de Nacimiento</label>
+                    <input type="date" placeholder="fecha de nacimiento" name="repassword" id="repassword">
                     <div class="terminos">
                         <input type="checkbox" id="terminos">
                         <label for="terminos">Acepto los <a href="#">terminos y condiciones</a></label>

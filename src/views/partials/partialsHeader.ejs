@@ -1,28 +1,32 @@
-<header class="encabezado">
-    <div class="subEncabezado">
-        <section class="encabezado__superior">
-            <img src="../images/logos/Poliforma-horizontal-color.svg" alt="imagen logo poliformas" class="encabezado__imagen">
-            <div class="superiorBarraBusqueda">
-                <input type="search" class="barraBusqueda" placeholder="Busqueda">
-                <button class="search__boton"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-        </section>
-        <nav class="navbar">
-            <ul class="navbar__listashop">
-                <li class="listasuperior__link"><a href="/products">Productos</a></li>
-                <li class="listasuperior__link"><a href="#">Ofertas</a></li>
-                <li class="listasuperior__link"><a href="#">Ayuda</a></li>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="/images/logos/Poliforma-horizontal-color.svg" alt=""></a>
+            <ul class="links">
+                <li><a href="/" class="link-navbar">Inicio</a></li>
+                <li><a href="/products" class="link-navbar">Productos</a></li>
+                <li><a href="/contact" class="link-navbar">Contacto</a></li>
+                <li><a href="/products/dashboard" class="link-navbar">Dashboard</a></li>
             </ul>
-            <ul class="navbar__listauser">
-                <li class="listauser__link"><a href="/users/register">Creá tu cuenta <i class="fa-regular fa-id-card"></i></a></li>
-                <li class="listauser__link"><a href="/users/login">Ingresá <i class="fa-solid fa-right-to-bracket"></i></a></li>
-                <li class="listauser__link"><a href="/products/productCart">carrito<i class="fa-solid fa-basket-shopping"></i></a></li>
-            </ul>
-            <section class="navbar__burger-menu">
-                <div class="burger-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </section>
-        </nav>
+        </div>
+
+        <div class="login">
+            <a href="/users/login" class="btn-login">Inicia Sesion</a>
+            <a href="/users/register" class="btn-register">Registrate</a>
+        </div>
+        <div class="menu-hamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="carrito">
+            <a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </nav>
+    <div class="dropdown_menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/products">Productos</a></li>
+        <li><a href="/contact">Contacto</a></li>
+        <li><a href="/products/dashboard">Dashboard</a></li>
+        <li><a href="/users/login" class="btn-login">Inicia Sesion</a></li>
+        <li><a href="/users/register" class="btn-register">Registrate</a></li>
     </div>
 </header>

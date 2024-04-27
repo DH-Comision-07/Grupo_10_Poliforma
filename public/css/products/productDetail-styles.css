@@ -12,27 +12,6 @@
     background-size: cover;
 }
 
-/*HEADER*/
-
-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    border-bottom: 1px solid black;
-}
-
-.logoHeader {
-    width: 25%;
-
-}
-
-.fa-bars,
-.fa-cart-shopping {
-    font-size: 25px;
-    margin: 10px;
-}
 
 /*MAIN*/
 /*PRODUCTO (IMANOL)*/
@@ -62,7 +41,7 @@ header {
 
 .img-principal{
     width: 100%;
-    height: auto;
+    min-height: 550px;
 }
 
  .contedor-imagen{
