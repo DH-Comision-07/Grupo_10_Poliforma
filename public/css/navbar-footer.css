@@ -26,6 +26,13 @@ a:hover{
     justify-content: space-between;
 }
 
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
 .navbar .logo img{
     width: 50%;
     margin-top: 8px;
@@ -33,7 +40,7 @@ a:hover{
 
 .navbar .links{
     display: flex;
-    gap: 2rem
+    gap: 2rem;
 }
 
 .btn-register{
