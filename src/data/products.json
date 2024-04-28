@@ -50,7 +50,6 @@
         "imagen": "jarron-blanco.jpg",
         "categoria": "jarron",
         "precio": 34.99
-
     },
     {
         "id": 5,
@@ -108,12 +107,11 @@
     },
     {
         "id": 11,
-        "nombre": "Roberto Skully",
+        "nombre": "Roberto Skullys",
         "descripcion": "mate calavera",
         "tags": "huesos",
         "imagen": "image1712351997306.PNG",
         "categoria": "mates",
         "precio": "14"
-
     }
 ]

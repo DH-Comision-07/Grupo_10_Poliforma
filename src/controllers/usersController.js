@@ -15,6 +15,10 @@ let users = {
     editUser: function(req, res){
         res.render('users/editProfile', {userToEdit: usersService.getOneBy(req.params.id)})
     },
+    modify: function(req, res){
+        usersService.update( req.body, req.params.id, req.file);
+        res.redirect("/users/dashboard");
+    },
     deleteUser: function(){
 
     },
