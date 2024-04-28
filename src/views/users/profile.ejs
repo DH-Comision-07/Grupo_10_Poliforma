@@ -4,7 +4,7 @@
 <head>
     <%- include('../partials/partialHead.ejs') %>
         <title>Perfil-Poliforma</title>
-        <link rel="stylesheet" href="../css/users/profile-styles.css">
+        <link rel="stylesheet" href="/css/users/profile-styles.css">
 </head>
 
 <body>
@@ -13,34 +13,34 @@
         <section class="contenedor-padre">
             <div class="perfil">
                 <div class="imagen-perfil">
-                    <img src="/images/usuarios/mickey.jpg" alt="">
-                    <h1>Rubo</h1>
+                    <img src="/images/usuarios/<%= user.imagen %>" alt="">
+                    <h1><%= user.username %></h1>
                 </div>
                 <div class="info-perfil">
                     <div class="info">
                         <h3>Nombre</h3>
-                        <span>Ruben</span>
+                        <span><%= user.nombre %></span>
                     </div>
 
                     <div class="info">
                         <h3>Apellido</h3>
-                        <span>Ferrer</span>
+                        <span><%= user.apellido %></span>
                     </div>
 
                     <div class="info">
                         <h3>Email</h3>
-                        <span>Rubenferrerl@gmail.com</span>
+                        <span><%= user.email %></span>
                     </div>
 
                     <div class="info">
                         <h3>Fecha de Nacimiento</h3>
-                        <span>09/07/1999</span>
+                        <span><%= user.fechaNacimiento %></span>
                     </div>
                     <div class="info-telefono">
                         <h3>Numero de Telefono</h3>
-                        <span>+58 424-6925654</span>
+                        <span><%= user.telefono %></span>
                     </div>
-                    <a href="" class="editar">Editar Perfil</a>
+                    <a href="/users/editProfile" class="editar">Editar Perfil</a>
                 </div>
             </div>
 

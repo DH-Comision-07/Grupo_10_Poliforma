@@ -10,7 +10,7 @@ let users = {
     },
     userProfile: function(req, res){
         const user = usersService.getOneBy(req.params.id);
-        res.render('products/productDetail', {product: productsService.getOneBy(req.params.id)})
+        res.render('users/profile', {user: usersService.getOneBy(req.params.id)})
     },
     editUser: function(req, res){
         res.render('users/editProfile', {userToEdit: usersService.getOneBy(req.params.id)})

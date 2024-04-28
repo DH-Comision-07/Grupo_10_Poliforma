@@ -132,8 +132,8 @@ form {
 
 .formularioLabel-primero .round{
     position: absolute;
-    bottom: 12px;
-    right: 14px;
+    bottom: 18px;
+    right: 8px;
     background: #00b4ff;
     width: 25px;
     height: 25px;
@@ -163,20 +163,6 @@ input[type='file']::-webkit-file-upload-button{
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 15px;
-}
-
-.info h3{
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.info span{
-    font-size: 1.2rem;
-}
-
-.info{
-    width: 40%;
-    margin: 20px;
 }
 /*FOOTER*/
 
