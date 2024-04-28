@@ -26,6 +26,11 @@ usersService= {
             email: user.email
         }
         fs.writeFileSync( path.join( __dirname, "/users.json"), JSON.stringify(this.users));
-
+    },
+    delete: function (id) {
+        let newUsers = this.users.filter((user) => user.id != id);
+        this.users = newUsers;
+        fs.writeFileSync( path.join( __dirname, "users.json"), JSON.stringify(this.users));
+        return newUsers;
     }
 }

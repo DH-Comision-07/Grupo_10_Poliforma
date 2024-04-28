@@ -33,7 +33,7 @@
                 <td><%= user.categoria%></td>
                 <td>
                     <a href="/users/editProfile/<%= user.id %>" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
-                    <form action="/products/dashboard/?_method=DELETE" method="POST">
+                    <form action="/users/<%= user.id %>?_method=PUT" method="POST">
                                 <button class="btn" type="submit" onclick="return confirm('¿Estás seguro que quieres eliminar este usuario?')"><i class="fa-solid fa-trash"></i> Borrar</button>
                             </form>
                 </td>

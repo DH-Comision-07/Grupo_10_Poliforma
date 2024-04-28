@@ -19,8 +19,9 @@ let users = {
         usersService.update( req.body, req.params.id, req.file);
         res.redirect("/users/dashboard");
     },
-    deleteUser: function(){
-
+    deleteUser: (req, res) => {
+        usersService.delete(req.params.id);
+        res.redirect("/users/dashboard")
     },
     dashboard: function(req, res){
         res.render('users/dashboardUsarios', {users: usersService.getAll()})
