@@ -9,10 +9,11 @@ let users = {
         res.render("users/register")
     },
     userProfile: function(req, res){
-        res.render('users/profile', {products: productsService.getAll()})
+        const user = usersService.getOneBy(req.params.id);
+        res.render('products/productDetail', {product: productsService.getOneBy(req.params.id)})
     },
-    editUser: function(){
-
+    editUser: function(req, res){
+        res.render('users/editProfile', {userToEdit: usersService.getOneBy(req.params.id)})
     },
     deleteUser: function(){
 

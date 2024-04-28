@@ -32,7 +32,7 @@
                 <td><%= user.email%></td>
                 <td><%= user.categoria%></td>
                 <td>
-                    <a href="/products/editProfile" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <a href="/users/editProfile" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
                     <form action="/products/dashboard/?_method=DELETE" method="POST">
                                 <button class="btn" type="submit" onclick="return confirm('¿Estás seguro que quieres eliminar este usuario?')"><i class="fa-solid fa-trash"></i> Borrar</button>
                             </form>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/partialHead.ejs') %>
+        <link rel="stylesheet" href="/css/users/editProfile-styles.css">
+        <title>Edicion de Usuario</title>
+</head>
+
+<body>
+    <%- include('../partials/partialsHeader.ejs') %>
+        <main class="contenedor-padre">
+            <section class="contenedor">
+                <h1 class="titulo">Edicion de Usuario</h1>
+                <form action="/products/editProduct/?_method=PUT" method="POST" class="create-form"
+                    enctype="multipart/form-data">
+                    <div class="upload-imagen">
+                        <div class="formularioLabel-primero">
+                            <img src="/images/usuarios/mickey.jpg" alt="" width="150px">
+                            <div class="round">
+                                <input type="file" name="imagenUsuario" id="imagenUsuario" accept=".jpg, .png" multiple
+                                    class="relleno-formulario">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formularioLabel">
+                        <label for="NombreUsuario" class="titulo-form">Nombre</label>
+                        <input type="text" id="NombreUsuario" name="NombreUsuario" class="relleno-formulario" value="">
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="apellidoUsuario" class="titulo-form">Apellido</label>
+                        <input type="text" id="pellidoUsuario" name="pellidoUsuario" class="relleno-formulario"
+                            value="">
+                    </div>
+
+                    <div class="info">
+                        <h3>Email</h3>
+                        <span>Rubenferrerl@gmail.com</span>
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="categoriaUsuario" class="titulo-form">Categoría</label>
+                        <select id="categoriaUsuario" name="categoriaUsuario" class="relleno-formulario">
+                            <option value="">-Seleccione una categoría-</option>
+                            <option value="administrador">Administrador</option>
+                            <option value="usuario">Usuario</option>
+                        </select>
+                    </div>
+
+                    <div class="formularioLabel-ultimo">
+                        <label for="birthday" class="titulo-form">Fecha de Nacimiento</label>
+                        <input type="date" name="birthday" id="birthday" class="relleno-formulario" value="">
+                    </div>
+
+                    <button type="submit" class="crear-boton">Editar Usuario</button>
+                    <a href="/users/profile" class="volver-boton">Volver</a>
+                </form>
+            </section>
+        </main>
+        <%- include('../partials/partialsFooter.ejs') %>
+</body>
+
+</html>
