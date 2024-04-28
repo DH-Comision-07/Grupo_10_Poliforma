@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    margin: 0px;
+    background-color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(/images/Patron-positivo-fondo.png);
+    background-size: cover;
+}
+
+/*main*/
+a{
+    text-decoration: none;
+    font-style: none;
+    color: black;
+}
+.contenedor-padre{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfil{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-bottom: 1px solid rgba(88, 88, 88, 0.3);
+}
+
+.imagen-perfil{
+    width: 20%;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+.imagen-perfil img{
+    width: 100%;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 30px;
+    border: 2px solid #ff4c0c;
+}
+
+.imagen-perfil h1{
+    text-align: center;
+}
+
+.info-perfil{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 60%;
+}
+
+.info{
+    width: 50%;
+}
+
+.info-telefono{
+    width: 100%;
+}
+
+.info-telefono h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info span{
+    font-size: 1.2rem;
+}
+
+.editar{
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.7em;
+    padding: 0.5rem 0.7rem;
+    background-color: #ff4c0c;
+    color: white;
+    text-decoration: none;
+    transition: all 450ms;
+}
+
+.ultimas-compras{
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-mas{
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.7em;
+    padding: 0.5rem 0.7rem;
+    background-color: #ff4c0c;
+    color: white;
+    text-decoration: none;
+    transition: all 450ms;
+    margin-bottom: 20px;
+}
+
+.ultimas-compras h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*Ultimas compras*/
+
+
+.producto-carta{
+    width: 20%;
+    margin: 15px;
+    border: 1px solid #b1b1b1;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+article:hover{
+    box-shadow: 5px 7px 7px rgba(134, 134, 134, 0.5);
+}
+
+.contendor-imagen img{
+    width: 100%;
+    height: 250px;
+    border-radius:  10px 10px 0px 0px;
+    border-bottom: solid 1px #ebebeb
+}
+
+.contendor-imagen{
+    width: 100%;
+    
+    position: relative;
+}
+
+.producto-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+.producto-nombre{
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.precio{
+    font-weight: 500;
+}
+
+.precio,
+.descuento{
+    font-size: 0.8em;
+    width: 50%;
+}
+
+.descuento{
+    color: #42ae52;
+    text-align: right;
+}
+
