@@ -15,9 +15,54 @@ body {
 
 /*MAIN*/
 
+.botones-titulos{
+
+}
+
+.botones{
+    position: relative;
+    left: 670px;
+    top: 20px;
+}
+
+.btn-dashboards:first-child{
+    margin-left: -5px;
+    width: 10%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 0.7em;
+    padding: 0.5rem 0.7rem;
+    background-color: #f7f7f7;
+    color: black;
+    text-decoration: none;
+    transition: all 450ms;
+
+}
+
+.btn-dashboards:last-child{
+    margin-left: -6px;
+    width: 10%;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 0.7em;
+    padding: 0.5rem 0.7rem;
+    background-color: #ff4c0c;
+    color: white;
+    text-decoration: none;
+    transition: all 450ms;
+}
+
+.btn-dashboards:first-child:hover{
+    background-color: #ffa483;
+    color: white;
+}
+
 h1{
     text-align: center;
     padding: 20px;
+    width: 100%;
 }
 
 .contenedor-dashboard{
