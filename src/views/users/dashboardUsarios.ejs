@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/partialHead.ejs') %>
-        <link rel="stylesheet" href="../css/products/dashboard-styles.css">
+        <link rel="stylesheet" href="../css/users/dashboardUsers-styles.css">
         <title>Dashboard Usuarios - Poliforma</title>
 </head>
 
@@ -12,7 +12,13 @@
 
 
         <section class="contenedor-dashboard">
-            <h1>Dashboard Usuarios</h1>
+            <div class="botones-titulos">
+                <div class="botones">
+                    <a href="/users/dashboard" class="btn-dashboards">Usuarios</a>
+                    <a href="/products/dashboard" class="btn-dashboards">Productos</a>
+                </div>
+                <h1>Dashboard Usuarios</h1>
+            </div>
 
         <table class="dashboard">
             <a href="/products/createUser" class="btn-crear"><i class="fa-solid fa-plus"></i> Crear Usuario</a>
