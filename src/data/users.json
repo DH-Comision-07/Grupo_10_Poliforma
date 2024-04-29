@@ -7,7 +7,7 @@
         "contraseña": "123456",
         "categoria": "administrador",
         "imagen": "mickey.jpg",
-        "fechaNacimiento": "09-07-99",
+        "fechaNacimiento": "1999-07-09",
         "telefono": "+58424625654",
         "username": "rubo"
     },
@@ -15,11 +15,13 @@
         "id": 2,
         "nombre": "María",
         "apellido": "González",
-        "username": "mariposa",
-        "imagen": "image1714339718532.png",
+        "email": "mariagonzalez@hotmail.com",
+        "contraseña": "contraseña456",
         "categoria": "usuario",
-        "nacimiento": "09-10-1997",
-        "telefono": "+541987654321"
+        "imagen": "usuario-vacio.jpg",
+        "fechaNacimiento": "1992-09-22",
+        "telefono": "+541987654321",
+        "username": "mariposa"
     },
     {
         "id": 3,
@@ -29,7 +31,7 @@
         "contraseña": "admin123",
         "categoria": "administrador",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "10-12-85",
+        "fechaNacimiento": "1985-12-10",
         "telefono": "+541555123456",
         "username": "robinhood"
     },
@@ -41,7 +43,7 @@
         "contraseña": "mipass123",
         "categoria": "usuario",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "03-07-91",
+        "fechaNacimiento": "1991-07-03",
         "telefono": "+541444333222",
         "username": "miguelicious"
     },
@@ -53,7 +55,7 @@
         "contraseña": "abc123",
         "categoria": "usuario",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "28-04-88",
+        "fechaNacimiento": "1988-04-28",
         "telefono": "+541666777888",
         "username": "lauralicious"
     },
@@ -65,7 +67,7 @@
         "contraseña": "pass123",
         "categoria": "usuario",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "07-01-94",
+        "fechaNacimiento": "1994-01-07",
         "telefono": "+541777888999",
         "username": "carlitox"
     },
@@ -77,7 +79,7 @@
         "contraseña": "ana123",
         "categoria": "usuario",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "12-06-93",
+        "fechaNacimiento": "1993-06-12",
         "telefono": "+541888999000",
         "username": "anabelle"
     },
@@ -89,7 +91,7 @@
         "contraseña": "luis123",
         "categoria": "usuario",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "30-09-90",
+        "fechaNacimiento": "1990-09-30",
         "telefono": "+541999888777",
         "username": "thunderluis"
     },
@@ -101,7 +103,7 @@
         "contraseña": "sofia456",
         "categoria": "usuario",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "14-02-92",
+        "fechaNacimiento": "1992-02-14",
         "telefono": "+541222333444",
         "username": "sofisticada"
     },
@@ -113,48 +115,8 @@
         "contraseña": "missecreto",
         "categoria": "usuario",
         "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "18-11-87",
+        "fechaNacimiento": "1987-11-18",
         "telefono": "+541333444555",
         "username": "javelin"
-    },
-    {
-        "id": 11,
-        "nombre": "Valentina",
-        "apellido": "Silva",
-        "email": "valentinasilva@gmail.com",
-        "contraseña": "valentina456",
-        "categoria": "usuario",
-        "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "25-03-95",
-        "telefono": "+541111111111",
-        "username": "valentinasilva95"
-    },
-    {
-        "id": 12,
-        "nombre": "Gabriel",
-        "apellido": "Hernández",
-        "email": "gabrielhernandez@hotmail.com",
-        "contraseña": "gabriel123",
-        "categoria": "usuario",
-        "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "08-07-93",
-        "telefono": "+541222222222",
-        "username": "gabrielh93"
-    },
-    {
-        "id": 13,
-        "nombre": "Isabella",
-        "apellido": "López",
-        "email": "isabellalopez@gmail.com",
-        "contraseña": "isabella456",
-        "categoria": "usuario",
-        "imagen": "usuario-vacio.jpg",
-        "fechaNacimiento": "17-09-91",
-        "telefono": "+541333333333",
-        "username": "isalopez91"
-    },
-    {
-        "id": 14,
-        "imagen": "usuario-vacio.jpg"
     }
 ]

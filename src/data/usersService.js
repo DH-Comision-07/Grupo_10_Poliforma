@@ -18,19 +18,21 @@ usersService= {
             id: Number(idUser),
             nombre: user.NombreUsuario,
             apellido: user.apellidoUsuario,
-            username: user.username,
-            imagen: imageFile? imageFile.filename : this.users[userIndex].imagen,
+            email: this.users[userIndex].email,
+            contraseña: this.users[userIndex].contraseña,
             categoria: user.categoriaUsuario,
-            nacimiento: user.birthDate,
+            imagen: imageFile? imageFile.filename : this.users[userIndex].imagen,
+            fechaNacimiento: user.birthday,
             telefono: user.telefono,
-            email: user.email
+            username: user.username,
         }
         fs.writeFileSync( path.join( __dirname, "/users.json"), JSON.stringify(this.users));
     },
     delete: function (id) {
         let newUsers = this.users.filter((user) => user.id != id);
+        console.log(newUsers);
         this.users = newUsers;
-        fs.writeFileSync( path.join( __dirname, "users.json"), JSON.stringify(this.users));
+        fs.writeFileSync( path.join( __dirname, "/users.json"), JSON.stringify(this.users));
         return newUsers;
     }
 }

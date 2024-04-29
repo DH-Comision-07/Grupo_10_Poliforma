@@ -124,6 +124,11 @@ a{
     text-align: center;
     margin-bottom: 20px;
 }
+
+.user{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
 /*Ultimas compras*/
 
 
