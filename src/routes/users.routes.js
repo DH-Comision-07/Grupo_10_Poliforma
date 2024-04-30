@@ -9,6 +9,7 @@ router.get('/profile/:id', usersController.userProfile);
 router.get('/dashboard', usersController.dashboard);
 
 router.get('/editProfile/:id', usersController.editUser);
+router.post("/", uploadFile.single("imagenUsuario"), usersController.store);
 router.put('/:id',uploadFile.single("imagenUsuario"), usersController.modify);
 
 router.delete('/:id', usersController.deleteUser);
