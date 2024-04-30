@@ -12,9 +12,15 @@ usersService= {
     getOneBy: function(id){
         return this.users.find(user => user.id == id)
     },
+
     save: function(user){
         this.users.push(user);
         fs.writeFileSync( path.join( __dirname, "/users.json"), JSON.stringify(this.users));
+    },
+
+
+    getOneByField: function(field, text){
+        return this.users.find(user => user[field] === text)
     },
 
     update: function(user, idUser, imageFile){
