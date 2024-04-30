@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/partialHead.ejs') %>
+        <title><%= product.nombre %> - Poliforma</title>
+        <link rel="stylesheet" href="/css/productDetail-styles.css">
+        <link rel="stylesheet" href="../css/createProduct-styles">
+</head>
+
+<body>
+    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
+
+        <main class="contenedor-padre">
+
+            <!--Producto (Imanol)-->
+
+            <section class="contenedor-producto">
+                <div class="contendor-imagen">
+                    <img src="/images/<%= product.imagen %>" alt="mate dragon" class="img-principal">
+                </div>
+                <div class="infoProduc">
+                    <h4 class="nomProduc"><%= product.nombre %></h4>
+                    <div class="preciosProduc">
+                        <h4 class="precioPrin">$<%= product.precio %></h4>
+                        <h4 class="descuento">25% OFF</h4>
+                    </div>
+                    <p class="descripProducto"><%= product.descripcion %></p>
+                    <div class="etiqueta-caja">
+                        <div class="icono-tag">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                        <div class="etiqueta">
+                            <p class="etiqueta-item">mate</p>
+                            <p class="etiqueta-item">dragon</p>
+                            <p class="etiqueta-item">negro</p>
+                            <p class="etiqueta-item">3D</p>
+                            <p class="etiqueta-item">descuento</p>
+                            <p class="etiqueta-item">arg</p>
+                        </div>
+                    </div>
+                    
+                    <div class="botones-compra">
+                        <select name="cantidad" id="cantidad" class="selector-cantidad">
+                            <option value="1">Qty: 1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <button type="submit" class="agregar-carrito">Agregar al carrito</button>
+                        <button type="submit" class="comprar-ahora">Comprar ahora</button>
+                    </div>
+
+                    <div class="interacciones-producto">
+                        <p class="intera"><i class="fa-regular fa-eye"></i> 5,5k Vista</p>
+                        <p class="intera"><i class="fa-regular fa-heart"></i> 2,5k Likes</p>
+                        <p class="intera"><i class="fa-solid fa-cloud-arrow-up"></i> 1k Descargas</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Detalles del producto (Ruben)-->
+            <section class="descripcion-mobile">
+
+                <section class="detalle-producto">
+
+                    <ul class="menu-desplegable">
+                        <li class="desplegable">
+                            <input type="radio" name="desplegable" id="detalles" class="abridor" checked>
+                            <label for="detalles" class="titulos">Detalles</label>
+                            <div class="contenido">
+                                <p>Nuestro mate en forma de huevo de dragón presenta un diseño detallado y
+                                    realista que captura
+                                    la esencia de estas míticas criaturas. Cada escama y curva está finamente
+                                    elaborada para
+                                    brindarte una experiencia visual única. El mate está fabricado con plástico
+                                    resistente y
+                                    seguro para alimentos, lo que garantiza su durabilidad y seguridad.</p>
+                            </div>
+                        </li>
+
+                        <li class="desplegable">
+                            <input type="radio" name="desplegable" id="envios" class="abridor">
+                            <label for="envios" class="titulos">Envíos</label>
+                            <div class="contenido">
+                                <p>Realizamos envíos rápidos y seguros a nivel nacional. Cada mate en forma de
+                                    huevo de dragón
+                                    impreso en 3D se empacará cuidadosamente para garantizar su protección
+                                    durante el
+                                    transporte. El tiempo estimado de entrega es de 5 a 7 días hábiles. Te
+                                    proporcionaremos un
+                                    número de seguimiento una vez que tu pedido haya sido enviado para que
+                                    puedas rastrear el
+                                    progreso de la entrega. Si tienes alguna pregunta sobre el envío o necesitas
+                                    opciones de
+                                    envío internacional, no dudes en contactarnos!</p>
+                            </div>
+                        </li>
+
+                        <li class="desplegable">
+                            <input type="radio" name="desplegable" id="devoluciones" class="abridor">
+                            <label for="devoluciones" class="titulos">Devoluciones</label>
+                            <div class="contenido">
+                                <p>Tu satisfacción es nuestra prioridad. Si por alguna razón no estás
+                                    completamente satisfecho
+                                    con tu mate en forma de huevo de dragón impreso en 3D, ofrecemos una
+                                    política de devolución
+                                    dentro de los 30 días posteriores a la recepción. Para ser elegible para la
+                                    devolución, el
+                                    mate debe estar en su estado original y sin usar. Por favor, contáctanos
+                                    para obtener más
+                                    detalles y comenzar el proceso de devolució</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </section>
+
+
+                <section class="carrusel">
+                    <div class="titulo-boton">
+                        <h2 class="titulo-contenedor">Catálogo de productos</h2>
+                        <button type="submit" class="boton-catalogo">Ver todos</button>
+                    </div>
+                    <div class="contenedor">
+                        <article class="producto">
+                            <img src="/images/mate-celeste.png" alt="mate celeste">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate celeste</h4>
+                                <p class="precio">15$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-argentina.png" alt="mate argentina">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Vamos!</h4>
+                                <p class="precio">20$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-metalizado.png" alt="Mate Metalizado">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Metalizado</h4>
+                                <p class="precio">30$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-rosado.png" alt="mate rosado">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Rosado</h4>
+                                <p class="precio">15$</p>
+                            </div>
+                        </article>
+                        <article class="producto">
+                            <img src="/images/mate-turquesa.png" alt="mate turquesa">
+                            <div class="info-producto">
+                                <h4 class="nombre-producto">Mate Turquesa</h4>
+                                <p class="precio">15$</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+        </main>
+        <%- include('../partials/partialsFooter.ejs') %>
+</body>
+
+</html>

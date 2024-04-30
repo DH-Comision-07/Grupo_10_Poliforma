@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mate Dragon",
+        "descripcion": "Mate de diseño con forma de dragón, ideal para disfrutar de tu bebida favorita.",
+        "tags": [
+            "mate",
+            "dragón",
+            "diseño"
+        ],
+        "imagen": "mate-dragon.png",
+        "categoria": "mates",
+        "precio": 25.99
+    },
+    {
+        "id": 2,
+        "nombre": "Mate Wavy",
+        "descripcion": "Mate moderno con forma ondulada, perfecto para disfrutar del tradicional mate argentino.",
+        "tags": [
+            "mate",
+            "moderno",
+            "ondulado"
+        ],
+        "imagen": "pm2.jpg",
+        "categoria": "mates",
+        "precio": 19.99
+    },
+    {
+        "id": 3,
+        "nombre": "Lapicero Fins",
+        "descripcion": "Lapicero elegante y sofisticado con diseño de aletas de pez.",
+        "tags": [
+            "lapicero",
+            "elegante",
+            "diseño"
+        ],
+        "imagen": "pm4.jpeg",
+        "categoria": "oficina",
+        "precio": 9.99
+    },
+    {
+        "id": 4,
+        "nombre": "Jarrón Blanco",
+        "descripcion": "Jarrón minimalista de color blanco, perfecto para decorar tu hogar u oficina.",
+        "tags": [
+            "jarrón",
+            "minimalista",
+            "decoración"
+        ],
+        "imagen": "jarron-blanco.jpg",
+        "categoria": "jarron",
+        "precio": 34.99
+
+    },
+    {
+        "id": 5,
+        "nombre": "jarron azul",
+        "descripcion": "un jarron azul muy bonito",
+        "tags": "jarron, azul, diseño",
+        "imagen": "image1712796675640.jpg",
+        "categoria": "jarron",
+        "precio": "30"
+    },
+    {
+        "id": 6,
+        "nombre": "Regadera pelota",
+        "descripcion": "Regadera en forma esférica con relieve de hojas",
+        "tags": "jardin, naturaleza, plantas",
+        "imagen": "image1712345478793.jpg",
+        "categoria": "maceta",
+        "precio": "20"
+    },
+    {
+        "id": 7,
+        "nombre": "Regadera pelota",
+        "descripcion": "Regadera en forma esférica con relieve de hojas",
+        "tags": "jardin, naturaleza, plantas",
+        "imagen": "image1712345499451.jpg",
+        "categoria": "maceta",
+        "precio": "20"
+    },
+    {
+        "id": 8,
+        "nombre": "Separa dedo",
+        "descripcion": "esto no va en este ecommerce",
+        "tags": "lalalalal",
+        "imagen": "image1712351178051.jpg",
+        "categoria": "figurita",
+        "precio": "2"
+    },
+    {
+        "id": 9,
+        "nombre": "Coso rojo feo",
+        "descripcion": "un coso rojo de un fiat palio",
+        "tags": "palio, repuesto, fiat",
+        "imagen": "image1712351894084.jpg",
+        "categoria": "figurita",
+        "precio": "30"
+    },
+    {
+        "id": 10,
+        "nombre": "coso rojo duplicado",
+        "descripcion": "a este hay q borrarlo",
+        "tags": "qweqweqwe",
+        "imagen": "image1712351918581.jpg",
+        "categoria": "mates",
+        "precio": "3"
+    },
+    {
+        "id": 11,
+        "nombre": "Roberto Skully",
+        "descripcion": "mate calavera",
+        "tags": "huesos",
+        "imagen": "image1712351997306.PNG",
+        "categoria": "mates",
+        "precio": "14"
+
+    }
+]
