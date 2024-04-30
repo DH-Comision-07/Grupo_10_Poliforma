@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Ruben",
         "apellido": "Ferrer",
-        "email": "Rubenferrerl@gmail.com",
+        "email": "rubenferrerl@gmail.com",
         "contraseña": "123456",
         "categoria": "administrador",
         "imagen": "mickey.jpg",

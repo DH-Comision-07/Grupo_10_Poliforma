@@ -5,6 +5,20 @@ let users = {
     login: function(req,res){ 
         res.render("users/login")
     },
+    loginProcess: function(req, res){
+        let userToLogin =  usersService.getOneByField('email', req.body.email);
+        
+        if(userToLogin){
+            if(userToLogin.contraseña === req.body.contraseña){
+                delete userToLogin.contraseña
+                req.session.userLogged = userToLogin;
+               return res.redirect('/users/profile/' + userToLogin.id)
+            }
+            res.send('clave invalida')
+        }
+
+        return res.send('error')
+    },
     register: function(req,res){ 
         res.render("users/register")
     },
