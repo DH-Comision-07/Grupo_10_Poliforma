@@ -12,18 +12,26 @@
     <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
         <main class="contenedor-padre">
             <section class="contenedor">
-                <form action="/" method="POST" class="register">
-                    <img src="/images/logos/Poliforma-horizontal-color.svg" alt="logo" class="logo">
+                <form action="/users/" method="POST" class="register" enctype="multipart/form-data">
                     <h1 class="titulo">Registrate</h1>
 
+                    <input type="text" placeholder="Nombre*" name="nombre" id="nombre">
+
+                    <input type="text" placeholder="Apellido*" name="apellido" id="apellido">
+
                     <input type="text" placeholder="Usuario*" name="usuario" id="usuario">
+
                     <input type="text" placeholder="E-mail*" name="email" id="email">
+
                     <input type="text" placeholder="Contraseña*" name="password" id="password">
                     <input type="text" placeholder="Confirmar contraseña*" name="repassword" id="repassword">
-                    <label for="imagenDePerfil" class="label-form">Imagen de Perfil</label>
-                    <input type="file" placeholder="imagen de perfil*" name="imagenDePerfil" id="imagenDePerfil">
-                    <label for="imagenDePerfil" class="label-form">Fecha de Nacimiento</label>
-                    <input type="date" placeholder="fecha de nacimiento" name="repassword" id="repassword">
+
+                    <label for="imagenUsuario" class="label-form">Imagen de Perfil</label>
+                    <input type="file" placeholder="imagen de perfil*" name="imagenUsuario" id="imagenUsuario">
+
+                    <label for="birthday" class="label-form">Fecha de Nacimiento</label>
+                    <input type="date" placeholder="fecha de nacimiento" name="birthday" id="birthday">
+                    <input type="tel" placeholder="Numero Telefonico*" name="telefono" id="telefono">
                     <div class="terminos">
                         <input type="checkbox" id="terminos">
                         <label for="terminos">Acepto los <a href="#">terminos y condiciones</a></label>

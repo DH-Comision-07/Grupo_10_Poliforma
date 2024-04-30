@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/partialHead.ejs') %>
+        <link rel="stylesheet" href="/css/users/editProfile-styles.css">
+        <title>Edicion de Usuario</title>
+</head>
+
+<body>
+    <%- include('../partials/partialsHeader.ejs') %>
+        <main class="contenedor-padre">
+            <section class="contenedor">
+                <h1 class="titulo">Edicion de Usuario</h1>
+                <form action="/users/<%= userToEdit.id %>?_method=PUT" method="POST" class="create-form"
+                    enctype="multipart/form-data">
+                    <div class="upload-imagen">
+                        <div class="formularioLabel-primero">
+                            <img src="/images/usuarios/<%= userToEdit.imagen %>" alt="" width="150px">
+                            <div class="round">
+                                <input type="file" name="imagenUsuario" id="imagenUsuario" accept=".jpg, .png" multiple
+                                    class="relleno-formulario">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formularioLabel">
+                        <label for="NombreUsuario" class="titulo-form">Nombre</label>
+                        <input type="text" id="NombreUsuario" name="NombreUsuario" class="relleno-formulario"
+                        value="<%= userToEdit.nombre %>">
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="apellidoUsuario" class="titulo-form">Apellido</label>
+                        <input type="text" id="apellidoUsuario" name="apellidoUsuario" class="relleno-formulario"
+                            value="<%= userToEdit.apellido %>">
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="username" class="titulo-form">Username</label>
+                        <input type="text" id="username" name="username" class="relleno-formulario"
+                            value="<%= userToEdit.username %>">
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="categoriaUsuario" class="titulo-form">Categoría</label>
+                        <select id="categoriaUsuario" name="categoriaUsuario" class="relleno-formulario">
+                            <option value="">-Seleccione una categoría-</option>
+                            <option value="administrador" <%= userToEdit.categoria === "administrador" ? "selected" : "" %>>Administrador</option>
+                            <option value="usuario" <%= userToEdit.categoria === "usuario" ? "selected" : "" %>>Usuario</option>
+                        </select>
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="telefono" class="titulo-form">Telefono</label>
+                        <input type="tel" name="telefono" id="telefono" class="relleno-formulario"
+                         value="<%= userToEdit.telefono %>">
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="birthday" class="titulo-form">Fecha de Nacimiento</label>
+                        <input type="date" name="birthday" id="birthday" class="relleno-formulario"
+                         value="<%= userToEdit.fechaNacimiento %>">
+                    </div>
+
+                    <button type="submit" class="crear-boton">Editar Usuario</button>
+                    <a href="/users/profile/<%= userToEdit.id %>" class="volver-boton">Volver</a>
+                </form>
+            </section>
+        </main>
+        <%- include('../partials/partialsFooter.ejs') %>
+</body>
+
+</html>
