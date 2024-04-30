@@ -12,6 +12,9 @@ usersService= {
     getOneBy: function(id){
         return this.users.find(user => user.id == id)
     },
+    getOneByField: function(field, text){
+        return this.users.find(user => user[field] === text)
+    },
     update: function(user, idUser, imageFile){
         let userIndex = this.users.findIndex(user => user.id == idUser)
         this.users[userIndex] = {
