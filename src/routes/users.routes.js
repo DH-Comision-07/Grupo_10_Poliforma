@@ -10,12 +10,12 @@ const authMid = require('../middlewares/authMid');
 router.get("/login", credentialMid.guestMid, usersController.login);
 router.post("/login",usersController.loginProcess);
 
-router.get("/register",usersController.register);
+router.get("/register", credentialMid.guestMid, usersController.register);
 router.post("/", uploadFile.single("imagenUsuario"), usersController.store);
 
 router.get('/profile/:id', authMid ,usersController.userProfile);
 
-router.get('/dashboard', authMid, usersController.dashboard);
+router.get('/dashboard', authMid, credentialMid.adminMid, usersController.dashboard);
 
 router.get('/editProfile/:id', authMid, usersController.editUser);
 router.put('/:id',uploadFile.single("imagenUsuario"), usersController.modify);

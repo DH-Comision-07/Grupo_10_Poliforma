@@ -11,6 +11,7 @@ let users = {
             if(userToLogin.contraseña === req.body.contraseña){
                 delete userToLogin.contraseña
                 req.session.userLogged = userToLogin;
+                console.log(req.session.userLogged.categoria);
                return res.redirect('/users/profile/' + userToLogin.id)
             }
             res.send('clave invalida')

@@ -14,6 +14,10 @@
             <a href="/users/login" class="btn-login">Inicia Sesion</a>
             <a href="/users/register" class="btn-register">Registrate</a>
         </div>
+        <div class="logged">
+            <a href="/users/profile/<%= req.session.userLogged.id %>"><i class="fa-solid fa-user"></i></a>
+            <a href="/"></a>
+        </div>
         <div class="menu-hamburguesa">
             <i class="fa-solid fa-bars"></i>
         </div>
