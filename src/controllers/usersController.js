@@ -1,4 +1,5 @@
-const usersService = require("../data/usersService")
+const usersService = require("../data/usersService");
+const bcryptjs = require('bcryptjs');
 
 let users = {
     login: function(req,res){ 
@@ -6,10 +7,12 @@ let users = {
     },
     loginProcess: function(req, res){
         let userToLogin =  usersService.getOneByField('email', req.body.email);
+        console.log(userToLogin);
         
         if(userToLogin){
-            if(userToLogin.contraseña === req.body.contraseña){
-                delete userToLogin.contraseña
+            isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
+            if(isOkThePassword || req.body.contraseña === userToLogin.contraseña){
+                /*delete userToLogin.contraseña*/
                 req.session.userLogged = userToLogin;
                return res.redirect('/users/profile/' + userToLogin.id)
             }
@@ -52,7 +55,7 @@ let users = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email:req.body.email,
-            contraseña:req.body.password,
+            contraseña: bcryptjs.hashSync(req.body.password, 10),
             categoria:"usuario",
             imagen: req.file? req.file.filename: "usuario-vacio.jpg",
             fechaNacimiento:req.body.birthday,
@@ -60,8 +63,12 @@ let users = {
             username:req.body.usuario,
         }
         usersService.save(newUser);
-        res.redirect("/users/dashboard");
+        res.redirect("/users/login");
     },
+    logout: function(req, res){
+        req.session.destroy();
+        return res.redirect('/')
+    }
 
 
 

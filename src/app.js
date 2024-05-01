@@ -6,12 +6,17 @@ const mainRoutes = require("./routes/main.routes");
 const productsRoutes = require("./routes/products.routes");
 const usersRoutes = require("./routes/users.routes");
 const methodOverride = require("method-override");
+const userLoggedMid = require('./middlewares/userLoggedMid')
+
+
 
 app.use(session({
     secret: 'shhh',
     resave: false,
     saveUninitialized: false
 }))
+
+app.use(userLoggedMid);
 
 app.use(methodOverride("_method"));
 
