@@ -40,7 +40,7 @@ const controller = {
         res.redirect("/products/dashboard");
     },
     dashboard: function(req,res){
-        res.render("products/dashboard",{products: productsService.products})
+        res.render("products/dashboard",{products: productsService.getAll()})
     },
 
     modify: function(req, res){
@@ -50,7 +50,6 @@ const controller = {
     delete: (req, res) => {
         productService.delete(req.params.id);
         res.redirect("/products/dashboard")
-
     }
 }
 

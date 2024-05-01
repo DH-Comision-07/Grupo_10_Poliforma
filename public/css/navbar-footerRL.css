@@ -1,0 +1,20 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.logoHeader {
+    width: 60%;
+
+}
+
+.fa-bars,
+.fa-cart-shopping {
+    font-size: 25px;
+    margin: 10px;
+    color: black;
+}

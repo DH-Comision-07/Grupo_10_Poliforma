@@ -1,12 +1,23 @@
 const express = require("express");
+const session = require("express-session");
 const app = express();
 const path = require("path");
 const mainRoutes = require("./routes/main.routes");
 const productsRoutes = require("./routes/products.routes");
 const usersRoutes = require("./routes/users.routes");
-
 const methodOverride = require("method-override");
-app.use(methodOverride("_method"));
+const userLoggedMid = require('./middlewares/userLoggedMid')
+
+
+
+app.use(session({
+    secret: 'shhh',
+    resave: false,
+    saveUninitialized: false
+}))
+
+app.use(userLoggedMid);
+
 app.use(methodOverride("_method"));
 
 app.use(express.urlencoded({extended:false}));

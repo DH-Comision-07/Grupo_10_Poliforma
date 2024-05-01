@@ -101,3 +101,29 @@ No hacer la tarea que le correspondía a otro compañero.
 Dejar de organizarnos con poca anticipación a la fecha de entrega del sprint. 
 No responder los mensajes en el grupo de whatssap. 
 Mostrar desinterés y falta de iniciativa.
+
+Retro Sprint 5
+
+1. Comenzar a hacer.
+
+Organizarnos mejor entre un Sprint y el siguiente
+Definir roles con bastante más urgencia
+Utilizar más el Trello
+
+
+2. Hacer más.
+
+Procastinar menos y entregar a tiempo los avances.
+
+3. Continuar haciendo.
+
+Mantener la cooperacion entre los integrantes del equipo.
+
+4. Hacer menos.
+
+No expresar las dudas.
+
+5. Dejar de hacer.
+
+No hacer la tarea que le correspondía a otro compañero.
+Dejar de organizarnos con poca anticipación a la fecha de entrega del sprint.

@@ -36,7 +36,6 @@ productService= {
         this.products = newProducts;
         fs.writeFileSync( path.join( __dirname, "products.json"), JSON.stringify(this.products));
         return newProducts;
-
     }
 }
 

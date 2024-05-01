@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/partialHead.ejs') %>
-        <link rel="stylesheet" href="../css/login-styles.css">
+        <link rel="stylesheet" href="../css/users/login-styles.css">
         <link rel="stylesheet" href="../css/createProduct-styles">
         <title>Log in</title>
 </head>
@@ -13,12 +13,15 @@
 
         <main class="contenedor-padre">
             <section class="contenedor">
-                <form action="/" method="POST" class="login">
-                    <img src="/images/logos/poliforma-horizontal-color.svg" alt="logo" class="logo">
+                <form action="/users/login" method="POST" class="login">
                     <h1 class="titulo">Inicia Sesión</h1>
 
-                    <input type="text" placeholder="Usuario">
-                    <input type="text" placeholder="Contraseña">
+                    <input type="email" placeholder="Correo Electronico" name="email" id="email">
+                    <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña">
+                    <div class="recordarme">
+                        <input type="checkbox" id="recordarme">
+                        <label for="terminos">Recordarme</label>
+                    </div>
 
                     <button type="submit" class="login-boton">Inicia Sesión</button>
                     <button type="submit" class="google-boton"><i class="fa-brands fa-google"
@@ -27,7 +30,7 @@
 
 
                 <div class="cuenta-creada">
-                    <span>¿No tienes una cuenta? <a href="/register.html">Registrate aquí</a></span>
+                    <span>¿No tienes una cuenta? <a href="/users/register">Registrate aquí</a></span>
                 </div>
             </section>
         </main>

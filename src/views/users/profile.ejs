@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/partialHead.ejs') %>
+        <title>Perfil-Poliforma</title>
+        <link rel="stylesheet" href="/css/users/profile-styles.css">
+</head>
+
+<body>
+    <%- include('../partials/partialsHeader.ejs') %>
+
+        <section class="contenedor-padre">
+            <div class="perfil">
+                <div class="imagen-perfil">
+                    <img src="/images/usuarios/<%= user.imagen %>" alt="">
+                    <h1 class="user"><%= user.username %></h1>
+                </div>
+                <div class="info-perfil">
+                    <div class="info">
+                        <h3>Nombre</h3>
+                        <span><%= user.nombre %></span>
+                    </div>
+
+                    <div class="info">
+                        <h3>Apellido</h3>
+                        <span><%= user.apellido %></span>
+                    </div>
+
+                    <div class="info">
+                        <h3>Email</h3>
+                        <span><%= user.email %></span>
+                    </div>
+
+                    <div class="info">
+                        <h3>Fecha de Nacimiento</h3>
+                        <span><%= user.fechaNacimiento %></span>
+                    </div>
+                    <div class="info-telefono">
+                        <h3>Numero de Telefono</h3>
+                        <span><%= user.telefono %></span>
+                    </div>
+                    <a href="/users/editProfile/<%= user.id %>" class="editar">Editar Perfil</a>
+                </div>
+            </div>
+
+            <div class="ultimas-compras">
+                <h1>Ultimas Compras</h1>
+                <article class="producto-carta">
+                    <a href="products/productDetail/1>">
+                        <div class="contendor-imagen">
+                            <img src="/images/mate-dragon.png" alt="imagen" height="100px">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Mate Dragon</p>
+                            <p class="precio">50$</p>
+                            <p class="descuento">10% OFF</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="producto-carta">
+                    <a href="products/productDetail/1>">
+                        <div class="contendor-imagen">
+                            <img src="/images/mate-argentina.png" alt="imagen" height="100px">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Mate Dragon</p>
+                            <p class="precio">50$</p>
+                            <p class="descuento">10% OFF</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="producto-carta">
+                    <a href="products/productDetail/1>">
+                        <div class="contendor-imagen">
+                            <img src="/images/mate-celeste.png" alt="imagen" height="100px">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Mate Dragon</p>
+                            <p class="precio">50$</p>
+                            <p class="descuento">10% OFF</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="producto-carta">
+                    <a href="products/productDetail/1>">
+                        <div class="contendor-imagen">
+                            <img src="/images/lampara-gris.jpg" alt="imagen" height="100px">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Mate Dragon</p>
+                            <p class="precio">50$</p>
+                            <p class="descuento">10% OFF</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <a href="" class="btn-mas">Ver Mas</a>
+        </section>
+
+        <%- include('../partials/partialsFooter.ejs') %>
+</body>
+
+</html>
