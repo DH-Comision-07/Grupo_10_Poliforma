@@ -1,6 +1,13 @@
-function userLoggedMiddleware(req, res, next){
-    let isLogged = false
+function userLoggedMid(req, res, next){
+    res.locals.isLogged = false
+    
+
+    if(req.session.userLogged){
+        res.locals.isLogged = true;
+        res.locals.userLogged = req.session.userLogged;
+    }
+
     next()
 }
 
-module.exports = userLoggedMiddleware
+module.exports = userLoggedMid

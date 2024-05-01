@@ -7,6 +7,8 @@ const productsRoutes = require("./routes/products.routes");
 const usersRoutes = require("./routes/users.routes");
 const methodOverride = require("method-override");
 const userLoggedMid = require('./middlewares/userLoggedMid')
+const userAVistas = require('./middlewares/userAVistas')
+
 
 app.use(session({
     secret: 'shhh',
