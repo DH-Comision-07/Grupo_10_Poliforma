@@ -17,6 +17,8 @@ router.get('/profile/:id', authMid ,usersController.userProfile);
 
 router.get('/dashboard', authMid, credentialMid.adminMid, usersController.dashboard);
 
+router.get('/logout', usersController.logout);
+
 router.get('/editProfile/:id', authMid, usersController.editUser);
 router.put('/:id',uploadFile.single("imagenUsuario"), usersController.modify);
 
