@@ -7,7 +7,6 @@ let users = {
     },
     loginProcess: function(req, res){
         let userToLogin =  usersService.getOneByField('email', req.body.email);
-        console.log(userToLogin);
         
         if(userToLogin){
             isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
