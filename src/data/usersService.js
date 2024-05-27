@@ -2,12 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const usersJSON = require("../data/users.json")
 const productsFilePath = path.join(__dirname, "../data/users.json");
+const db = require('../model/db/models')
 
 usersService= {
     users: usersJSON,
 
     getAll: function(){
-        return this.users;
+        return ;
     },
     getOneBy: function(id){
         return this.users.find(user => user.id == id)
