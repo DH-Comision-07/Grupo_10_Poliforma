@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes)=>{
         timeStamps: false
     };
 
-    let Producto = sequelize.define(alias, cols, config);
+    let Usuario = sequelize.define(alias, cols, config);
 
-    return Producto;
+    return Usuario;
 }
