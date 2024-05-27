@@ -7,11 +7,28 @@ const db = require('../model/db/models')
 usersService= {
     users: usersJSON,
 
-    getAll: function(){
-        return ;
+    getAll: async function(){
+        try {
+            return await db.Usuarios.findAll();
+        } catch (error) {
+            console.log(error);
+        }
+        
     },
-    getOneBy: function(id){
-        return this.users.find(user => user.id == id)
+    getOneBy: async function(id) {
+        try {
+            return await db.Usuarios.findByPk(id);
+        } catch (error) {
+            console.log(error);
+            return {
+                id: 0,
+                nombre: "No encontrado",
+                apellido: 0,
+                email: 0,
+                iamgen: "usuario-vacio.jpg",
+                email: ""
+            }
+        } 
     },
 
     save: function(user){

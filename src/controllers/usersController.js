@@ -11,7 +11,7 @@ let users = {
         if(userToLogin){
             isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
             if(isOkThePassword || req.body.contraseña === userToLogin.contraseña){
-                /*delete userToLogin.contraseña*/
+                delete userToLogin.contraseña
                 req.session.userLogged = userToLogin;
                return res.redirect('/users/profile/' + userToLogin.id)
             }
