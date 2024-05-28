@@ -23,9 +23,15 @@ let users = {
     register: function(req,res){ 
         res.render("users/register")
     },
-    userProfile: function(req, res){
-        const user = usersService.getOneBy(req.params.id);
-        res.render('users/profile', {user: usersService.getOneBy(req.params.id)})
+    userProfile: async function(req, res){
+        try {
+            const user = await usersService.getOneBy(req.params.id);
+            res.render('users/profile', {user: await usersService.getOneBy(req.params.id)})
+        } catch (error) {
+            console.log(error);
+        }
+        
+        
     },
     editUser: function(req, res){
         res.render('users/editProfile', {userToEdit: usersService.getOneBy(req.params.id)})
@@ -38,8 +44,13 @@ let users = {
         usersService.delete(req.params.id);
         res.redirect("/users/dashboard")
     },
-    dashboard: function(req, res){
-        res.render('users/dashboardUsarios', {users: usersService.getAll()})
+    dashboard: async function(req, res){
+        try {
+            res.render('users/dashboardUsarios', {users: await usersService.getAll()})
+        } catch (error) {
+            console.log(error);
+        }
+        
     },
     store: function (req, res){
         let users = usersService.getAll();
