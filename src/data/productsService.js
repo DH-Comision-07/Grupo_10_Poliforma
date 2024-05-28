@@ -2,15 +2,27 @@ const fs = require('fs');
 const path = require('path');
 const productsJSON = require("../data/products.json")
 const productsFilePath = path.join(__dirname, "../data/products.json");
+const db = require('../model/db/models');
 
 productService= {
     products: productsJSON,
 
-    getAll: function(){
-        return this.products;
+    getAll: async function(){
+        try {
+            return await db.Productos.findAll();
+        } catch (error) {
+            console.log(error);
+        }
     },
-    getOneBy: function(id){
-        return this.products.find(product => product.id == id)
+    getOneBy: async function(id){
+        try {
+            return await db.Productos.findByPk(id, {
+                include: [{association:'categorias'}]
+            }) 
+        } catch (error) {
+            console.log(error);
+        }
+
     },
     save: function(product){
         this.products.push(product);

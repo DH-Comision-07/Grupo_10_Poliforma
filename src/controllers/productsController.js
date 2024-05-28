@@ -3,12 +3,22 @@ const productsService = require("../data/productsService");
 
 const controller = {
 
-    home: function (req,res){
-        res.render("products/products", {products: productsService.getAll()});
+    home: async function (req,res){
+        try {
+            res.render("products/products", {products: await productsService.getAll()}); 
+        } catch (error) {
+           console.log(error); 
+        }
+        
     },
-    detail: (req, res) => {
-        const product = productsService.getOneBy(req.params.id);
-        res.render('products/productDetail', {product: productsService.getOneBy(req.params.id)})
+    detail: async (req, res) => {
+        try {
+            const product = await productsService.getOneBy(req.params.id);
+            res.render('products/productDetail', {product: await productsService.getOneBy(req.params.id)})
+        } catch (error) {
+            console.log(error);
+        }
+
     },
     cart: function (req,res) {
         res.render("products/productCart");
@@ -39,8 +49,13 @@ const controller = {
         productsService.save(newProduct);
         res.redirect("/products/dashboard");
     },
-    dashboard: function(req,res){
-        res.render("products/dashboard",{products: productsService.getAll()})
+    dashboard: async function(req,res){
+        try {
+            res.render("products/dashboard",{products: await productsService.getAll()})
+        } catch (error) {
+            console.log(error);
+        }
+
     },
 
     modify: function(req, res){
