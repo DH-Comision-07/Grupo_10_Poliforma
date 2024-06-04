@@ -5,6 +5,10 @@ header{
     border-bottom: 1px solid black;
 }
 
+.links{
+    margin-left: 20px;
+}
+
 li{
     list-style: none;
 }
@@ -117,6 +121,42 @@ li{
     display: none;
 }
 
+.container{
+    width: 40%;
+    text-align: center;
+}
+
+.search-bar{
+    width: 80%;
+    max-width: 700px;
+    background: rgba(187, 187, 187, 0.2);
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    border-radius: 60px;
+    padding: 5px 10px;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 5px 2px;
+    font-size: 10px;
+}
+
+.search-bar button i{
+    width: 25px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
 /*dropdown menu*/
 
 .dropdown_menu{

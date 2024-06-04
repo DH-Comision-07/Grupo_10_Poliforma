@@ -79,9 +79,6 @@ let users = {
         req.session.destroy();
         return res.redirect('/')
     }
-
-
-
 }
 
 module.exports = users;

@@ -10,6 +10,12 @@
             <li><a href="/products/dashboard" 
                 class=<%= ( locals.userLogged && locals.userLogged.categoria == 'administrador') ? 'link-navbar-dashboard-on' : 'link-navbar-dashboard-off'%>>Dashboard</a></li>
         </ul>
+        <div class="container">
+            <form action="/products/search" class="search-bar" method="GET">
+                <input type="text" placeholder="Buscar..." name="busqueda">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
         <% if(locals.userLogged){ %>
             <div class="logged">
                 <a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
