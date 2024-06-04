@@ -46,5 +46,12 @@ module.exports = (sequelize, DataTypes)=>{
         })
     }
 
+    Producto.associate = function(models){
+        Producto.hasMany(models.Tag, {
+            as:'tags',
+            foreignKey: 'productos_id'
+        })
+    }
+
     return Producto;
 }

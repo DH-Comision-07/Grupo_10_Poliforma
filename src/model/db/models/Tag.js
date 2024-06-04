@@ -20,5 +20,12 @@ module.exports = (sequelize, DataTypes)=>{
 
     let Tag = sequelize.define(alias, cols, config);
 
+    Tag.associate = function(models){
+        Tag.belongsTo(models.Productos, {
+            as:'productos',
+            foreignKey: 'productos_id'
+        })
+    }
+
     return Tag;
 }
