@@ -7,7 +7,6 @@ const productsRoutes = require("./routes/products.routes");
 const usersRoutes = require("./routes/users.routes");
 const methodOverride = require("method-override");
 const userLoggedMid = require('./middlewares/userLoggedMid')
-const articlesRouter = require('./routes/articles');
 
 
 
@@ -33,6 +32,3 @@ app.use("/products", productsRoutes);
 app.use("/users",usersRoutes);
 
 app.listen(3030,() => console.log("servidor corriendo en el puerto 3030 en http://localhost:3030/"));
-
-app.use('/articles', articlesRouter);
-app.use('/users', usersRouter);
