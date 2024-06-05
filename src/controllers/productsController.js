@@ -65,6 +65,15 @@ const controller = {
     delete: (req, res) => {
         productService.delete(req.params.id);
         res.redirect("/products/dashboard")
+    },
+    search: async function(req, res){
+        try {
+            res.render("products/products", {products: await productsService.search(req.query.busqueda)});
+        } catch (error) {
+            console.log(error);
+        }
+
+
     }
 }
 
