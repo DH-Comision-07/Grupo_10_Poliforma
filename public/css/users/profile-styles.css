@@ -64,6 +64,10 @@ a{
     width: 50%;
 }
 
+.caps{
+    text-transform: capitalize;
+}
+
 .info-telefono{
     width: 100%;
 }

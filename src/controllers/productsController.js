@@ -13,7 +13,6 @@ const controller = {
     },
     detail: async (req, res) => {
         try {
-            const product = await productsService.getOneBy(req.params.id);
             res.render('products/productDetail', {product: await productsService.getOneBy(req.params.id)})
         } catch (error) {
             console.log(error);
@@ -29,25 +28,24 @@ const controller = {
     edit: function (req, res){
         res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
     },
-    store: function (req, res){
-        let products = productsService.getAll();
-        let mayorId = 0;
-        for (i=0; i < products.length; i++) {
-            if (products[i].id > mayorId) {
-                mayorId = products[i].id;
+    store: async function (req, res){
+        try {
+            let newProduct = {
+                nombre: req.body.NombreProducto,
+                descripcion:req.body.descripcion,
+                tags: req.body.tags,
+                imagen: req.file.filename,
+                categorias_id: req.body.categoria,
+                precio: req.body.precio,
+                stock: req.body.stock,
+                descuento: req.body.descuento
             }
-        };
-        let newProduct = {
-            id: mayorId+1,
-            nombre: req.body.NombreProducto,
-            descripcion:req.body.descripcion,
-            tags: req.body.tags,
-            imagen: req.file.filename,
-            categoria: req.body.categoria,
-            precio: req.body.precio,
+            await productsService.save(newProduct);
+            res.redirect("/products/dashboard");
+        } catch (error) {
+            console.log(error);
         }
-        productsService.save(newProduct);
-        res.redirect("/products/dashboard");
+
     },
     dashboard: async function(req,res){
         try {
