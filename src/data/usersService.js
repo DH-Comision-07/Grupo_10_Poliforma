@@ -25,15 +25,19 @@ usersService= {
                 nombre: "No encontrado",
                 apellido: 0,
                 email: 0,
-                iamgen: "usuario-vacio.jpg",
+                imagen: "usuario-vacio.jpg",
                 email: ""
             }
         } 
     },
 
-    save: function(user){
-        this.users.push(user);
-        fs.writeFileSync( path.join( __dirname, "/users.json"), JSON.stringify(this.users));
+    save: async function(user){
+        try {
+            db.Usuarios.create(user);
+        } catch (error) {
+            console.log(error);
+        }
+        
     },
 
 
