@@ -14,7 +14,7 @@ router.get("/dashboard", authMid, credentialMid.adminMid, productsController.das
 
 
 router.get("/createProduct", authMid, credentialMid.adminMid, productsController.create);
-router.post("/", createProductValidation, uploadFile.single("imagenProducto"), productsController.store);
+router.post("/", uploadFile.single("imagenProducto"), createProductValidation, productsController.store);
 
 router.get("/editProduct/:id", authMid, credentialMid.adminMid, productsController.edit);
 router.patch("/editProduct/:id", editProductValidation, uploadFile.single("imagenProducto"), productsController.modify);

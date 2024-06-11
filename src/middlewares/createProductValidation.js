@@ -1,4 +1,5 @@
 const {check} = require('express-validator');
+const path = require("path");
 
 let createProductValidation = [
 check('NombreProducto').notEmpty().withMessage('No puede estar vacio')
@@ -8,9 +9,6 @@ check('descripcion').notEmpty().withMessage('No puede estar vacio')
 .isLength({ min: 20 }).withMessage('Minimo debe tener 20 caracteres en el apellido'),
 
 check('categoria').notEmpty().withMessage('No puede estar vacio'),
-
-check('email').notEmpty().withMessage('No puede estar vacio')
-.isEmail().withMessage('formato no valido'),
 
 check('stock').notEmpty().withMessage('No puede estar vacio'),
 

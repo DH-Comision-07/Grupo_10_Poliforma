@@ -33,8 +33,8 @@ const controller = {
         try {
             let resultValidations = validationResult(req);
             if(resultValidations.errors.length > 0){
-                res.redirect("/products/createProduct")
-            }
+                res.redirect('/products/createProduct')
+            }else{
             let newProduct = {
                 nombre: req.body.NombreProducto,
                 descripcion:req.body.descripcion,
@@ -47,6 +47,7 @@ const controller = {
             }
             await productsService.save(newProduct);
             res.redirect("/products/dashboard");
+            }
         } catch (error) {
             console.log(error);
         }

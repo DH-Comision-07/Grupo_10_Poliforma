@@ -1,4 +1,5 @@
 const {check} = require('express-validator');
+const path = require("path");
 
 let registerValidations = [
 check('nombre').notEmpty().withMessage('No puede estar vacio')
