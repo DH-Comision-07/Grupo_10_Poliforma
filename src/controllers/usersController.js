@@ -58,22 +58,13 @@ let users = {
         }
         
     },
-    store: function (req, res){
-        let resultValidations = validationResult(req);
-        console.log(resultValidations.errors.length);
-        console.log(resultValidations);
-        if(resultValidations.errors.length > 0){
-            res.redirect("/users/register")
-        }else{
-            let users = usersService.getAll();
-            let mayorId = 0;
-            for (i=0; i < users.length; i++) {
-                if (users[i].id > mayorId) {
-                    mayorId = users[i].id;
-                }
-            };
+    store: async function (req, res){
+        try {
+            let resultValidations = validationResult(req);
+            if(resultValidations.errors.length > 0){
+                res.redirect("/users/register")
+            }
             let newUser = {
-                id: mayorId+1,
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 email:req.body.email,
@@ -86,7 +77,9 @@ let users = {
             }
             usersService.save(newUser);
             res.redirect("/users/login");
-    }
+        } catch (error) {
+            console.log(error);
+        }
     },
     logout: function(req, res){
         req.session.destroy();
