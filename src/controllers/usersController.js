@@ -52,28 +52,26 @@ let users = {
         }
         
     },
-    store: function (req, res){
-        let users = usersService.getAll();
-        let mayorId = 0;
-        for (i=0; i < users.length; i++) {
-            if (users[i].id > mayorId) {
-                mayorId = users[i].id;
+    store: async function (req, res){
+        try {
+            console.log(req.body.nombre);
+            console.log(req.body.birthday);
+            let newUser = {
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                email:req.body.email,
+                contraseña: bcryptjs.hashSync(req.body.password, 10),
+                categoria:"usuario",
+                imagen: req.file? req.file.filename: "usuario-vacio.jpg",
+                fechaNacimiento:req.body.birthday,
+                telefono:req.body.telefono,
+                username:req.body.usuario,
             }
-        };
-        let newUser = {
-            id: mayorId+1,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email:req.body.email,
-            contraseña: bcryptjs.hashSync(req.body.password, 10),
-            categoria:"usuario",
-            imagen: req.file? req.file.filename: "usuario-vacio.jpg",
-            fechaNacimiento:req.body.birthday,
-            telefono:req.body.telefono,
-            username:req.body.usuario,
+            usersService.save(newUser);
+            res.redirect("/users/login");
+        } catch (error) {
+            console.log(error);
         }
-        usersService.save(newUser);
-        res.redirect("/users/login");
     },
     logout: function(req, res){
         req.session.destroy();
