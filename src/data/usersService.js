@@ -41,9 +41,15 @@ usersService= {
     },
 
 
-    getOneByField: function(field, text){
-        return this.users.find(user => user[field] === text)
-    },
+    getOneByField: async function (field, value) {
+        try {
+          const user = await db.Usuarios.findOne({ where: { [field]: value } });
+          return user;
+        } catch (error) {
+          console.log(error);
+          return null;
+        }
+      },
 
     update: function(user, idUser, imageFile){
         let userIndex = this.users.findIndex(user => user.id == idUser)

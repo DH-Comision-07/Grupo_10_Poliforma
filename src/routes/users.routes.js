@@ -5,7 +5,8 @@ const credentialMid = require('../middlewares/credentialsMid');
 const uploadFile = require('../middlewares/userMulterMid');
 const authMid = require('../middlewares/authMid');
 const registerValidations = require('../middlewares/registerValidations');
-const loginValidations = require('../middlewares/loginValidations')
+const loginValidations = require('../middlewares/loginValidations');
+const emailRepetido = require('../middlewares/emailRepetido');
 
 
 
@@ -13,7 +14,7 @@ router.get("/login", credentialMid.guestMid, usersController.login);
 router.post("/login", loginValidations, usersController.loginProcess);
 
 router.get("/register", credentialMid.guestMid, usersController.register);
-router.post("/", registerValidations, uploadFile.single("imagenUsuario"), usersController.store);
+router.post("/", uploadFile.single("imagenUsuario"), registerValidations ,usersController.store);
 
 router.get('/profile/:id', authMid ,usersController.userProfile);
 

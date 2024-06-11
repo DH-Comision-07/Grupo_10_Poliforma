@@ -11,6 +11,7 @@ router.get("/",productsController.home);
 router.get("/productDetail/:id",productsController.detail);
 router.get("/productCart", authMid ,productsController.cart);
 router.get("/dashboard", authMid, credentialMid.adminMid, productsController.dashboard);
+router.get('/search', productsController.search)
 
 
 router.get("/createProduct", authMid, credentialMid.adminMid, productsController.create);

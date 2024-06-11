@@ -6,25 +6,30 @@ let users = {
     login: function(req,res){ 
         res.render("users/login")
     },
-    loginProcess: function(req, res){
-        let resultValidations = validationResult(req);
-        if(resultValidations.errors.length > 0){
-            res.redirect('/users/login')
-        }else{
-        let userToLogin =  usersService.getOneByField('email', req.body.email);
-        
-        if(userToLogin){
-            isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
-            if(isOkThePassword || req.body.contraseña === userToLogin.contraseña){
-                delete userToLogin.contraseña
-                req.session.userLogged = userToLogin;
-               return res.redirect('/users/profile/' + userToLogin.id)
+    loginProcess: async function(req, res){
+        try {
+            let resultValidations = validationResult(req);
+            if(resultValidations.errors.length > 0){
+                res.redirect('/users/login')
+            }else{
+            let userToLogin = await usersService.getOneByField('email', req.body.email);
+            
+            if(userToLogin){
+                isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
+                if(isOkThePassword || req.body.contraseña === userToLogin.contraseña){
+                    delete userToLogin.contraseña
+                    req.session.userLogged = userToLogin;
+                   return res.redirect('/users/profile/' + userToLogin.id)
+                }
+                res.send('clave invalida')
             }
-            res.send('clave invalida')
+    
+            return res.send('error')
+        }
+        } catch (error) {
+            console.log(error);
         }
 
-        return res.send('error')
-    }
     },
     register: function(req,res){ 
         res.render("users/register")
@@ -39,8 +44,12 @@ let users = {
         
         
     },
-    editUser: function(req, res){
-        res.render('users/editProfile', {userToEdit: usersService.getOneBy(req.params.id)})
+    editUser: async function(req, res){
+        try {
+            res.render('users/editProfile', {userToEdit: await usersService.getOneBy(req.params.id)}) 
+        } catch (error) {
+            console.log(error);
+        }
     },
     modify: function(req, res){
         usersService.update( req.body, req.params.id, req.file);
@@ -61,6 +70,8 @@ let users = {
     store: async function (req, res){
         try {
             let resultValidations = validationResult(req);
+            console.log(resultValidations);
+            console.log(resultValidations.errors.length);
             if(resultValidations.errors.length > 0){
                 res.redirect("/users/register")
             }
@@ -75,7 +86,7 @@ let users = {
                 telefono:req.body.telefono,
                 username:req.body.usuario,
             }
-            usersService.save(newUser);
+            await usersService.save(newUser);
             res.redirect("/users/login");
         } catch (error) {
             console.log(error);
