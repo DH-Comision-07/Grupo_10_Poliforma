@@ -14,6 +14,7 @@
             <section class="contenedor">
                 <h1 class="titulo">Edicion de Producto: <%= productToEdit.nombre %></h1>
                 <form action="/products/editProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+                    //en la linea de arriba, en vez de "pdroductToEdit.id" no vá "productos" [omitir las comillas]
 
                     <div class="formularioLabel">
                         <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
@@ -24,7 +25,8 @@
                     <div class="formularioLabel">
                         <label for="descripcion" class="titulo-form">Descripción</label>
                         <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"
-                            value=""><%= productToEdit.descripcion %></textarea>
+                            value="<%= productToEdit.descripcion %>" </textarea>
+                            //aca decia "value=""><%= productToEdit.descripcion %></textarea>"
                     </div>
 
                     <div class="formularioLabel">
@@ -53,9 +55,34 @@
                         <label for="precio" class="titulo-form">Precio</label>
                         <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01"
                             value="<%= productToEdit.precio %>">
+                        <label for="stock" class="titulo-form">Stock</label>
+                        <input type="number" name="stock" id="stock" class="relleno-formulario" step="0.01"
+                            value="<%= productToEdit.stock %>">
+                        <label for="descuento" class="titulo-form">Descuento</label>
+                        <input type="number" name="descuento" id="descuento" class="relleno-formulario" step="0.01"
+                            value="<%= productToEdit.descuento %>">
                     </div>
+                    <div class="formularioLabel-ultimo">
+                        //la linea 65 puede que no valla
+                        <label for="categorias" class="titulo-form">Categorias</label>
+                        <input type="text" name="categorias" id="categorias" class="relleno-formulario" step="0.01">
+                        //la ">" que puse arriba al lado de step="00.1" puede que haya que revisarla
+                        <% for (let i = 0; i < categorias.length; i++) { %>
+                            <% if (categorias[i].id == poliforma_10-categorias_id) { %>
+                                <option value="<%=categorias[i].id%>" selected>
+                                    <%=generos[i].nombre"%>
+                                </option>
+                                <% } else { %>
+                                    <option value="<%=categorias[i].id%>">
+                                        <%=categorias[i].nombre%>
+                                    </option>
+                                <% } %>
+                            <% } %>
+                    </div>
+                    //router.get("/productDetail/:id",productsController.detail);
                     <button type="submit" class="crear-boton">Editar Producto</button>
                     <button type="submit" class="volver-boton">Volver</button>
+                    </a>
                 </form>
             </section>
         </main>

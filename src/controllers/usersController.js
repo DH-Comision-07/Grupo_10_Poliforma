@@ -13,6 +13,21 @@ let users = {
         res.render('users/profile', {user: usersService.getOneBy(req.params.id)})
     },
     editUser: function(req, res){
+        let pedidousuarios = db.poliforma_10.findByPK(req.params.id);
+
+        Promise.all([pedidoUsuarios])
+        .then(funtion(usuarios) {
+            res.render("editarUsuarios", {usuarios:usuarios})
+        })
+     },
+    actualizar: funtion(req, res) {
+        db.poliforma_10.update({
+             // (Copiar y pegar lo que se escribío del create de los usuarios y modificar donde dice create por update)
+    }, {
+        where: {
+            id: req.params.id
+        }
+    });
         res.render('users/editProfile', {userToEdit: usersService.getOneBy(req.params.id)})
     },
     modify: function(req, res){

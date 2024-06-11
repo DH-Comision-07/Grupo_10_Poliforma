@@ -16,8 +16,30 @@ const controller = {
     create: function (req, res){
         res.render("products/createProduct")
     },
-    edit: function (req, res){
-        res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
+   // edit: function (req, res){
+     //   res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
+     // Antes que yo Denis creara el editar, osea el Update estaban estas dos lineas de codigo que estan aca arriba, las cuales las dejé como comentarios para no this.eliminarlas.
+     edit: function (req, res) {
+        let pedidoProductos = db.poliforma_10.findByPK(req.params.id);
+
+        let pedidoCategorias = de.poliforma_10-findAll();
+
+        Promise.all([pedidoProducto, pedidoCategorias])
+        .then(funtion(productos, categorias) {
+            res.render("editarProductos", {productos:productos, categorias:categorias})
+        })
+     },
+    actualizar: funtion(req, res) {
+        db.poliforma_10.update({
+             // (Copiar y pegar lo que se escribío del create y modificar donde dice create por update)
+    }, {
+        where: {
+            id: req.params.id
+        }
+    });
+        res.render('users/products', {productsToEdit: produtsService.getOneBy(req.params.id)})
+       // res.redirect(("/productDetail/:id",productsController.detail);)
+     }
     },
     store: function (req, res){
         let products = productsService.getAll();
@@ -51,6 +73,7 @@ const controller = {
         productService.delete(req.params.id);
         res.redirect("/products/dashboard")
     }
+    
 }
 
 module.exports = controller;
