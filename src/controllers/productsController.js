@@ -1,5 +1,6 @@
 
 const productsService = require("../data/productsService");
+const {validationResult} = require('express-validator');
 
 const controller = {
 
@@ -30,6 +31,10 @@ const controller = {
         res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
     },
     store: function (req, res){
+        let resultValidations = validationResult(req);
+        if(resultValidations.errors.length > 0){
+            res.redirect("/products/createProduct")
+        }
         let products = productsService.getAll();
         let mayorId = 0;
         for (i=0; i < products.length; i++) {
@@ -59,6 +64,10 @@ const controller = {
     },
 
     modify: function(req, res){
+        let resultValidations = validationResult(req);
+        if(resultValidations.errors.length > 0){
+            res.redirect("/products/editProduct")
+        }
         productsService.update( req.body, req.params.id, req.file);
         res.redirect("/products/dashboard");
     },
