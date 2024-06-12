@@ -1,7 +1,6 @@
 const {check} = require('express-validator');
 const path = require("path");
 const usersService = require("../data/usersService");
-const User = require('../model/db/models/Usuario')
 
 let registerValidations = [
 check('nombre').notEmpty().withMessage('No puede estar vacio')
@@ -15,8 +14,9 @@ check('usuario').notEmpty().withMessage('No puede estar vacio')
 
 check('email').notEmpty().withMessage('No puede estar vacio')
 .isEmail().withMessage('formato no valido')
-.custom( async (req) =>{
-    const userInDB = await usersService.getOneByField('email',req.body.email);
+.custom( async (value, { req }) =>{
+    let userInDB = await usersService.getOneByField('email',req.body.email);
+    console.log(userInDB);
 
 if (userInDB) {
     throw new Error('Este correo electrónico ya ha sido registrado');
@@ -24,7 +24,7 @@ if (userInDB) {
 } else {
  return true
 }
-}).withMessage('Este correo electrónico ya ha sido registrado'),
+}),
 
 check('password').notEmpty().withMessage('No puede estar vacio')
 .isLength({ min: 8 }).withMessage('Minimo debe tener 8 caracteres'),
