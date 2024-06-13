@@ -68,6 +68,7 @@ let users = {
         
     },
     store: async function (req, res){
+        console.log(req.body);
         try {
             let resultValidations = validationResult(req);
             console.log(resultValidations);
@@ -82,7 +83,7 @@ let users = {
                 contraseña: bcryptjs.hashSync(req.body.password, 10),
                 categoria:"usuario",
                 imagen: req.file? req.file.filename: "usuario-vacio.jpg",
-                fechaNacimiento:req.body.birthday,
+                fechaNacimiento: req.body.birthday,
                 telefono:req.body.telefono,
                 username:req.body.usuario,
             }
