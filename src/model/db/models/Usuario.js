@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes)=>{
             allowNull: false
         },
         imagen: DataTypes.STRING(45),
-        FechaNacimiento:{
+        fechaNacimiento:{
             type: DataTypes.DATEONLY,
             allowNull: false
         },

@@ -154,5 +154,89 @@
         "fechaNacimiento": "2024-05-02",
         "telefono": "+541987654323",
         "username": "clave"
+    },
+    {
+        "id": 1,
+        "nombre": "ruben",
+        "apellido": "",
+        "email": "Rubenferrerl@gmail.com",
+        "contraseña": "$2a$10$LwIe5kHRbTGDwpzg2E.sRelgmIPduXAKNbu7exUBKhcryrB6qRCaC",
+        "categoria": "usuario",
+        "imagen": "usuario-vacio.jpg",
+        "fechaNacimiento": "2024-07-06",
+        "telefono": "+541987654323",
+        "username": "ruben"
+    },
+    {
+        "id": 1,
+        "nombre": "ruben",
+        "apellido": "",
+        "email": "",
+        "contraseña": "$2a$10$D25MVm0/LphJEeIdnbBSIerB4cjr.vh6bGuGdhZJRRmHy78S.hiYK",
+        "categoria": "usuario",
+        "imagen": "usuario-vacio.jpg",
+        "fechaNacimiento": "",
+        "telefono": "",
+        "username": "ruben"
+    },
+    {
+        "id": 1,
+        "nombre": "",
+        "apellido": "",
+        "email": "",
+        "contraseña": "$2a$10$Ldr11J2Bt7L2ZE/p4DoLAepzLl6Llqf.Xh/CybI4liD8njEgbGAYq",
+        "categoria": "usuario",
+        "imagen": "usuario-vacio.jpg",
+        "fechaNacimiento": "",
+        "telefono": "",
+        "username": ""
+    },
+    {
+        "id": 1,
+        "nombre": "",
+        "apellido": "",
+        "email": "",
+        "contraseña": "$2a$10$EZ5.4UvN5TIckRB0vWk9t.3uPxjJP6np90LjX6CzZUosJ0YUYDNWy",
+        "categoria": "usuario",
+        "imagen": "usuario-vacio.jpg",
+        "fechaNacimiento": "",
+        "telefono": "",
+        "username": ""
+    },
+    {
+        "id": 1,
+        "nombre": "",
+        "apellido": "",
+        "email": "",
+        "contraseña": "$2a$10$EFaeEh3IDLymZd3hDsHJ5ePiRhVzZ9Rxk268MbuNu5WCUAxNIoDv6",
+        "categoria": "usuario",
+        "imagen": "usuario-vacio.jpg",
+        "fechaNacimiento": "",
+        "telefono": "",
+        "username": ""
+    },
+    {
+        "id": 1,
+        "nombre": "ruben",
+        "apellido": "ferrer",
+        "email": "rubenferrerl@gmail.com",
+        "contraseña": "$2a$10$Q1etNZHcOd5GYmzpVB1c6.6hZL9mtz9VQDCtollrCGmHZ/duLV2jC",
+        "categoria": "usuario",
+        "imagen": "usuario-vacio.jpg",
+        "fechaNacimiento": "2024-06-26",
+        "telefono": "+584246925654",
+        "username": "rubi"
+    },
+    {
+        "id": 1,
+        "nombre": "ruben",
+        "apellido": "ferrer",
+        "email": "rubenferrerl@gmail.com",
+        "contraseña": "$2a$10$HIp30f0/LMuz9i9YGkFhQ.0HCw.4brcDSxq5r./kHit5zOH0t.FJ2",
+        "categoria": "usuario",
+        "imagen": "image1718075866831.png",
+        "fechaNacimiento": "2024-05-26",
+        "telefono": "+584246925654",
+        "username": "rubi"
     }
 ]
