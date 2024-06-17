@@ -53,12 +53,26 @@ productService= {
         fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
 
     },
-    delete: function (id) {
+/*     delete: function (id) {
         let newProducts = this.products.filter((product) => product.id != id);
         this.products = newProducts;
         fs.writeFileSync( path.join( __dirname, "products.json"), JSON.stringify(this.products));
         return newProducts;
+    }, */
+    delete: async function (idProd){
+        try {
+            const resultadoDestroy =await db.Productos.destroy({ where: { id: idProd}})
+        
+            if (resultadoDestroy === 0) {
+                console.log('No se encontró ningún producto con el id proporcionado.');
+            } else {
+                console.log('Producto eliminado exitosamente.');
+            }
+        } catch (error) {
+          console.error('Error al eliminar el producto:', error);
+        }
     },
+
     search: async function(busqueda){
         try {
             return await db.Productos.findAll({
