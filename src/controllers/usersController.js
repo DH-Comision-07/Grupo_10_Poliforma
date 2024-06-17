@@ -51,9 +51,14 @@ let users = {
             console.log(error);
         }
     },
-    modify: function(req, res){
-        usersService.update( req.body, req.params.id, req.file);
-        res.redirect("/users/dashboard");
+    modify: async function(req, res){
+        try {
+            user = await usersService.getOneBy(req.params.id)
+            await usersService.update(user, req.body, req.params.id, req.file);
+            res.redirect("/users/dashboard");         
+        } catch (error) {
+          console.log(error);  
+        }
     },
     deleteUser: (req, res) => {
         usersService.delete(req.params.id);

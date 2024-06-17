@@ -26,8 +26,8 @@ const controller = {
     create: function (req, res){
         res.render("products/createProduct")
     },
-    edit: function (req, res){
-        res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
+    edit: async function (req, res){
+        res.render("products/editProduct", {productToEdit: await productsService.getOneBy(req.params.id)})
     },
     store: async function (req, res){
         try {

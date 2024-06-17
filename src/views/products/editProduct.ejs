@@ -42,10 +42,12 @@
                         <label for="categoriaProducto" class="titulo-form">Categoría</label>
                         <select id="categoria" name="categoria" required class="relleno-formulario">
                             <option value="">-Seleccione una categoría-</option>
-                            <option value="mates" <%= productToEdit.categoria === "mates" ? "selected" : "" %>>Mates</option>
-                            <option value="jarron" <%= productToEdit.categoria === "jarron" ? "selected" : "" %>>Jarron</option>
-                            <option value="maceta" <%= productToEdit.categoria === "maceta" ? "selected" : "" %>>Maceta</option>
-                            <option value="figurita" <%= productToEdit.categoria === "figurita" ? "selected" : "" %>>Figurita</option>
+                            <option value="mates" <%= productToEdit.categoria === "1" ? "selected" : "" %>>Mates</option>
+                            <option value="jarron" <%= productToEdit.categoria === "2" ? "selected" : "" %>>Jarron</option>
+                            <option value="maceta" <%= productToEdit.categoria === "3" ? "selected" : "" %>>Maceta</option>
+                            <option value="figurita" <%= productToEdit.categoria === "4" ? "selected" : "" %>>Figurita</option>
+                            <option value="oficina" <%= productToEdit.categoria === "5" ? "selected" : "" %>>Oficina</option>
+                            <option value="lamparas" <%= productToEdit.categoria === "6" ? "selected" : "" %>>Lamparas</option>
                         </select>
                     </div>
 
@@ -55,7 +57,7 @@
                             value="<%= productToEdit.precio %>">
                     </div>
                     <button type="submit" class="crear-boton">Editar Producto</button>
-                    <button type="submit" class="volver-boton">Volver</button>
+                    <button type="reset" class="volver-boton">Volver</button>
                 </form>
             </section>
         </main>
