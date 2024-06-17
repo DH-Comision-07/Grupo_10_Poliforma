@@ -34,9 +34,13 @@ productService= {
           return null;
         }
       },
-    save: function(product){
-        this.products.push(product);
-        fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
+      save: async function (product) {
+        try {
+            await db.Productos.create(product)
+        } catch (error) {
+            console.log(error);
+        }
+
     },
 
     update: function(product, idProd, imageFile){
