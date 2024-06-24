@@ -61,7 +61,8 @@ productService= {
     }, */
     delete: async function (idProd){
         try {
-            const resultadoDestroy =await db.Productos.destroy({ where: { id: idProd}})
+            const destroyCarrito = await db.Carrito_productos.destroy ({ where: { productos_id: idProd }});
+            const resultadoDestroy = await db.Productos.destroy ({ where: { id: idProd }});
         
             if (resultadoDestroy === 0) {
                 console.log('No se encontró ningún producto con el id proporcionado.');
