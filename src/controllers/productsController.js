@@ -26,8 +26,12 @@ const controller = {
     create: function (req, res){
         res.render("products/createProduct")
     },
-    edit: function (req, res){
-        res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
+    edit: async function (req, res){
+        try {
+            res.render("products/editProduct", {productToEdit: await productsService.getOneBy(req.params.id)})
+        } catch (error) {
+            console.log(error);
+        }
     },
     store: async function (req, res){
         try {
@@ -62,13 +66,14 @@ const controller = {
 
     },
 
-    modify: function(req, res){
-        let resultValidations = validationResult(req);
-        if(resultValidations.errors.length > 0){
-            res.redirect("/products/editProduct")
+    modify: async function(req, res){
+        try {
+            let product = await productsService.getOneBy(req.params.id);
+            await productsService.update(product, req.body, req.params.id, req.file);
+            res.redirect("/products/dashboard");         
+        } catch (error) {
+            console.log(error);
         }
-        productsService.update( req.body, req.params.id, req.file);
-        res.redirect("/products/dashboard");
     },
     delete: (req, res) => {
         productService.delete(req.params.id);

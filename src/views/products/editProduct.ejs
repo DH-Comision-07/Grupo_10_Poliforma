@@ -13,7 +13,7 @@
         <main class="contenedor-padre">
             <section class="contenedor">
                 <h1 class="titulo">Edicion de Producto: <%= productToEdit.nombre %></h1>
-                <form action="/products/editProduct/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+                <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
 
                     <div class="formularioLabel">
                         <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
@@ -40,13 +40,26 @@
 
                     <div class="formularioLabel">
                         <label for="categoriaProducto" class="titulo-form">Categoría</label>
-                        <select id="categoria" name="categoria" required class="relleno-formulario">
+                        <select id="categoria" name="categoria" class="relleno-formulario">
                             <option value="">-Seleccione una categoría-</option>
-                            <option value="mates" <%= productToEdit.categoria === "mates" ? "selected" : "" %>>Mates</option>
-                            <option value="jarron" <%= productToEdit.categoria === "jarron" ? "selected" : "" %>>Jarron</option>
-                            <option value="maceta" <%= productToEdit.categoria === "maceta" ? "selected" : "" %>>Maceta</option>
-                            <option value="figurita" <%= productToEdit.categoria === "figurita" ? "selected" : "" %>>Figurita</option>
+                            <option value="mates" <%= productToEdit.categorias_id === "1" ? "selected" : "" %>>Mates</option>
+                            <option value="jarron" <%= productToEdit.categorias_id === "2" ? "selected" : "" %>>Jarron</option>
+                            <option value="maceta" <%= productToEdit.categorias_id=== "3" ? "selected" : "" %>>Maceta</option>
+                            <option value="figurita" <%= productToEdit.categorias_id === "4" ? "selected" : "" %>>Figurita</option>
+                            <option value="oficina" <%= productToEdit.categorias_id === "5" ? "selected" : "" %>>Oficina</option>
+                            <option value="lamparas" <%= productToEdit.categorias_id === "6" ? "selected" : "" %>>Lamparas</option>
                         </select>
+                    </div>
+
+                    <div class="formularioLabel">
+                        <label for="stock" class="titulo-form">Stock</label>
+                        <input type="number" name="stock" id="stock" class="relleno-formulario"
+                        value="<%= productToEdit.stock %>">
+                    </div>
+                    <div class="formularioLabel">
+                        <label for="descuento" class="titulo-form">Descuento</label>
+                        <input type="number" name="descuento" id="descuento" class="relleno-formulario"
+                        value="<%= productToEdit.descuento %>">
                     </div>
 
                     <div class="formularioLabel-ultimo">
@@ -55,7 +68,7 @@
                             value="<%= productToEdit.precio %>">
                     </div>
                     <button type="submit" class="crear-boton">Editar Producto</button>
-                    <button type="submit" class="volver-boton">Volver</button>
+                    <button type="reset" class="volver-boton">Volver</button>
                 </form>
             </section>
         </main>

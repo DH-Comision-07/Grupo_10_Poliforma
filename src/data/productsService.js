@@ -17,9 +17,7 @@ productService= {
     },
     getOneBy: async function(id){
         try {
-            return await db.Productos.findByPk(id, {
-                include: [{association:'categoria'}, {association: 'tags'}]
-            }) 
+            return await db.Productos.findByPk(id) 
         } catch (error) {
             console.log(error);
         }
@@ -34,23 +32,30 @@ productService= {
           return null;
         }
       },
-    save: function(product){
-        this.products.push(product);
-        fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
+      save: async function (product) {
+        try {
+            await db.Productos.create(product)
+        } catch (error) {
+            console.log(error);
+        }
+
     },
 
-    update: function(product, idProd, imageFile){
-        let prodIndex = this.products.findIndex(product => product.id == idProd)
-        this.products[prodIndex] = {
-            id: Number(idProd),
-            nombre: product.NombreProducto,
-            descripcion:product.descripcion,
-            tags: product.tags,
-            imagen: imageFile? imageFile.filename : this.products[prodIndex].imagen,
-            categoria: product.categoria,
-            precio: product.precio,
+    update: async function (product, body, id, imageFile){
+        try {
+            newProduct= {
+                nombre: body.NombreProducto,
+                descripcion: body.descripcion,
+                imagen: imageFile? imageFile.filename : product.imagenProducto,
+                precio: body.precio,
+                stock: body.stock,
+                descuento: body.descuento,
+                categorias_id: product.categoria
+            }
+            await db.Productos.update(newProduct, {where: {id: id}});
+        } catch (error) {
+            console.log(error);
         }
-        fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
 
     },
     delete: function (id) {
