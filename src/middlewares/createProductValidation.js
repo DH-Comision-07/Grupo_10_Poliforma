@@ -16,7 +16,7 @@ check("precio").notEmpty().withMessage("No puede estar vacio"),
     
 check("imagenProducto").custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = [".jpg",".jpeg", ".png",".webp"]; 
+    let acceptedExtensions = [".jpg",".jpeg", ".PNG",".webp"]; 
     
     if (!file) {
         throw new Error("Tiene que subir una imagen");
