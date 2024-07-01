@@ -42,10 +42,9 @@ usersService= {
     },
 
 
-    getOneByField: async function (field, value) {
+    getOneByField: async function (email) {
         try {
-          const user = await db.Usuarios.findOne({ where: { [field]: value } });
-          return user;
+            return await db.Usuarios.findOne({ where: { email: email } });
         } catch (error) {
           console.log(error);
           return null;
