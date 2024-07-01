@@ -6,7 +6,7 @@ const uploadFile = require('../middlewares/userMulterMid');
 const authMid = require('../middlewares/authMid');
 const registerValidations = require('../middlewares/registerValidations');
 const loginValidations = require('../middlewares/loginValidations');
-const editUserValidation = require('../middlewares/editUserValidations')
+const editUserValidation = require('../middlewares/editUserValidations');
 
 
 

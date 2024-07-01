@@ -12,7 +12,7 @@ let users = {
             if(resultValidations.errors.length > 0){
                 res.redirect('/users/login')
             }else{
-            let userToLogin = await usersService.getOneByField('email', req.body.email);
+            let userToLogin = await usersService.getOneByField(req.body.email);
             
             if(userToLogin){
                 isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
@@ -53,9 +53,15 @@ let users = {
     },
     modify: async function(req, res){
         try {
+            let resultValidations = validationResult(req);
+            console.log(resultValidations);
+            if (resultValidations.errors.length > 0) {
+                return res.redirect('/users/editProfile/' + req.params.id)
+              }else{
             user = await usersService.getOneBy(req.params.id)
             await usersService.update(user, req.body, req.params.id, req.file);
-            res.redirect("/users/dashboard");         
+            res.redirect("/users/dashboard");
+              }         
         } catch (error) {
           console.log(error);  
         }
