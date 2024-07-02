@@ -19,7 +19,7 @@ const controller = {
    // edit: function (req, res){
      //   res.render("products/editProduct", {productToEdit: productsService.getOneBy(req.params.id)})
      // Antes que yo Denis creara el editar, osea el Update estaban estas dos lineas de codigo que estan aca arriba, las cuales las dejé como comentarios para no this.eliminarlas.
-     editPdoructo: function (req, res) {
+     edit: function (req, res) {
         let pedidoProductos = db.poliforma_10.findByPK(req.params.id);
 
         let pedidoCategorias = de.poliforma_10-findAll();
