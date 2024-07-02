@@ -68,9 +68,14 @@ const controller = {
 
     modify: async function(req, res){
         try {
+            let resultValidations = validationResult(req);
+            if (resultValidations.errors.length > 0) {
+                return res.redirect('/products/editProduct/' + req.params.id)
+              }else{
             let product = await productsService.getOneBy(req.params.id);
             await productsService.update(product, req.body, req.params.id, req.file);
-            res.redirect("/products/dashboard");         
+            res.redirect("/products/dashboard");
+              }         
         } catch (error) {
             console.log(error);
         }
