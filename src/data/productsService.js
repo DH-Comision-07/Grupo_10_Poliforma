@@ -10,7 +10,9 @@ productService= {
 
     getAll: async function(){
         try {
-            return await db.Productos.findAll();
+            return await db.Productos.findAll({
+                include: [{ association: 'categoria' }],
+              });
         } catch (error) {
             console.log(error);
         }
@@ -25,15 +27,6 @@ productService= {
         }
 
     },
-    findByField: async function (field, value) {
-        try {
-          const user = await db.Usuarios.findOne({ where: { [field]: value } });
-          return user;
-        } catch (error) {
-          console.log(error);
-          return null;
-        }
-      },
       save: async function (product) {
         try {
             await db.Productos.create(product)
@@ -42,9 +35,21 @@ productService= {
         }
 
     },
-
+    findByCategory: async function(categoryName){
+        try {
+           return await db.Productos.findAll({
+            where: {
+                '$Categoria.nombre$': categoryName
+            },
+            include: [{ association: 'categoria' }]
+        });
+        } catch (error) {
+            console.log(error);
+        }
+    },
     update: async function (product, body, id, imageFile){
         try {
+
             newProduct= {
                 nombre: body.NombreProducto,
                 descripcion: body.descripcion,
