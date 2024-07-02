@@ -58,7 +58,8 @@ let users = {
         try {
             let resultValidations = validationResult(req);
             if (resultValidations.errors.length > 0) {
-                return res.render('users/editProfile/${req.params.id}', {
+                return res.render(`users/editProfile`, {
+                    userToEdit: await usersService.getOneBy(req.params.id),
                     errors: resultValidations.mapped,
                     oldData: req.body
                 })
