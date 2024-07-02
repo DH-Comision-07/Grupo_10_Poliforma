@@ -10,7 +10,10 @@ let users = {
         try {
             let resultValidations = validationResult(req);
             if(resultValidations.errors.length > 0){
-                res.redirect('/users/login')
+                res.render('users/login', {
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+                })
             }else{
             let userToLogin = await usersService.getOneByField(req.body.email);
             
@@ -54,8 +57,12 @@ let users = {
     modify: async function(req, res){
         try {
             let resultValidations = validationResult(req);
+            console.log(req.body.imagenUsuario);
             if (resultValidations.errors.length > 0) {
-                return res.redirect('/users/editProfile/' + req.params.id)
+                return res.render('users/editProfile/${req.params.id}', {
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+                })
               }else{
             user = await usersService.getOneBy(req.params.id)
             await usersService.update(user, req.body, req.params.id, req.file);
@@ -82,8 +89,11 @@ let users = {
         try {
             let resultValidations = validationResult(req);
             if(resultValidations.errors.length > 0){
-                res.redirect("/users/register")
-            }
+                res.render("users/register", {
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+                })
+            }else{
             let newUser = {
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
@@ -97,6 +107,7 @@ let users = {
             }
             await usersService.save(newUser);
             res.redirect("/users/login");
+            }
         } catch (error) {
             console.log(error);
         }

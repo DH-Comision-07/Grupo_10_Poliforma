@@ -15,26 +15,36 @@
                 <form action="/users/" method="POST" class="register" enctype="multipart/form-data">
                     <h1 class="titulo">Registrate</h1>
 
-                    <input type="text" placeholder="Nombre*" name="nombre" id="nombre">
+                    <input type="text" placeholder="Nombre*" name="nombre" id="nombre"
+                    value="<%= locals.oldData ? oldData.nombre : null %>">
 
-                    <input type="text" placeholder="Apellido*" name="apellido" id="apellido">
+                    <input type="text" placeholder="Apellido*" name="apellido" id="apellido"
+                    value="<%= locals.oldData ? oldData.apellido : null %>">
 
-                    <input type="text" placeholder="Usuario*" name="usuario" id="usuario">
+                    <input type="text" placeholder="Usuario*" name="usuario" id="usuario"
+                    value="<%= locals.oldData ? oldData.usuario : null %>">
 
-                    <input type="text" placeholder="E-mail*" name="email" id="email">
+                    <input type="text" placeholder="E-mail*" name="email" id="email"
+                    value="<%= locals.oldData ? oldData.email : null %>">
 
-                    <input type="password" placeholder="Contraseña*" name="password" id="password">
-                    <input type="password" placeholder="Confirmar contraseña*" name="repassword" id="repassword">
+                    <input type="password" placeholder="Contraseña*" name="password" id="password"
+                    value="<%= locals.oldData ? oldData.password : null %>">
+
+                    <input type="password" placeholder="Confirmar contraseña*" name="repassword" id="repassword"
+                    value="<%= locals.oldData ? oldData.repassword : null %>">
 
                     <label for="imagenUsuario" class="label-form">Imagen de Perfil</label>
-                    <input type="file" placeholder="imagen de perfil*" name="imagenUsuario" id="imagenUsuario">
+                    <input type="file" placeholder="imagen de perfil*" name="imagenUsuario" id="imagenUsuario"
+                    value="<%= locals.oldData ? oldData.imagenUsuario : '' %>">
 
                     <label for="birthday" class="label-form">Fecha de Nacimiento</label>
-                    <input type="date" placeholder="fecha de nacimiento" name="birthday" id="birthday">
+                    <input type="date" placeholder="fecha de nacimiento" name="birthday" id="birthday"
+                    value="<%= locals.oldData ? oldData.birthday : null %>">
                     
-                    <input type="tel" placeholder="Numero Telefonico*" name="telefono" id="telefono">
+                    <input type="tel" placeholder="Numero Telefonico*" name="telefono" id="telefono"
+                    value="<%= locals.oldData ? oldData.telefono : null %>">
                     <div class="terminos">
-                        <input type="checkbox" id="terminos" name="terminos">
+                        <input type="checkbox" id="terminos" name="terminos" <%= locals.oldData && oldData.terminos ? 'checked' : '' %>>
                         <label for="terminos">Acepto los <a href="#">terminos y condiciones</a></label>
                     </div>
 
