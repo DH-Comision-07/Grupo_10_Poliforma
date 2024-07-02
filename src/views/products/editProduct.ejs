@@ -42,12 +42,12 @@
                         <label for="categoriaProducto" class="titulo-form">Categoría</label>
                         <select id="categoria" name="categoria" class="relleno-formulario">
                             <option value="">-Seleccione una categoría-</option>
-                            <option value="mates" <%= productToEdit.categorias_id === "1" ? "selected" : "" %>>Mates</option>
-                            <option value="jarron" <%= productToEdit.categorias_id === "2" ? "selected" : "" %>>Jarron</option>
-                            <option value="maceta" <%= productToEdit.categorias_id=== "3" ? "selected" : "" %>>Maceta</option>
-                            <option value="figurita" <%= productToEdit.categorias_id === "4" ? "selected" : "" %>>Figurita</option>
-                            <option value="oficina" <%= productToEdit.categorias_id === "5" ? "selected" : "" %>>Oficina</option>
-                            <option value="lamparas" <%= productToEdit.categorias_id === "6" ? "selected" : "" %>>Lamparas</option>
+                            <option value="1" <%= productToEdit.categoria.nombre === "mates" ? "selected" : "" %>>Mates</option>
+                            <option value="2" <%= productToEdit.categoria.nombre === "jarrones" ? "selected" : "" %>>Jarron</option>
+                            <option value="3" <%= productToEdit.categoria.nombre === "macetas" ? "selected" : "" %>>Maceta</option>
+                            <option value="4" <%= productToEdit.categoria.nombre === "figuritas" ? "selected" : "" %>>Figurita</option>
+                            <option value="5" <%= productToEdit.categoria.nombre === "oficina" ? "selected" : "" %>>Oficina</option>
+                            <option value="6" <%= productToEdit.categoria.nombre === "lamparas" ? "selected" : "" %>>Lamparas</option>
                         </select>
                     </div>
 

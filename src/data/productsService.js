@@ -17,7 +17,9 @@ productService= {
     },
     getOneBy: async function(id){
         try {
-            return await db.Productos.findByPk(id) 
+            return  await db.Productos.findByPk(id, {
+                include: [{ association: 'categoria' }],
+              }) 
         } catch (error) {
             console.log(error);
         }
@@ -50,7 +52,7 @@ productService= {
                 precio: body.precio,
                 stock: body.stock,
                 descuento: body.descuento,
-                categorias_id: product.categoria
+                categorias_id: body.categoria
             }
             await db.Productos.update(newProduct, {where: {id: id}});
         } catch (error) {
