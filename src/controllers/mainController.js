@@ -36,7 +36,7 @@ const mainController = {
                 imagen: usuario.imagen
             })
         } catch (error) {
-            
+            console.log(error);
         }
     },
     allProducts: async function(req, res){
@@ -62,6 +62,24 @@ const mainController = {
             })
         } catch (error) {
             console.log(error);
+        }
+    },
+    oneProduct: async function(req, res){
+        try {
+            let producto = await productsService.getOneBy(req.params.id);
+            return res.json({
+                id: producto.id,
+                nombre: producto.nombre,
+                descripcion: producto.descripcion,
+                precio: producto.precio,
+                stock: producto.stock,
+                descuento: producto.descuento,
+                categorias_id: producto.categorias_id,
+                categoria: [producto.categoria],
+                imagen: producto.imagen
+            })
+        } catch (error) {
+            
         }
     }
 }
