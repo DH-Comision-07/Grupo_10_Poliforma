@@ -20,15 +20,38 @@ let users = {
             res.render("editarUsuarios", {usuarios:usuarios})
         })
      },
-    actualizar: funtion(req, res) {
+    actualizar:async function (req, res){
         db.poliforma_10.update({
-             // (Copiar y pegar lo que se escribío del create de los usuarios y modificar donde dice create por update)
+        console.log(req.body);
+        try {
+            let resultValidations = validationResult(req);
+            console.log(resultValidations);
+            console.log(resultValidations.errors.length);
+            if(resultValidations.errors.length > 0){
+                res.redirect("/users/register")
+            }
+            let newUser = {
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                email:req.body.email,
+                contraseña: bcryptjs.hashSync(req.body.password, 10),
+                categoria:"usuario",
+                imagen: req.file? req.file.filename: "usuario-vacio.jpg",
+                fechaNacimiento: req.body.birthday,
+                telefono:req.body.telefono,
+                username:req.body.usuario,
+            }
+            await usersService.save(newUser);
+            res.redirect("/users/login");
+        } catch (error) {
+            console.log(error);
+        }
     }, {
         where: {
             id: req.params.id
         }
     });
-        res.render('users/editProfile', {userToEdit: usersService.getOneBy(req.params.id)})
+        res.render('users/editProfile/:id', {userToEdit: usersService.getOneBy(req.params.id)})
     },
     modify: function(req, res){
         usersService.update( req.body, req.params.id, req.file);

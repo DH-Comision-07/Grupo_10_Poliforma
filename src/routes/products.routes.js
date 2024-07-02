@@ -13,7 +13,7 @@ router.get("/createProduct", productsController.create);
 router.post("/", uploadFile.single("imagenProducto"), productsController.store);
 
 router.get("/editProduct/:id", productsController.edit);
-router.patch("/editProduct/:id",uploadFile.single("imagenProducto"), productsController.modify);
+router.patch("/productDetail/:id",uploadFile.single("imagenProducto"), productsController.modify);
 
 router.delete("/dashboard/:id", productsController.delete);
 
