@@ -57,7 +57,6 @@ let users = {
     modify: async function(req, res){
         try {
             let resultValidations = validationResult(req);
-            console.log(req.body.imagenUsuario);
             if (resultValidations.errors.length > 0) {
                 return res.render('users/editProfile/${req.params.id}', {
                     errors: resultValidations.mapped,
