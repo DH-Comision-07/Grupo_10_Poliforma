@@ -7,6 +7,7 @@ router.get("/", mainController.index);
 //APIS
 
 router.get('/api/users/', mainController.allUsers);
+router.get('/api/users/:id', mainController.oneUser);
 
 
 router.get('/api/products/', mainController.allProducts);

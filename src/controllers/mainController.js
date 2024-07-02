@@ -22,6 +22,23 @@ const mainController = {
             console.log(error);
         }
     },
+    oneUser: async function(req, res){
+        try {
+            let usuario = await usersService.getOneBy(req.params.id)
+            return res.json({
+                id: usuario.id,
+                nombre: usuario.nombre,
+                apellido: usuario.apellido,
+                email: usuario.email,
+                fechaNacimiento: usuario.fechaNacimiento,
+                telefono: usuario.telefono,
+                username: usuario.username,
+                imagen: usuario.imagen
+            })
+        } catch (error) {
+            
+        }
+    },
     allProducts: async function(req, res){
         try {
             let productos = await productsService.getAll();
