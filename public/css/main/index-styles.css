@@ -124,6 +124,10 @@ a{
     filter: invert(99%) sepia(26%) saturate(32%) hue-rotate(235deg) brightness(112%) contrast(94%);
 }
 
+h4{
+    text-align: center;
+} 
+
 @keyframes slider-marcas{
     from{
         transform: translateX(0);

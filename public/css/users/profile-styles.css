@@ -221,6 +221,10 @@ article:hover{
     .contendor-imagen img{
         width: 100%;
         height: 25vh;
+    }    
+    .imagen-perfil{
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 @media (max-width: 430px){
@@ -232,6 +236,10 @@ article:hover{
     }
     .btn-mas{
         width: 40%;
+    }
+    .imagen-perfil{
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
