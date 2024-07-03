@@ -43,7 +43,7 @@ a{
 
 .producto-carta{
     width: 20%;
-    height: 350px;
+    height: 55vh;
     margin: 15px;
     border: 1px solid #b1b1b1;
     border-radius: 10px;
@@ -81,6 +81,7 @@ article:hover{
     width: 100%;
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: 1.2em;
 }
 
 .precio{
@@ -89,7 +90,8 @@ article:hover{
 
 .precio,
 .descuento{
-    font-size: 0.8em;
+    margin-top: 20px;
+    font-size: 1em;
     width: 50%;
 }
 
@@ -106,9 +108,10 @@ article:hover{
     border: 1px solid black;
     color: white;
     background-color: #ff4c0c;
-    padding: 5px;
+    padding: 15px;
     margin: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .boton-carrito:hover{

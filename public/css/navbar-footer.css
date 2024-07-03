@@ -256,4 +256,22 @@ footer {
         display: block;
         z-index: 1;
     }
+    .logged{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+
+}
+@media (max-width: 662px) {
+    .container{
+        display: none;
+    }
+    .logged{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
 }

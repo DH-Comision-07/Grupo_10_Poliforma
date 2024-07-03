@@ -143,6 +143,7 @@ a{
     border-radius: 10px;
     cursor: pointer;
     background-color: #f7f7f7;
+    height: 50vh;
 }
 
 article:hover{
@@ -151,7 +152,7 @@ article:hover{
 
 .contendor-imagen img{
     width: 100%;
-    height: 250px;
+    height: 40vh;
     border-radius:  10px 10px 0px 0px;
     border-bottom: solid 1px #ebebeb
 }
@@ -190,5 +191,47 @@ article:hover{
 .descuento{
     color: #42ae52;
     text-align: right;
+}
+
+@media (max-width: 987px){
+    .perfil{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .info-telefono{
+        text-align: center;
+        width: 100%;
+    }
+    .editar{
+        width: 50%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .producto-carta{
+        width: 40%;
+        height: 35vh;
+    }
+    .contendor-imagen img{
+        width: 100%;
+        height: 25vh;
+    }
+}
+@media (max-width: 430px){
+    .contenedor-padre{
+        width: 100%;
+    }
+    .producto-carta{
+        width: 50%;
+    }
+    .btn-mas{
+        width: 40%;
+    }
 }
 
