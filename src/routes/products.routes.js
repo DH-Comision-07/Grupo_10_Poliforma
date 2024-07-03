@@ -18,7 +18,7 @@ router.get("/createProduct", authMid, credentialMid.adminMid, productsController
 router.post("/", uploadFile.single("imagenProducto"), createProductValidation, productsController.store);
 
 router.get("/editProduct/:id", authMid, credentialMid.adminMid, productsController.edit);
-router.patch("/editProduct/:id", editProductValidation, uploadFile.single("imagenProducto"), productsController.modify);
+router.put("/:id", uploadFile.single("imagenProducto"), editProductValidation, productsController.modify);
 
 router.delete("/dashboard/:id",productsController.delete);
 
