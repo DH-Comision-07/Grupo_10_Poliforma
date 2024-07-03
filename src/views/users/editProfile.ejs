@@ -16,9 +16,9 @@
                     enctype="multipart/form-data">
                     <div class="upload-imagen">
                         <div class="formularioLabel-primero">
-                            <img src="/images/usuarios/<%= userToEdit.imagen %>" alt="" width="150px">
+                            <img src="/images/usuarios/<%= userToEdit.imagen %>" alt="" width="150px" id="imagen-perfil">
                             <div class="round">
-                                <input type="file" name="imagenUsuario" id="imagenUsuario" accept=".jpg, .png, .jpeg, .webp" multiple
+                                <input type="file" name="imagenUsuario" id="imagenUsuario" accept=".jpg, .png, .jpeg, .webp"
                                     class="relleno-formulario">
                                 <i class="fa-solid fa-arrow-up"></i>
                             </div>
@@ -69,6 +69,23 @@
             </section>
         </main>
         <%- include('../partials/partialsFooter.ejs') %>
-</body>
+        <script>
+            const defaultFile = "/images/usuarios/<%= userToEdit.imagen %>";
 
+            const file = document.getElementById('imagenUsuario');
+            const img = document.getElementById('imagen-perfil')
+
+            file.addEventListener('change', e =>{
+                if(e.target.files[0]){
+                    const reader = new FileReader();
+                    reader.onload = function(e){
+                        img.src = e.target.result;
+                    }
+                    reader.readAsDataURL(e.target.files[0])
+                }else{
+                    img.src = defaultFile
+                }
+            })
+        </script>
+</body>
 </html>
