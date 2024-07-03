@@ -19,11 +19,6 @@ let users = {
             
             if(userToLogin){
                 isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
-
-                console.log(bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña));
-                console.log(req.body.contraseña);
-                console.log(userToLogin.contraseña);
-
                 if(isOkThePassword || req.body.contraseña === userToLogin.contraseña){
                     delete userToLogin.contraseña
                     req.session.userLogged = userToLogin;
@@ -31,7 +26,6 @@ let users = {
                 }else{
                 res.send('clave invalida');
                 }
-            }else{
             return res.send('error')
             }
         }

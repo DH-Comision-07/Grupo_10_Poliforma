@@ -5,9 +5,20 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: #f7f7f7;
-    color:#161419;
+        margin: 0px;
+        background-color: #FFFFFF;
+        font-family: "Montserrat", sans-serif;
+        background-image: url(/images/Patron-positivo-fondo.png);
+        background-size: cover;
+}
+
+.cuerpo{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 a{
