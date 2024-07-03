@@ -1,12 +1,14 @@
 const express = require("express");
 const session = require("express-session");
+const cookies = require("cookie-parser");
 const app = express();
 const path = require("path");
 const mainRoutes = require("./routes/main.routes");
 const productsRoutes = require("./routes/products.routes");
 const usersRoutes = require("./routes/users.routes");
 const methodOverride = require("method-override");
-const userLoggedMid = require('./middlewares/userLoggedMid')
+const userLoggedMid = require('./middlewares/userLoggedMid');
+
 
 
 
@@ -15,6 +17,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
+app.use(cookies());
 
 app.use(userLoggedMid);
 

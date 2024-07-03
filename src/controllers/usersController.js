@@ -15,14 +15,19 @@ let users = {
                     oldData: req.body
                 })
             }else{
-            let userToLogin = await usersService.getOneByField(req.body.email);
+            let userToLogin = await usersService.getOneByField('email', req.body.email);
             
             if(userToLogin){
                 isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
                 if(isOkThePassword || req.body.contraseña === userToLogin.contraseña){
-                    delete userToLogin.contraseña
+                    delete userToLogin.contraseña;
                     req.session.userLogged = userToLogin;
-                   return res.redirect('/users/profile/' + userToLogin.id)
+
+                    if(req.body.recordarme){
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 15})
+                    }
+
+                   return res.redirect('/users/profile/' + userToLogin.id);
                 }else{
                 res.send('clave invalida');
                 }
@@ -113,6 +118,7 @@ let users = {
         }
     },
     logout: function(req, res){
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/')
     }

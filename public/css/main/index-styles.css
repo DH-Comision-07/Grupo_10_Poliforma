@@ -9,7 +9,7 @@ body {
         background-color: #FFFFFF;
         font-family: "Montserrat", sans-serif;
         background-image: url(/images/Patron-positivo-fondo.png);
-        background-size: cover;
+        background-size:auto;
 }
 
 .cuerpo{
