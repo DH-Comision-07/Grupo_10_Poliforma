@@ -177,7 +177,7 @@ li{
 }
 
 .open{
-    height: 270px;
+    height: 265px;
     border: 1px solid black;
 }
 
@@ -186,6 +186,10 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.dropdown_menu li:first-child{
+
 }
 
 .dropdown_menu .btn-login,
@@ -197,6 +201,8 @@ li{
     font-size: 1em;
     padding: 8px;
 }
+
+
 
 /*FOOTER*/
 
@@ -276,6 +282,9 @@ footer {
     .dropdown_menu a{
         text-decoration: none;
         color: black;
+    }
+    .dashboard-off{
+        display: none;
     }
 
 }

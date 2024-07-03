@@ -38,16 +38,15 @@
             <li><a href="/">Inicio</a></li>
             <li><a href="/products">Productos</a></li>
             <li><a href="/contact">Contacto</a></li>
-            <li><a href="/products/dashboard">Dashboard</a></li>
+            <li><a href="/products/dashboard" class="<%= ( locals.userLogged && locals.userLogged.categoria == 'administrador') ? '' : 'dashboard-off'%>">Dashboard</a></li>
             <li><a href="/users/profile/<%= locals.userLogged.id%>" class="btn-login">Perfil</a></li>
             <li><a href="/users/logout" class="btn-register">Cerrar Sesion</a></li>
         </div>
         <% }else{ %>
-            <div class="dropdown_menu ">
-                <li><a href="/">Inicio</a></li>
+            <div class="dropdown_menu">
+                <li><a href="/" style="margin-top: 10px;">Inicio</a></li>
                 <li><a href="/products">Productos</a></li>
                 <li><a href="/contact">Contacto</a></li>
-                <li><a href="/products/dashboard">Dashboard</a></li>
                 <li><a href="/users/login" class="btn-login">Inicia Sesion</a></li>
                 <li><a href="/users/register" class="btn-register">Registrate</a></li>
             </div>
