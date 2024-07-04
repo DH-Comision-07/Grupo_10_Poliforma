@@ -9,7 +9,7 @@ body {
     background-color: #FFFFFF;
     font-family: "Montserrat", sans-serif;
     background-image: url(/images/Patron-positivo-fondo.png);
-    background-size: contain;
+    background-size: auto;
 }
 
 
@@ -43,7 +43,9 @@ a{
 
 .producto-carta{
     width: 20%;
-    height: 55vh;
+    min-width: 210px;
+    height: 55%;
+    min-height: 475px;
     margin: 15px;
     border: 1px solid #b1b1b1;
     border-radius: 10px;
@@ -58,6 +60,7 @@ article:hover{
 .contendor-imagen img{
     width: 100%;
     height: 100%;
+    min-height: 450px;
     border-radius:  10px 10px 0px 0px;
     border-bottom: solid 1px #ebebeb
 }
@@ -79,8 +82,9 @@ article:hover{
 
 .producto-nombre{
     width: 100%;
+    max-height: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 1.2em;
 }
 
@@ -118,51 +122,12 @@ article:hover{
     background-color: #db3e04ec;
 }
 
-
-/*FOOTER*/
-
-footer {
-    width: 100%;
-    background-color: #f5f5f5;
-    border-top: 1px solid black;
-}
-
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.footer-section {
-    flex: 1;
-}
-
-.footer-section h3 {
-    color: #333;
-    font-size: 18px;
-}
-
-.footer-section p {
-    color: #777;
-}
-
-.social-icons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-.social-icons li {
-    margin-right: 10px;
-}
-
-.social-icons li a {
-    color: #777;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    text-align: center;
-    color: #777;
+@media (max-width: 533px) {
+    .ordenar{
+        display: none;
+    }
+    .contenedor-productos{
+        width: 100%;
+    }
+    
 }

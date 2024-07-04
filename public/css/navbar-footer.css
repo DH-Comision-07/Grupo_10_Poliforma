@@ -188,10 +188,6 @@ li{
     justify-content: center;
 }
 
-.dropdown_menu li:first-child{
-
-}
-
 .dropdown_menu .btn-login,
 .dropdown_menu .btn-register{
     width: 100%;
