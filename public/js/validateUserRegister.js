@@ -1,4 +1,4 @@
-let inputNombre = document.querySelector('.nombre');
+let inputNombre = document.getElementById('nombre');
 let inputApellido = document.getElementById("apellido");
 let inputUsuario = document.getElementById("usuario");
 let inputEmail = document.getElementById("email");
@@ -9,7 +9,7 @@ let inputTelefono = document.getElementById('telefono');
 let inputNacimiento = document.getElementById('birthday');
 
 
-
+ 
 let notValid = false
 
 //validacion nombre
