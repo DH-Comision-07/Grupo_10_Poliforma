@@ -20,6 +20,8 @@ body {
     border: 1px black solid;
     border-top: none;
     border-bottom: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 

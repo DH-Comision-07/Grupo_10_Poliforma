@@ -91,6 +91,10 @@ form {
 }
 
 .volver-boton {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: #ececec;
     font-size: 1em;
     font-weight: 550;
     margin-top: 20px;

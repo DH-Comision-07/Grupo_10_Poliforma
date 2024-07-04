@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
+    <%- include('../partials/partialsHeader.ejs') %>
 
         <main class="contenedor-padre">
             <section class="contenedor">
                 <form action="/users/login" method="POST" class="login" id="loginForm">
                     <h1 class="titulo">Inicia Sesión</h1>
-
-                    <input type="email" placeholder="Correo Electronico" name="email" id="email">
+                    <input type="email" placeholder="Correo Electronico" name="email" id="email" 
+                    value="<%= locals.oldData ? oldData.email : null %>">>
                     <span class="error email_vacio">El e-mail no puede estar vacío</span>
                     <span class="error email_invalido">El e-mail no es valido</span>
-                    <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña">
+                    <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña"
+                    value="<%= locals.oldData ? oldData.contraseña : null %>">
                     <span class="error contrasenia_obligatoria">La contraseña es obligatoria</span>
-
                     <div class="recordarme">
-                        <input type="checkbox" id="recordarme">
-                        <label for="terminos">Recordarme</label>
+                        <input type="checkbox" id="recordarme" name="recordarme">
+                        <label for="recordarme">Recordarme</label>
                     </div>
 
                     <button type="submit" class="login-boton">Inicia Sesión</button>

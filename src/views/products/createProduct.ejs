@@ -16,26 +16,29 @@
 
                     <div class="formularioLabel">
                         <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
-                        <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario">
+
+                        <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario"
+                        value="<%= locals.oldData ? oldData.NombreProducto : null %>">
                         <span class="error nombreVacio">El nombre no puede estar vacío</span>
                         <span class="error nombreCorto">El nombre debe tener al menos 5 caracteres</span>
+
                     </div>
 
                     <div class="formularioLabel">
                         <label for="descripcion" class="titulo-form">Descripción</label>
-                        <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"></textarea>
+                        <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"><%= locals.oldData ? oldData.descripcion : null %></textarea>
                         <span class="error descripcion_corta">La descripcion debe tener al menos 20 caracteres</span>
                     </div>
 
                     <div class="formularioLabel">
                         <label for="tags" class="titulo-form">Tags</label>
-                        <input type="text" name="tags" id="tags" class="relleno-formulario">
+                        <input type="text" name="tags" id="tags" class="relleno-formulario" value="<%= locals.oldData ? oldData.tags : null %>">
                     </div>
 
                     <div class="formularioLabel">
                         <label for="imagenProducto" class="titulo-form">Imagen del Producto</label>
                         <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg, .png" multiple
-                            class="relleno-formulario">
+                            class="relleno-formulario" value="<%= locals.oldData ? oldData.imagenProducto : null %>">
                         <span class="error formato_invalido">formato invalido</span>
                         <span class="error foto_obligatoria">foto obligatoria</span>
                     </div>
@@ -44,27 +47,32 @@
                         <label for="categoriaProducto" class="titulo-form">Categoría</label>
                         <select id="categoria" name="categoria" class="relleno-formulario">
                             <option value="">-Seleccione una categoría-</option>
-                            <option value="1">Mates</option>
-                            <option value="2">Jarron</option>
-                            <option value="3">Maceta</option>
-                            <option value="4">Figurita</option>
-                            <option value="5">Oficina</option>
-                            <option value="6">Lampara</option>
+                            <option value="1" <%= locals.oldData && (oldData.categoria === "1") ? "selected" : "" %>>Mates</option>
+                            <option value="2" <%= locals.oldData && (oldData.categoria === "2") ? "selected" : "" %>>Jarron</option>
+                            <option value="3" <%= locals.oldData && (oldData.categoria === "3") ? "selected" : "" %>>Maceta</option>
+                            <option value="4" <%= locals.oldData && (oldData.categoria === "4") ? "selected" : "" %>>Figurita</option>
+                            <option value="5" <%= locals.oldData && (oldData.categoria === "5") ? "selected" : "" %>>Oficina</option>
+                            <option value="6" <%= locals.oldData && (oldData.categoria === "6") ? "selected" : "" %>>Lampara</option>
                         </select>
                         <span class="error categoria_vacia">La categoria no puede estar vacío</span>
                     </div>
                     <div class="formularioLabel">
                         <label for="stock" class="titulo-form">Stock</label>
-                        <input type="number" name="stock" id="stock" class="relleno-formulario">
+
+                        <input type="number" name="stock" id="stock" class="relleno-formulario" 
+                        value="<%= locals.oldData ? oldData.stock : null %>">
                         <span class="error stock_vacia">El stock no puede estar vacío</span>
                     </div>
                     <div class="formularioLabel">
                         <label for="descuento" class="titulo-form">Descuento</label>
-                        <input type="number" name="descuento" id="descuento" class="relleno-formulario">
+                        <input type="number" name="descuento" id="descuento" class="relleno-formulario"
+                        value="<%= locals.oldData ? oldData.descuento : null %>">
                     </div>
                     <div class="formularioLabel-ultimo">
                         <label for="precio" class="titulo-form">Precio</label>
-                        <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01">
+
+                        <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01"
+                        value="<%= locals.oldData ? oldData.precio : null %>">
                         <span class="error precio_vacia">El precio no puede estar vacío</span>
                     </div>
 

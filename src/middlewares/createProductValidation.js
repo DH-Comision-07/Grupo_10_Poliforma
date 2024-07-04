@@ -21,7 +21,7 @@ check("imagenProducto").custom((value, { req }) => {
     if (!file) {
         throw new Error("Tiene que subir una imagen");
     } else {
-        let fileExtension = path.extname(file.originalname);
+        let fileExtension = path.extname(file.originalname.toLowerCase());
         if (!acceptedExtensions.includes(fileExtension)) {
             throw new Error("Tiene que subir una imagen en formato " + acceptedExtensions)
         }    

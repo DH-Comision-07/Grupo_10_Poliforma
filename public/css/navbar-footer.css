@@ -58,7 +58,7 @@ li{
 }
 
 .logo{
-    width: 15%;
+    width: 20%;
     height: 60px;
 }
 
@@ -122,8 +122,10 @@ li{
 }
 
 .container{
-    width: 35%;
-    text-align: center;
+    width: 30%;
+    text-align: center; 
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .search-bar{
@@ -163,15 +165,24 @@ li{
     display: none;
     position: absolute;
     right: 2rem;
-    top: 60px;
+    top: 65px;
+    height: 0px;
     width: 300px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(248, 247, 247, 0.99);
     border-radius: 10px;
+    border: 0px black solid;
     overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: border 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.open{
+    height: 265px;
+    border: 1px solid black;
 }
 
 .dropdown_menu li{
-    padding: 0.7rem;
+    padding: 0.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,19 +193,20 @@ li{
     width: 100%;
     display: flex;
     justify-content: center;
+    color: white;
+    font-size: 1em;
+    padding: 8px;
 }
+
+
 
 /*FOOTER*/
 
 footer {
-    background-color: #f5f5f5;
+    background-color: #e4e4e4;
     padding: 20px;
   }
   
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
   
   .footer-content {
     display: flex;
@@ -255,5 +267,37 @@ footer {
     .dropdown_menu{
         display: block;
         z-index: 1;
+    }
+    .logged{
+        display: none;
+    }
+    .login-botones{
+        display: none;
+    }
+
+    .dropdown_menu a{
+        text-decoration: none;
+        color: black;
+    }
+    .dashboard-off{
+        display: none;
+    }
+
+}
+@media (max-width: 741px) {
+    .container{
+        display: none;
+    }
+    .logged{
+        display: none;
+    }
+    .login-botones{
+        display: none;
+    }
+}
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
     }
 }

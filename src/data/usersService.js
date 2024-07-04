@@ -42,9 +42,10 @@ usersService= {
     },
 
 
-    getOneByField: async function (email) {
+    getOneByField: async function (field, value) {
         try {
-            return await db.Usuarios.findOne({ where: { email: email } });
+          const user = await db.Usuarios.findOne({ where: { [field]: value } });
+          return user;
         } catch (error) {
           console.log(error);
           return null;
@@ -70,13 +71,27 @@ usersService= {
         }
 
     },
-    delete: function (id) {
+    delete: async function (idProd){
+        try {
+            /*const destroyCarrito = await db.Carrito_productos.destroy ({ where: { productos_id: idProd }});*/
+            const resultadoDestroy = await db.Usuarios.destroy ({ where: { id: idProd }});
+        
+            if (resultadoDestroy === 0) {
+                console.log('No se encontró ningún producto con el id proporcionado.');
+            } else {
+                console.log('Producto eliminado exitosamente.');
+            }
+        } catch (error) {
+          console.error('Error al eliminar el producto:', error);
+        }
+    },
+    /*delete: function (id) {
         let newUsers = this.users.filter((user) => user.id != id);
         console.log(newUsers);
         this.users = newUsers;
         fs.writeFileSync( path.join( __dirname, "/users.json"), JSON.stringify(this.users));
         return newUsers;
-    }
+    }*/
 }
 
 module.exports = usersService;

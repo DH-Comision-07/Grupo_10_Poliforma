@@ -1,0 +1,36 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+        margin: 0px;
+        background-color: #F7F7F7;
+        font-family: "Montserrat", sans-serif;
+}
+
+
+.contenedor_padre{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+img{
+    width: 50%;
+}
+
+.btn-1 {
+    background-color: rgb(221, 93, 38);
+    padding: 10px 15px;
+    color: #f7f7f7;
+    border-radius: 10px;
+    margin: 10px;
+    text-decoration: none;
+}

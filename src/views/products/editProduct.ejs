@@ -13,13 +13,14 @@
             <section class="contenedor">
                 <h1 class="titulo">Edicion de Producto: <%= productToEdit.nombre %>
                 </h1>
-                <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" class="edit-form"
+
+                <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form"
                     enctype="multipart/form-data">
 
                     <div class="formularioLabel">
                         <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
                         <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario"
-                            value="<%= productToEdit.nombre %>">
+                            value="<%=locals.oldData ? oldData.NombreProducto : productToEdit.nombre %>">
                         <span class="error nombreVacio">El nombre no puede estar vacío</span>
                         <span class="error nombreCorto">El nombre debe tener al menos 5 caracteres</span>
                     </div>
@@ -27,14 +28,19 @@
                     <div class="formularioLabel">
                         <label for="descripcion" class="titulo-form">Descripción</label>
                         <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"
-                            value=""><%= productToEdit.descripcion %></textarea>
+
+                            value=""><%=locals.oldData ? oldData.descripcion : productToEdit.descripcion %></textarea>
                         <span class="error descripcion_corta">La descripcion debe tener al menos 20 caracteres</span>
                     </div>
 
                     <div class="formularioLabel">
                         <label for="tags" class="titulo-form">Tags</label>
                         <input type="text" name="tags" id="tags" class="relleno-formulario"
-                            value="<%= productToEdit.tags %>">
+
+                            value="<%=locals.oldData ? oldData.tags : productToEdit.tags %>">
+
+                            value="<%=locals.oldData ? oldData.tags : productToEdit.tags %>">
+
                     </div>
 
                     <div class="formularioLabel">
@@ -48,18 +54,13 @@
                         <label for="categoriaProducto" class="titulo-form">Categoría</label>
                         <select id="categoria" name="categoria" class="relleno-formulario">
                             <option value="">-Seleccione una categoría-</option>
-                            <option value="1" <%=productToEdit.categoria.nombre==="mates" ? "selected" : "" %>>Mates
-                            </option>
-                            <option value="2" <%=productToEdit.categoria.nombre==="jarrones" ? "selected" : "" %>>Jarron
-                            </option>
-                            <option value="3" <%=productToEdit.categoria.nombre==="macetas" ? "selected" : "" %>>Maceta
-                            </option>
-                            <option value="4" <%=productToEdit.categoria.nombre==="figuritas" ? "selected" : "" %>
-                                >Figurita</option>
-                            <option value="5" <%=productToEdit.categoria.nombre==="oficina" ? "selected" : "" %>>Oficina
-                            </option>
-                            <option value="6" <%=productToEdit.categoria.nombre==="lamparas" ? "selected" : "" %>
-                                >Lamparas</option>
+
+                            <option value="1" <%= locals.oldData && locals.oldData.categoria === "1" || productToEdit.categoria.nombre === "mates" ? "selected" : "" %>>Mates</option>
+                            <option value="2" <%= locals.oldData && locals.oldData.categoria === "2" || productToEdit.categoria.nombre === "jarrones" ? "selected" : "" %>>Jarron</option>
+                            <option value="3" <%= locals.oldData && locals.oldData.categoria === "3" || productToEdit.categoria.nombre === "macetas" ? "selected" : "" %>>Maceta</option>
+                            <option value="4" <%= locals.oldData && locals.oldData.categoria === "4" || productToEdit.categoria.nombre === "figuritas" ? "selected" : "" %>>Figurita</option>
+                            <option value="5" <%= locals.oldData && locals.oldData.categoria === "5" || productToEdit.categoria.nombre === "oficina" ? "selected" : "" %>>Oficina</option>
+                            <option value="6" <%= locals.oldData && locals.oldData.categoria === "6" || productToEdit.categoria.nombre === "lamparas" ? "selected" : "" %>>Lamparas</option>
                         </select>
                         <span class="error categoria_vacia">La categoria no puede estar vacío</span>
                     </div>
@@ -67,23 +68,24 @@
                     <div class="formularioLabel">
                         <label for="stock" class="titulo-form">Stock</label>
                         <input type="number" name="stock" id="stock" class="relleno-formulario"
-                            value="<%= productToEdit.stock %>">
+                            value="<%=locals.oldData ? oldData.stock : productToEdit.stock %>">
                         <span class="error stock_vacia">El stock no puede estar vacío</span>
                     </div>
                     <div class="formularioLabel">
                         <label for="descuento" class="titulo-form">Descuento</label>
                         <input type="number" name="descuento" id="descuento" class="relleno-formulario"
-                            value="<%= productToEdit.descuento %>">
+                            value="<%=locals.oldData ? oldData.descuento : productToEdit.descuento %>">
                     </div>
 
                     <div class="formularioLabel-ultimo">
                         <label for="precio" class="titulo-form">Precio</label>
                         <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01"
-                            value="<%= productToEdit.precio %>">
+                            value="<%=locals.oldData ? oldData.precio : productToEdit.precio %>">
                         <span class="error precio_vacia">El precio no puede estar vacío</span>
                     </div>
                     <button type="submit" class="crear-boton">Editar Producto</button>
-                    <button type="reset" class="volver-boton">Volver</button>
+                    <a href="/products/dashboard" class="volver-boton">Volver</a>
+                    
                 </form>
             </section>
         </main>

@@ -10,21 +10,29 @@ let users = {
         try {
             let resultValidations = validationResult(req);
             if(resultValidations.errors.length > 0){
-                res.redirect('/users/login')
+                res.render('users/login', {
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+                })
             }else{
-            let userToLogin = await usersService.getOneByField(req.body.email);
+            let userToLogin = await usersService.getOneByField('email', req.body.email);
             
             if(userToLogin){
                 isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
                 if(isOkThePassword || req.body.contraseña === userToLogin.contraseña){
-                    delete userToLogin.contraseña
+                    delete userToLogin.contraseña;
                     req.session.userLogged = userToLogin;
-                   return res.redirect('/users/profile/' + userToLogin.id)
+
+                    if(req.body.recordarme){
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 15})
+                    }
+
+                   return res.redirect('/users/profile/' + userToLogin.id);
+                }else{
+                res.send('clave invalida');
                 }
-                res.send('clave invalida')
-            }
-    
             return res.send('error')
+            }
         }
         } catch (error) {
             console.log(error);
@@ -55,7 +63,11 @@ let users = {
         try {
             let resultValidations = validationResult(req);
             if (resultValidations.errors.length > 0) {
-                return res.redirect('/users/editProfile/' + req.params.id)
+                return res.render(`users/editProfile`, {
+                    userToEdit: await usersService.getOneBy(req.params.id),
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+                })
               }else{
             user = await usersService.getOneBy(req.params.id)
             await usersService.update(user, req.body, req.params.id, req.file);
@@ -82,7 +94,10 @@ let users = {
         try {
             let resultValidations = validationResult(req);
             if(resultValidations.errors.length > 0){
-                res.redirect("/users/register")
+                res.render("users/register", {
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+                })
             }else{
             let newUser = {
                 nombre: req.body.nombre,
@@ -103,6 +118,7 @@ let users = {
         }
     },
     logout: function(req, res){
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/')
     }

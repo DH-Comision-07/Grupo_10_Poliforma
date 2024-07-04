@@ -46,8 +46,7 @@ module.exports = (sequelize, DataTypes)=>{
         });
       };
 
-/*
-    Producto.associate = function(models){
+    /*Producto.associate = function(models){
         Producto.hasMany(models.Tags, {
             as:'tags',
             foreignKey: 'productos_id'
@@ -60,6 +59,7 @@ module.exports = (sequelize, DataTypes)=>{
         });
     };
     */
+
 
 
     return Producto;

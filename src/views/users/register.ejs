@@ -8,47 +8,57 @@
 </head>
 
 <body>
-    <%- include('../partials/partialsHeaderLoginRegister.ejs') %>
+    <%- include('../partials/partialsHeader.ejs') %>
         <main class="contenedor-padre">
             <section class="contenedor">
                 <form action="/users/" method="POST" class="register" enctype="multipart/form-data">
                     <h1 class="titulo">Registrate</h1>
 
-                    <input type="text" placeholder="Nombre*" name="nombre" id="nombre" class="nombre">
+                    <input type="text" placeholder="Nombre*" name="nombre" id="nombre"
+                    value="<%= locals.oldData ? oldData.nombre : null %>">
+
                     <p class="error nombreVacio">El nombre no puede estar vacío</p>
                     <p class="error nombreCorto">El nombre debe tener al menos dos caracteres</p>
 
-                    <input type="text" placeholder="Apellido*" name="apellido" id="apellido">
+                    <input type="text" placeholder="Apellido*" name="apellido" id="apellido"
+                    value="<%= locals.oldData ? oldData.apellido : null %>">
                     <p class="error apellidoVacio">El apellido no puede estar vacío</p>
                     <p class="error apellidoCorto">El apellido debe tener al menos dos caracteres</p>
 
-                    <input type="text" placeholder="Usuario*" name="usuario" id="usuario">
+                    <input type="text" placeholder="Usuario*" name="usuario" id="usuario"
+                    value="<%= locals.oldData ? oldData.usuario : null %>">
                     <p class="error usuarioVacio">El usuario no puede estar vacío</p>
                     <p class="error usuarioCorto">El usuario debe tener al menos dos caracteres</p>
 
-                    <input type="text" placeholder="E-mail*" name="email" id="email">
+                    <input type="text" placeholder="E-mail*" name="email" id="email"
+                    value="<%= locals.oldData ? oldData.email : null %>">
                     <p class="error emailVacio">El E-mail no puede estar vacío</p>
                     <p class="error emailInvalido">El E-mail es inválido</p>
 
-                    <input type="password" placeholder="Contraseña*" name="password" id="password">
+                    <input type="password" placeholder="Contraseña*" name="password" id="password"
+                    value="<%= locals.oldData ? oldData.password : null %>">
                     <p class="error passwordVacio">La contraseña no puede estar vacía</p>
                     <p class="error passwordCorto">La contraseña debe tener al menos ocho caracteres</p>
-                    <input type="password" placeholder="Confirmar contraseña*" name="repassword" id="repassword">
+                    <input type="password" placeholder="Confirmar contraseña*" name="repassword" id="repassword"
+                    value="<%= locals.oldData ? oldData.repassword : null %>">
                     <p class="error passwordDistinto">Las contraseñas no coinciden</p>
 
                     <label for="imagenUsuario" class="label-form">Imagen de Perfil</label>
-                    <input type="file" placeholder="imagen de perfil*" name="imagenUsuario" id="imagenUsuario" accept=".jpg, .png">
-                    <p class="error foto_invalida">Formato invalido</p>
+                    <input type="file" placeholder="imagen de perfil*" name="imagenUsuario" id="imagenUsuario"
+                    value="<%= locals.oldData ? oldData.imagenUsuario : '' %>">
 
                     <label for="birthday" class="label-form">Fecha de Nacimiento</label>
-                    <input type="date" placeholder="fecha de nacimiento" name="birthday" id="birthday">
+                    <input type="date" placeholder="fecha de nacimiento" name="birthday" id="birthday"
+                    value="<%= locals.oldData ? oldData.birthday : null %>">
                     <p class="error nacimiento_obligatorio">La fecha de nacimietno es obligatoria</p>
 
                     
-                    <input type="tel" placeholder="Numero Telefonico*" name="telefono" id="telefono">
+                    <input type="tel" placeholder="Numero Telefonico*" name="telefono" id="telefono"
+                    value="<%= locals.oldData ? oldData.telefono : null %>">
                     <p class="error telefono_obligatorio">El numero de telefono es obligatorio</p>
+
                     <div class="terminos">
-                        <input type="checkbox" id="terminos" name="terminos">
+                        <input type="checkbox" id="terminos" name="terminos" <%= locals.oldData && oldData.terminos ? 'checked' : '' %>>
                         <label for="terminos">Acepto los <a href="#">terminos y condiciones</a></label>
                     </div>
 

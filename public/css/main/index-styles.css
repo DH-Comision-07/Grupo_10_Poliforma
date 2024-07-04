@@ -5,9 +5,20 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: #f7f7f7;
-    color:#161419;
+        margin: 0px;
+        background-color: #FFFFFF;
+        font-family: "Montserrat", sans-serif;
+        background-image: url(/images/Patron-positivo-fondo.png);
+        background-size:auto;
+}
+
+.cuerpo{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 a{
@@ -113,6 +124,45 @@ a{
     filter: invert(99%) sepia(26%) saturate(32%) hue-rotate(235deg) brightness(112%) contrast(94%);
 }
 
+.header-txt{
+    text-align: center;
+}
+
+.contenedor-desenios{
+    background-color: #161419;
+    width: 100%;
+    color: white;
+    padding: 50px;
+}
+
+.contenedor-desenios h4{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.iconos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.icono{
+    width: 15%;
+    text-align: center;
+}
+
+.icono img{
+    width: 80%;
+    text-align: center;
+}
+
+.icono p{
+    text-align: center;
+    margin-top: 20px;
+}
+
 @keyframes slider-marcas{
     from{
         transform: translateX(0);
@@ -127,8 +177,12 @@ a{
         animation-play-state: paused;
     }
 }
+
+.categorias{
+    margin-top: 20px;
+}
 .categorias__titulo{
-    width: 95%;
+    width: 95%; 
     text-align: center;
     margin:auto;
     margin-bottom: 20px;
@@ -140,6 +194,10 @@ a{
     border:#161419 1px solid;
     border-radius: 8px;
     margin-bottom: 10px;
+}
+
+.categoria__card:hover{
+    box-shadow: 5px 7px 7px rgba(134, 134, 134, 0.5);
 }
 
 .categoria__card img{
@@ -154,40 +212,67 @@ a{
     font-weight: 400;
 }
 
+.destacado__card{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    border:#161419 1px solid;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.destacado__card:hover{
+    box-shadow: 5px 7px 7px rgba(134, 134, 134, 0.5);
+}
+
+.destacado__card img{
+    width: 100%;
+    min-height: 500px;
+    max-height: 600px;
+    border-radius: 8px;
+}
+
+.destacado__card h3{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 8px 0px;
+    width: 100%;
+}
+
+.destacado-card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .main{
     padding: 10px;
 
     }
 .btn-1 {
     background-color: rgb(221, 93, 38);
-    padding: 15px 15px;
+    padding: 10px 15px;
     color: #f7f7f7;
-}
-.destacados {
- display: flex;
- flex-wrap: wrap;
-}
-
-.product {
-    border: 1px solid #161419;
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 10px;
     margin: 10px;
-    width: 47%;
 }
-
-.product__title{
-    font-size: 20px;
-    font-weight: bold;
+.info-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-
-.product__image{
-    width: 100%
+.precio{ 
+    width: 40%;
+    text-align: right;
+    display: block;
+    font-size: 1.2rem;
 }
-
-.product__description {
-font-size: 30px;
-margin: 20px 10px ;
+.descuento{
+    width: 40%;
+    text-align: left;
+    display: block;
+    font-size: 1.2rem;
+    color:#42ae52;
 }
 
 @media (min-width: 769px){
@@ -211,12 +296,17 @@ margin: 20px 10px ;
         width: 47%;
         margin-bottom: 20px;
     }
+    .destacado__card{
+        width: 40%;
+        margin: 20px;
+    }
 }
 
 @media (min-width: 1200px){
     .slider,
     .disenio-fabricacion,
-    .card-wrapper{
+    .card-wrapper,
+    .destacado-card-wrapper{
         width: 1200px;
         margin-left: auto;
         margin-right: auto;
@@ -230,5 +320,13 @@ margin: 20px 10px ;
     .categoria__card{
         margin: 0px 0px 30px 0px;
     }
-
+}
+@media (max-width: 732px) {
+    .icono{
+        width: 51%;
+        margin-bottom: 30px;
+    }
+    .cuerpo{
+        width: 100%;
+    }
 }
