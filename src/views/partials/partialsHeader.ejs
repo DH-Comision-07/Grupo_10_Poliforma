@@ -23,7 +23,7 @@
                 <a href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
             </div>
             <% }else{ %>
-                <div class="login">
+                <div class="login-botones">
                     <a href="/users/login" class="btn-login">Inicia Sesion</a>
                     <a href="/users/register" class="btn-register">Registrate</a>
                 </div>
@@ -33,12 +33,35 @@
                     </div>
 
     </nav>
-    <div class="dropdown_menu">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/products">Productos</a></li>
-        <li><a href="/contact">Contacto</a></li>
-        <li><a href="/products/dashboard">Dashboard</a></li>
-        <li><a href="/users/login" class="btn-login">Inicia Sesion</a></li>
-        <li><a href="/users/register" class="btn-register">Registrate</a></li>
-    </div>
+    <% if(locals.userLogged){ %>
+        <div class="dropdown_menu ">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><a href="/contact">Contacto</a></li>
+            <li><a href="/products/dashboard" class="<%= ( locals.userLogged && locals.userLogged.categoria == 'administrador') ? '' : 'dashboard-off'%>">Dashboard</a></li>
+            <li><a href="/users/profile/<%= locals.userLogged.id%>" class="btn-login">Perfil</a></li>
+            <li><a href="/users/logout" class="btn-register">Cerrar Sesion</a></li>
+        </div>
+        <% }else{ %>
+            <div class="dropdown_menu">
+                <li><a href="/" style="margin-top: 10px;">Inicio</a></li>
+                <li><a href="/products">Productos</a></li>
+                <li><a href="/contact">Contacto</a></li>
+                <li><a href="/users/login" class="btn-login">Inicia Sesion</a></li>
+                <li><a href="/users/register" class="btn-register">Registrate</a></li>
+            </div>
+            <% } %>
 </header>
+
+<script>
+    const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+    const iconoMenu = document.querySelector('.menu-hamburguesa i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+
+    menuHamburguesa.onclick = function(){
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        iconoMenu.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"
+    }
+</script>
