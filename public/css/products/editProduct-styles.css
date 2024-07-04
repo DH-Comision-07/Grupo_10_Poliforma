@@ -91,6 +91,10 @@ form {
 }
 
 .volver-boton {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: #ececec;
     font-size: 1em;
     font-weight: 550;
     margin-top: 20px;
@@ -116,6 +120,14 @@ form {
 
 .imgProduc{
     width: 40%;
+}
+.error{
+    color: #ff4c0c;
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: left;
+    margin-top: 5px;
+    display: none;
 }
 /*FOOTER*/
 

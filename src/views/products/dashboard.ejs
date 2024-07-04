@@ -11,50 +11,53 @@
     <%- include('../partials/partialsHeader.ejs') %>
 
 
-        <section class="contenedor-dashboard">
-            <div class="botones-titulos">
+        <main class="contenedor-dashboard">
+
+            <section class="botones-titulos">
+                <h1>Dashboard Usuarios</h1>
                 <div class="botones">
                     <a href="/users/dashboard" class="btn-dashboards">Usuarios</a>
                     <a href="/products/dashboard" class="btn-dashboards">Productos</a>
                 </div>
-                <h1>Dashboard Usuarios</h1>
-            </div>
-
-            <table class="dashboard">
-                <a href="/products/createProduct" class="btn-crear"><i class="fa-solid fa-plus"></i> Crear producto</a>
-                <thead>
-                    <th>ID</th>
-                    <th>Imagen</th>
-                    <th>Nombre Producto</th>
-                    <th>Precio</th>
-                    <th colspan="3">Accion</th>
-                </thead>
-                <% products.forEach(product=> { %>
-                    <tr>
-                        <td>
-                            <%= product.id %>
-                        </td>
-                        <td><img src="/images/<%= product.imagen %>" alt="<%= product.name%>" height="100px"></td>
-                        <td>
-                            <%= product.nombre %><a href="/products/productDetail/<%= product.id %>" class="name"><i
-                                        class="fa-solid fa-eye"></i></a>
-                        </td>
-                        <td>
-                            <%= product.precio%>$
-                        </td>
-                        <td>
-                            <a href="/products/editProduct/<%= product.id %>" class="btn"><i
-                                    class="fa-solid fa-pen-to-square"></i> Editar</a>
-                            <form action="/products/dashboard/<%=product.id%>?_method=DELETE" method="POST">
-                                <button class="btn" type="submit"
-                                    onclick="return confirm('¿Estás seguro que quieres eliminar este producto?')"><i
-                                        class="fa-solid fa-trash"></i> Borrar</button>
-                            </form>
-                        </td>
-                    </tr>
-                    <% }) %>
-            </table>
-        </section>
+                <a href="/products/createProduct" class="btn-crear"><i class="fa-solid fa-plus"></i> Crear
+                    producto</a>
+            </section>
+            <section class="table-body">
+                <table class="dashboard">
+                    <thead>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre Producto</th>
+                        <th>Precio</th>
+                        <th colspan="3">Accion</th>
+                    </thead>
+                    <% products.forEach(product=> { %>
+                        <tr>
+                            <td>
+                                <%= product.id %>
+                            </td>
+                            <td><img src="/images/<%= product.imagen %>" alt="<%= product.name%>" height="100px"></td>
+                            <td>
+                                <%= product.nombre %><a href="/products/productDetail/<%= product.id %>" class="name"><i
+                                            class="fa-solid fa-eye"></i></a>
+                            </td>
+                            <td>
+                                <%= product.precio%>$
+                            </td>
+                            <td>
+                                <a href="/products/editProduct/<%= product.id %>" class="btn"><i
+                                        class="fa-solid fa-pen-to-square"></i> Editar</a>
+                                <form action="/products/dashboard/<%=product.id%>?_method=DELETE" method="POST">
+                                    <button class="btn" type="submit"
+                                        onclick="return confirm('¿Estás seguro que quieres eliminar este producto?')"><i
+                                            class="fa-solid fa-trash"></i> Borrar</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </table>
+            </section>
+        </main>
         <%- include('../partials/partialsFooter.ejs') %>
 
 </body>

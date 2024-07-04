@@ -22,7 +22,6 @@ body {
     width: 100%;
     background-color: #fff;
     border-collapse: collapse;
-    border-radius: 20px;
     margin-top: 20px;
 }
 
@@ -38,11 +37,27 @@ body {
     color: white;
 }
 
+.total span{
+    margin-right: 5px;
+}
+
 .total {
     text-align: right;
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
+    margin-right: 280px;
+
+}
+.comprar{
+    background-color: #ff4d0cc0;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    transition: all 450ms;
+    border: 1px solid black;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
 
 .product-image {
