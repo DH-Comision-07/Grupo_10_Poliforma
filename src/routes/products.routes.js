@@ -8,6 +8,7 @@ const createProductValidation = require('../middlewares/createProductValidation'
 const editProductValidation = require('../middlewares/editProductValidations');
 
 router.get("/",productsController.home);
+router.get("/filtro",productsController.price);
 router.get("/productDetail/:id",productsController.detail);
 router.get("/productCart", authMid ,productsController.cart);
 router.get("/dashboard", authMid, credentialMid.adminMid, productsController.dashboard);

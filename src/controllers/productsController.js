@@ -93,6 +93,13 @@ const controller = {
         }
 
 
+    },
+    price: async function(req, res){
+        try {
+           res.render('products/products', {products: await productsService.price(req.query.filtro)}) 
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 

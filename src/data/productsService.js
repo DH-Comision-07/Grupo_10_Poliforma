@@ -83,6 +83,23 @@ productService= {
           } catch (error) {
             console.log(error);
         }
+    },
+    price: async function(filtro){
+        try {
+            if(filtro ==='mayor'){
+                return await db.Productos.findAll({
+                    order: [['precio', 'DESC']]
+                })
+            }else if(filtro === 'menor'){
+                return await db.Productos.findAll({
+                    order: [['precio', 'ASC']]
+                })
+            }else{
+                return await db.Productos.findAll()
+            }
+          } catch (error) {
+            console.log(error);
+        }
     }
     
 }
