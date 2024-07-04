@@ -1,140 +1,253 @@
-window.addEventListener("load", function(){
-    let nombreVacio = true;
-    let nombreCorto = true;
-    let apellidoCorto = true;
-    let apellidoVacio = true;
-    let usuarioCorto = true;
-    let usuarioVacio = true;
-    let emailInvalido = true;
-    let emailVacio = true;
-    let passwordCorto = true;
-    let passwordVacio = true;
-    let passwordDistinto = true;
-
-    let inputNombre = this.document.getElementById("nombre");
-    inputNombre.addEventListener("blur",function(){
-        if (inputNombre.value == ""){
-            nombreVacio = true;
-            document.querySelector(".nombreVacio").style.display = "block"
-        }else{
-            nombreVacio = false;
-            document.querySelector(".nombreVacio").style.display = "none"
-        }
-    })
-    inputNombre.addEventListener("blur",function(){
-        if (inputNombre.value.length < 2){
-            nombreCorto = true;
-            document.querySelector(".nombreCorto").style.display = "block"
-        }else{
-            nombreCorto = false;
-            document.querySelector(".nombreCorto").style.display = "none"
-        }
-    })
-
-    let inputApellido = this.document.getElementById("apellido");
-    inputApellido.addEventListener("blur",function(){
-        if (inputApellido.value == ""){
-            apellidoVacio = true;
-            document.querySelector(".apellidoVacio").style.display = "block"
-        }else{
-            apellidoVacio = false;
-            document.querySelector(".apellidoVacio").style.display = "none"
-        }
-    })
-    inputApellido.addEventListener("blur",function(){
-        if (inputApellido.value.length < 2){
-            apellidoCorto = true;
-            document.querySelector(".apellidoCorto").style.display = "block"
-        }else{
-            apellidoCorto = false;
-            document.querySelector(".apellidoCorto").style.display = "none"
-        }
-    })
-
-    let inputUsuario = this.document.getElementById("usuario");
-    inputUsuario.addEventListener("blur",function(){
-        if (inputUsuario.value == ""){
-            usuarioVacio = true;
-            document.querySelector(".usuarioVacio").style.display = "block"
-        }else{
-            usuarioVacio = false;
-            document.querySelector(".usuarioVacio").style.display = "none"
-        }
-    })
-    inputUsuario.addEventListener("blur",function(){
-        if (inputUsuario.value.length < 2){
-            usuarioCorto = true;
-            document.querySelector(".usuarioCorto").style.display = "block"
-        }else{
-            usuarioCorto = false;
-            document.querySelector(".usuarioCorto").style.display = "none"
-        }
-    })
-
-    let inputEmail = this.document.getElementById("email");
-    inputEmail.addEventListener("blur",function(){
-        if (inputEmail.value == ""){
-            emailVacio = true;
-            document.querySelector(".emailVacio").style.display = "block"
-        }else{
-            emailVacio = false;
-            document.querySelector(".emailVacio").style.display = "none"
-        }
-    })
-    inputEmail.addEventListener("blur",function(){
-        if (validator.isEmail(inputEmail.value)){
-            emailInvalido = false;
-            document.querySelector(".emailInvalido").style.display = "none"
-        }else{
-            emailInvalido = true;
-            document.querySelector(".emailInvalido").style.display = "block"
-        }
-    })
-
-    let inputPassword = this.document.getElementById("password");
-    let inputRePassword = this.document.getElementById("repassword");
-    inputPassword.addEventListener("blur",function(){
-        if (inputPassword.value == ""){
-            passwordVacio = true;
-            document.querySelector(".passwordVacio").style.display = "block"
-        }else{
-            passwordVacio = false;
-            document.querySelector(".passwordVacio").style.display = "none"
-        }
-    })
-    inputPassword.addEventListener("blur",function(){
-        if (inputPassword.value.length < 8){
-            passwordCorto = true;
-            document.querySelector(".passwordCorto").style.display = "block"
-        }else{
-            passwordCorto = false;
-            document.querySelector(".passwordCorto").style.display = "none"
-        }
-        if (inputPassword.value != inputRePassword.value){
-            passwordDistinto = true;
-            document.querySelector(".passwordDistinto").style.display = "block"
-        }else{
-            passwordDistinto = false;
-            document.querySelector(".passwordDistinto").style.display = "none"
-        }
-
-    })
-    inputRePassword.addEventListener("blur",function(){
-        if (inputPassword.value != inputRePassword.value){
-            passwordDistinto = true;
-            document.querySelector(".passwordDistinto").style.display = "block"
-        }else{
-            passwordDistinto = false;
-            document.querySelector(".passwordDistinto").style.display = "none"
-        }
-    })
+let inputNombre = document.querySelector('.nombre');
+let inputApellido = document.getElementById("apellido");
+let inputUsuario = document.getElementById("usuario");
+let inputEmail = document.getElementById("email");
+let inputPassword = document.getElementById("password");
+let inputRePassword = document.getElementById("repassword");
+let imagenInput = document.getElementById('imagenUsuario');
+let inputTelefono = document.getElementById('telefono');
+let inputNacimiento = document.getElementById('birthday');
 
 
-    this.document.querySelector(".register").addEventListener("submit", function(e){
-        if (nombreCorto || nombreVacio || apellidoVacio || apellidoCorto || usuarioVacio || usuarioCorto || emailVacio || emailInvalido || passwordCorto || passwordDistinto || passwordVacio){
-            e.preventDefault();
-            alert("Revise los campos obligatorios marcados con *")
-        }
 
-    })
-});
+let notValid = false
+
+//validacion nombre
+
+inputNombre.addEventListener("blur", function () {
+    if (inputNombre.value.trim() === '') {
+        notValid = true;
+        document.querySelector(".nombreVacio").style.display = "block"
+    } else {
+        document.querySelector(".nombreVacio").style.display = "none"
+    }
+})
+inputNombre.addEventListener("blur", function () {
+    if (inputNombre.value.length < 2) {
+        notValid = true;
+        document.querySelector(".nombreCorto").style.display = "block"
+    } else {
+        document.querySelector(".nombreCorto").style.display = "none"
+    }
+})
+
+//validacion apellido
+
+inputApellido.addEventListener("blur", function () {
+    if (inputApellido.value == "") {
+        notValid = true;
+        document.querySelector(".apellidoVacio").style.display = "block"
+    } else {
+        document.querySelector(".apellidoVacio").style.display = "none"
+    }
+})
+inputApellido.addEventListener("blur", function () {
+    if (inputApellido.value.length < 2) {
+        notValid = true;
+        document.querySelector(".apellidoCorto").style.display = "block"
+    } else {
+        document.querySelector(".apellidoCorto").style.display = "none"
+    }
+})
+
+//validacion usuario
+
+inputUsuario.addEventListener("blur", function () {
+    if (inputUsuario.value == "") {
+        notValid = true;
+        document.querySelector(".usuarioVacio").style.display = "block"
+    } else {
+        document.querySelector(".usuarioVacio").style.display = "none"
+    }
+})
+inputUsuario.addEventListener("blur", function () {
+    if (inputUsuario.value.length < 2) {
+        notValid = true;
+        document.querySelector(".usuarioCorto").style.display = "block"
+    } else {
+        document.querySelector(".usuarioCorto").style.display = "none"
+    }
+})
+
+//validacion email
+
+inputEmail.addEventListener("blur", function () {
+    if (inputEmail.value == "") {
+        notValid = true;
+        document.querySelector(".emailVacio").style.display = "block"
+    } else {
+        document.querySelector(".emailVacio").style.display = "none"
+    }
+})
+inputEmail.addEventListener("blur", function () {
+    if (validator.isEmail(inputEmail.value)) {
+        document.querySelector(".emailInvalido").style.display = "none"
+    } else {
+        notValid = true;
+        document.querySelector(".emailInvalido").style.display = "block"
+    }
+})
+
+//validacion password
+
+inputPassword.addEventListener("blur", function () {
+    if (inputPassword.value == "") {
+        notValid = true;
+        document.querySelector(".passwordVacio").style.display = "block"
+    } else {
+        document.querySelector(".passwordVacio").style.display = "none"
+    }
+})
+inputPassword.addEventListener("blur", function () {
+    if (inputPassword.value.length < 8) {
+        notValid = true;
+        document.querySelector(".passwordCorto").style.display = "block"
+    } else {
+        document.querySelector(".passwordCorto").style.display = "none"
+    }
+    if (inputPassword.value != inputRePassword.value) {
+        notValid = true;
+        document.querySelector(".passwordDistinto").style.display = "block"
+    } else {
+        document.querySelector(".passwordDistinto").style.display = "none"
+    }
+
+})
+inputRePassword.addEventListener("blur", function () {
+    if (inputPassword.value != inputRePassword.value) {
+        notValid = true;
+        document.querySelector(".passwordDistinto").style.display = "block"
+    } else {
+        document.querySelector(".passwordDistinto").style.display = "none"
+    }
+})
+
+//validacion submit
+
+document.querySelector(".register").addEventListener("submit", function (e) {
+
+    //validacion nombre
+
+    if (inputNombre.value.trim() === '') {
+        notValid = true;
+        document.querySelector(".nombreVacio").style.display = "block"
+    } else {
+        document.querySelector(".nombreVacio").style.display = "none"
+    }
+
+    if (inputNombre.value.length < 2) {
+        notValid = true;
+        document.querySelector(".nombreCorto").style.display = "block"
+    } else {
+        document.querySelector(".nombreCorto").style.display = "none"
+    }
+
+    //validacion apellido
+
+    if (inputApellido.value == "") {
+        notValid = true;
+        document.querySelector(".apellidoVacio").style.display = "block"
+    } else {
+        document.querySelector(".apellidoVacio").style.display = "none"
+    }
+
+    if (inputApellido.value.length < 2) {
+        notValid = true;
+        document.querySelector(".apellidoCorto").style.display = "block"
+    } else {
+        document.querySelector(".apellidoCorto").style.display = "none"
+    }
+
+    //validacion user
+
+    if (inputUsuario.value == "") {
+        notValid = true;
+        document.querySelector(".usuarioVacio").style.display = "block"
+    } else {
+        document.querySelector(".usuarioVacio").style.display = "none"
+    }
+    if (inputUsuario.value.length < 2) {
+        notValid = true;
+        document.querySelector(".usuarioCorto").style.display = "block"
+    } else {
+        document.querySelector(".usuarioCorto").style.display = "none"
+    }
+
+    //validacion email
+
+    if (inputEmail.value == "") {
+        notValid = true;
+        document.querySelector(".emailVacio").style.display = "block"
+    } else {
+        document.querySelector(".emailVacio").style.display = "none"
+    }
+
+    if (validator.isEmail(inputEmail.value)) {
+        document.querySelector(".emailInvalido").style.display = "none"
+    } else {
+        notValid = true;
+        document.querySelector(".emailInvalido").style.display = "block"
+    }
+
+    //validacion contrasenia
+
+    if (inputPassword.value == "") {
+        notValid = true;
+        document.querySelector(".passwordVacio").style.display = "block"
+    } else {
+        document.querySelector(".passwordVacio").style.display = "none"
+    }
+
+    if (inputPassword.value.length < 8) {
+        notValid = true;
+        document.querySelector(".passwordCorto").style.display = "block"
+    } else {
+        document.querySelector(".passwordCorto").style.display = "none"
+    }
+    if (inputPassword.value != inputRePassword.value) {
+        notValid = true;
+        document.querySelector(".passwordDistinto").style.display = "block"
+    } else {
+        document.querySelector(".passwordDistinto").style.display = "none"
+    }
+
+    if (inputPassword.value != inputRePassword.value) {
+        notValid = true;
+        document.querySelector(".passwordDistinto").style.display = "block"
+    } else {
+        document.querySelector(".passwordDistinto").style.display = "none"
+    }
+
+    const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+    const fileExtension = imagenInput.value.split('.').pop().toLowerCase();
+
+    if (fileExtension) {
+        if (!allowedExtensions.includes(fileExtension)) {
+            document.querySelector('.foto_invalida').style.display = 'block';
+            isValid = false;
+        } else {
+            formatoInvalidoError.style.display = 'none';
+        }
+    }
+
+
+    if (inputTelefono.value.trim() === '') {
+        notValid = true;
+        document.querySelector(".telefono_obligatorio").style.display = "block"
+    } else {
+        document.querySelector(".telefono_obligatorio").style.display = "none"
+    }
+
+    if (inputNacimiento.value.trim() === '') {
+        notValid = true;
+        document.querySelector(".nacimiento_obligatorio").style.display = "block"
+    } else {
+        document.querySelector(".nacimiento_obligatorio").style.display = "none"
+    }
+
+    if (notValid) {
+        console.log(e);
+        e.preventDefault();
+    }
+
+})

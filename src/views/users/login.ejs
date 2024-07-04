@@ -13,11 +13,15 @@
 
         <main class="contenedor-padre">
             <section class="contenedor">
-                <form action="/users/login" method="POST" class="login">
+                <form action="/users/login" method="POST" class="login" id="loginForm">
                     <h1 class="titulo">Inicia Sesión</h1>
 
                     <input type="email" placeholder="Correo Electronico" name="email" id="email">
+                    <span class="error email_vacio">El e-mail no puede estar vacío</span>
+                    <span class="error email_invalido">El e-mail no es valido</span>
                     <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña">
+                    <span class="error contrasenia_obligatoria">La contraseña es obligatoria</span>
+
                     <div class="recordarme">
                         <input type="checkbox" id="recordarme">
                         <label for="terminos">Recordarme</label>
@@ -35,6 +39,8 @@
             </section>
         </main>
         <%- include('../partials/partialsFooter.ejs')%>
+        <script src="/js/validateLogin.js"></script>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </body>
 
 </html>

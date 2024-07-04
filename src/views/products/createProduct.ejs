@@ -17,11 +17,14 @@
                     <div class="formularioLabel">
                         <label for="NombreProducto" class="titulo-form">Nombre del Producto</label>
                         <input type="text" id="NombreProducto" name="NombreProducto" class="relleno-formulario">
+                        <span class="error nombreVacio">El nombre no puede estar vacío</span>
+                        <span class="error nombreCorto">El nombre debe tener al menos 5 caracteres</span>
                     </div>
 
                     <div class="formularioLabel">
                         <label for="descripcion" class="titulo-form">Descripción</label>
                         <textarea name="descripcion" id="descripcion" rows="5" class="relleno-formulario"></textarea>
+                        <span class="error descripcion_corta">La descripcion debe tener al menos 20 caracteres</span>
                     </div>
 
                     <div class="formularioLabel">
@@ -33,6 +36,8 @@
                         <label for="imagenProducto" class="titulo-form">Imagen del Producto</label>
                         <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg, .png" multiple
                             class="relleno-formulario">
+                        <span class="error formato_invalido">formato invalido</span>
+                        <span class="error foto_obligatoria">foto obligatoria</span>
                     </div>
 
                     <div class="formularioLabel">
@@ -44,14 +49,14 @@
                             <option value="3">Maceta</option>
                             <option value="4">Figurita</option>
                             <option value="5">Oficina</option>
-                            <option value="6">Lampara
-                                
-                            </option>
+                            <option value="6">Lampara</option>
                         </select>
+                        <span class="error categoria_vacia">La categoria no puede estar vacío</span>
                     </div>
                     <div class="formularioLabel">
                         <label for="stock" class="titulo-form">Stock</label>
                         <input type="number" name="stock" id="stock" class="relleno-formulario">
+                        <span class="error stock_vacia">El stock no puede estar vacío</span>
                     </div>
                     <div class="formularioLabel">
                         <label for="descuento" class="titulo-form">Descuento</label>
@@ -60,6 +65,7 @@
                     <div class="formularioLabel-ultimo">
                         <label for="precio" class="titulo-form">Precio</label>
                         <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01">
+                        <span class="error precio_vacia">El precio no puede estar vacío</span>
                     </div>
 
                     <button type="submit" class="crear-boton">Crear Producto</button>
@@ -70,6 +76,8 @@
             </section>
         </main>
     <%- include('../partials/partialsFooter.ejs') %>
+    <script src="../js/validateCreateProduct.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </body>
 
 </html>

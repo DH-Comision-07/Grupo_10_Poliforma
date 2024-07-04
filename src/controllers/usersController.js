@@ -83,7 +83,7 @@ let users = {
             let resultValidations = validationResult(req);
             if(resultValidations.errors.length > 0){
                 res.redirect("/users/register")
-            }
+            }else{
             let newUser = {
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
@@ -97,6 +97,7 @@ let users = {
             }
             await usersService.save(newUser);
             res.redirect("/users/login");
+            }
         } catch (error) {
             console.log(error);
         }
