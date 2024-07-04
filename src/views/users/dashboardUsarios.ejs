@@ -11,43 +11,57 @@
     <%- include('../partials/partialsHeader.ejs') %>
 
 
-        <section class="contenedor-dashboard">
-            <div class="botones-titulos">
+        <main class="contenedor-dashboard">
+            <section class="botones-titulos">
+
+                <h1>Dashboard Usuarios</h1>
                 <div class="botones">
                     <a href="/users/dashboard" class="btn-dashboards">Usuarios</a>
                     <a href="/products/dashboard" class="btn-dashboards">Productos</a>
                 </div>
-                <h1>Dashboard Usuarios</h1>
-            </div>
-
-        <table class="dashboard">
-            <a href="/products/createUser" class="btn-crear"><i class="fa-solid fa-plus"></i> Crear Usuario</a>
-            <thead>
-                <th>ID</th>
-                <th>Imagen</th>
-                <th>Nombre y Apellido</th>
-                <th>Email</th>
-                <th>Permisos</th>
-                <th colspan="3">Accion</th>
-            </thead>
-            <% users.forEach(user => { %>
-            <tr>
-                <td><%= user.id %></td>
-                <td><img src="/images/usuarios/<%= user.imagen %>" alt="<%= user.nombre%>" height="80px"></td>
-                <td class="nombre"><a href="/users/profile/<%= user.id %>" class="name"><%= user.nombre%> </br> <%= user.apellido%></a></td>
-                <td><%= user.email%></td>
-                <td><%= user.categoria%></td>
-                <td>
-                    <a href="/users/editProfile/<%= user.id %>" class="btn"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
-                    <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
-                                <button class="btn" type="submit" onclick="return confirm('¿Estás seguro que quieres eliminar este usuario?')"><i class="fa-solid fa-trash"></i> Borrar</button>
-                            </form>
-                </td>
-            </tr>
-            <% }) %>
-        </table>
-    </section>
-    <%- include('../partials/partialsFooter.ejs') %>
+            </section>
+            <section class="table-body">
+                <table class="dashboard">
+                    <thead>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre y Apellido</th>
+                        <th>Email</th>
+                        <th>Permisos</th>
+                        <th colspan="3">Accion</th>
+                    </thead>
+                    <% users.forEach(user=> { %>
+                        <tr>
+                            <td>
+                                <%= user.id %>
+                            </td>
+                            <td><img src="/images/usuarios/<%= user.imagen %>" alt="<%= user.nombre%>" height="80px">
+                            </td>
+                            <td class="nombre"><a href="/users/profile/<%= user.id %>" class="name">
+                                    <%= user.nombre%> </br>
+                                        <%= user.apellido%>
+                                </a></td>
+                            <td>
+                                <%= user.email%>
+                            </td>
+                            <td>
+                                <%= user.categoria%>
+                            </td>
+                            <td>
+                                <a href="/users/editProfile/<%= user.id %>" class="btn"><i
+                                        class="fa-solid fa-pen-to-square"></i> Editar</a>
+                                <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
+                                    <button class="btn" type="submit"
+                                        onclick="return confirm('¿Estás seguro que quieres eliminar este usuario?')"><i
+                                            class="fa-solid fa-trash"></i> Borrar</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </table>
+            </section>
+        </main>
+        <%- include('../partials/partialsFooter.ejs') %>
 
 </body>
 
