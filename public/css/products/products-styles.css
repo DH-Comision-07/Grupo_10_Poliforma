@@ -33,6 +33,26 @@ a{
     justify-content: center;
 }
 
+.contenedor-noproductos{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+.not-found{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sad-face{
+    width: 10%;
+}
 .resultados-filtros{
     display: flex;
     justify-content:space-between;

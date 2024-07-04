@@ -100,6 +100,13 @@ const controller = {
         } catch (error) {
             console.log(error);
         }
+    },
+    category: async function(req, res){
+        try {
+            res.render('products/products', {products: await productsService.findByCategory(req.params.categoria)}) 
+         } catch (error) {
+             console.log(error);
+         }
     }
 }
 

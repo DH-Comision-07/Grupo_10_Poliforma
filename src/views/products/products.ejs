@@ -11,53 +11,60 @@
     <%- include('../partials/partialsHeader.ejs') %>
 
         <main>
-            <section class="contenedor-productos">
-                <div class="resultados-filtros">
-                    <span class="resultados">resultados: <%= products.length %></span>
-                    <div class="filtro">
-                        <form id="filtro-form" action="/products/filtro" method="GET">
-                            <span class="ordenar">Ordenar por:</span>
-                            <select name="filtro" id="filtro">
-                                <option>-Elige un filtro</option>
-                                <option value="mayor">Mayor precio</option>
-                                <option value="menor">Menor precio</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
-                <% products.forEach((product)=> { %>
-                    <article class="producto-carta">
-                        <a href="products/productDetail/<%= product.id %>">
-                            <div class="contendor-imagen">
-                                <img src="/images/<%= product.imagen %>" alt="imagen <%= product.name %>"
-                                    height="100px">
-                            </div>
-                            <div class="producto-info">
-                                <p class="producto-nombre">
-                                    <%= product.nombre %>
-                                </p>
-                                <p class="precio">
-                                    <%= product.precio %>$
-                                </p>
-                                <p class="descuento">
-                                    <%= product.descuento ? product.descuento + '% OFF' : '' %>
-                                </p>
-                            </div>
-                        </a>
-                        <div class="carrito">
-                            <button class="boton-carrito">Agregar al Carrito</button>
+            <% if(products.length> 0){ %>
+                <section class="contenedor-productos">
+                    <div class="resultados-filtros">
+                        <span class="resultados">resultados: <%= products.length %></span>
+                        <div class="filtro">
+                            <form id="filtro-form" action="/products/filtro" method="GET">
+                                <span class="ordenar">Ordenar por:</span>
+                                <select name="filtro" id="filtro">
+                                    <option>-Elige un filtro</option>
+                                    <option value="mayor">Mayor precio</option>
+                                    <option value="menor">Menor precio</option>
+                                </select>
+                            </form>
                         </div>
-                    </article>
-                    <% }); %>
-            </section>
+                    </div>
+                    <% products.forEach((product)=> { %>
+                        <article class="producto-carta">
+                            <a href="products/productDetail/<%= product.id %>">
+                                <div class="contendor-imagen">
+                                    <img src="/images/<%= product.imagen %>" alt="imagen <%= product.name %>"
+                                        height="100px">
+                                </div>
+                                <div class="producto-info">
+                                    <p class="producto-nombre">
+                                        <%= product.nombre %>
+                                    </p>
+                                    <p class="precio">
+                                        <%= product.precio %>$
+                                    </p>
+                                    <p class="descuento">
+                                        <%= product.descuento ? product.descuento + '% OFF' : '' %>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="carrito">
+                                <button class="boton-carrito">Agregar al Carrito</button>
+                            </div>
+                        </article>
+                        <% }); %>
+                </section>
+                <% }else{ %>
+                    <section class="contenedor-noproductos">
+                        <img src="/images/sad-face.png" alt="" class="sad-face">
+                        <h1 class="not-found">No se encontro ningun producto</h1>
+                        <% } %>
+                    </section>
         </main>
 
         <%- include('../partials/partialsFooter.ejs') %>
-        <script>
-            document.getElementById('filtro').addEventListener('change', function() {
-                document.getElementById('filtro-form').submit();
-            });
-        </script>
+            <script>
+                document.getElementById('filtro').addEventListener('change', function () {
+                    document.getElementById('filtro-form').submit();
+                });
+            </script>
 </body>
 
 </html>
