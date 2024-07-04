@@ -121,6 +121,14 @@ form {
 .imgProduc{
     width: 40%;
 }
+.error{
+    color: #ff4c0c;
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: left;
+    margin-top: 5px;
+    display: none;
+}
 /*FOOTER*/
 
 footer {

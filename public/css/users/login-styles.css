@@ -25,6 +25,15 @@ body{
   width: 5%;
   cursor: pointer;
 }
+.error{
+  color: #ff4c0c;
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  display: none;
+}
 
 
 
