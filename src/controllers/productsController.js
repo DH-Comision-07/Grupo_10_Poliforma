@@ -91,6 +91,7 @@ const controller = {
     delete: (req, res) => {
         productService.delete(req.params.id);
         res.redirect("/products/dashboard")
+        console.log("redireccionado al dashboard desp de borrar");
     },
     search: async function(req, res){
         try {

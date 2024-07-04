@@ -47,5 +47,19 @@ module.exports = (sequelize, DataTypes)=>{
       };
 
 
+    /*Producto.associate = function(models){
+        Producto.hasMany(models.Tags, {
+            as:'tags',
+            foreignKey: 'productos_id'
+        });
+    };
+    Producto.associate = function(models){
+        Producto.hasMany(models.Carrito_productos, {
+            as:'carrito',
+            foreignKey: 'productos_id'
+        });
+    };*/
+
+
     return Producto;
 }

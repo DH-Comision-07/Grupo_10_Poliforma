@@ -6,6 +6,7 @@
         <title>Register</title>
         <link rel="stylesheet" href="../css/users/register-styles.css">
         <link rel="stylesheet" href="../css/createProduct-styles">
+        <script src="../js/validateUserRegister.js"></script>
 </head>
 
 <body>
@@ -15,14 +16,21 @@
                 <form action="/users/" method="POST" class="register" enctype="multipart/form-data">
                     <h1 class="titulo">Registrate</h1>
 
+
                     <input type="text" placeholder="Nombre*" name="nombre" id="nombre"
                     value="<%= locals.oldData ? oldData.nombre : null %>">
+                    <p class="error nombreVacio">El nombre no puede estar vacío</p>
+                    <p class="error nombreCorto">El nombre debe tener al menos dos caracteres</p>
 
                     <input type="text" placeholder="Apellido*" name="apellido" id="apellido"
                     value="<%= locals.oldData ? oldData.apellido : null %>">
+                    <p class="error apellidoVacio">El apellido no puede estar vacío</p>
+                    <p class="error apellidoCorto">El apellido debe tener al menos dos caracteres</p>
 
                     <input type="text" placeholder="Usuario*" name="usuario" id="usuario"
                     value="<%= locals.oldData ? oldData.usuario : null %>">
+                    <p class="error usuarioVacio">El usuario no puede estar vacío</p>
+                    <p class="error usuarioCorto">El usuario debe tener al menos dos caracteres</p>
 
                     <input type="text" placeholder="E-mail*" name="email" id="email"
                     value="<%= locals.oldData ? oldData.email : null %>">
