@@ -33,6 +33,10 @@
     border-left: solid 1px black;
     padding-left: 10%;
 }
+
+.no_descuento{
+    display: none;
+}
 .descripProducto{
     margin: 20px;
 }

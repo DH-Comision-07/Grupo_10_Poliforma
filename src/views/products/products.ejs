@@ -32,7 +32,7 @@
                         <div class="producto-info">
                             <p class="producto-nombre"><%= product.nombre %></p>
                             <p class="precio"><%= product.precio %>$</p>
-                            <p class="descuento">10% OFF</p>
+                            <p class="descuento" > <%= product.descuento ? product.descuento + '% OFF' : '' %> </p>
                         </div>
                     </a>
                     <div class="carrito"> 

@@ -69,6 +69,7 @@ const controller = {
     modify: async function(req, res){
         try {
             let resultValidations = validationResult(req);
+            console.log(resultValidations);
             if (resultValidations.errors.length > 0) {
                 return res.redirect('/products/editProduct/' + req.params.id)
               }else{

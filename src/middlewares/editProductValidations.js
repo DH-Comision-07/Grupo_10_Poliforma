@@ -1,4 +1,6 @@
 const {check} = require('express-validator');
+const path = require("path");
+
 
 let editProductValidation = [
 check('NombreProducto').notEmpty().withMessage('No puede estar vacio')

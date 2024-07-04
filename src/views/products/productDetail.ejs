@@ -23,7 +23,7 @@
                     <h4 class="nomProduc"><%= product.nombre %></h4>
                     <div class="preciosProduc">
                         <h4 class="precioPrin">$<%= product.precio %></h4>
-                        <h4 class="descuento">25% OFF</h4>
+                        <h4 class=<%= product.descuento ? 'descuento' : 'no_descuento' %>>25% OFF</h4>
                     </div>
                     <p class="descripProducto"><%= product.descripcion %></p>
                     <div class="etiqueta-caja">
