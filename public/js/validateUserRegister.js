@@ -5,10 +5,11 @@ window.addEventListener("load", function(){
     let apellidoVacio = true;
     let usuarioCorto = true;
     let usuarioVacio = true;
-    let mailInvalido = true;
-    let mailVacio = true;
-    let passCorto = true;
-    let passVacio = true;
+    let emailInvalido = true;
+    let emailVacio = true;
+    let passwordCorto = true;
+    let passwordVacio = true;
+    let passwordDistinto = true;
 
     let inputNombre = this.document.getElementById("nombre");
     inputNombre.addEventListener("blur",function(){
@@ -70,8 +71,67 @@ window.addEventListener("load", function(){
         }
     })
 
+    let inputEmail = this.document.getElementById("email");
+    inputEmail.addEventListener("blur",function(){
+        if (inputEmail.value == ""){
+            emailVacio = true;
+            document.querySelector(".emailVacio").style.display = "block"
+        }else{
+            emailVacio = false;
+            document.querySelector(".emailVacio").style.display = "none"
+        }
+    })
+    inputEmail.addEventListener("blur",function(){
+        if (validator.isEmail(inputEmail.value)){
+            emailInvalido = false;
+            document.querySelector(".emailInvalido").style.display = "none"
+        }else{
+            emailInvalido = true;
+            document.querySelector(".emailInvalido").style.display = "block"
+        }
+    })
+
+    let inputPassword = this.document.getElementById("password");
+    let inputRePassword = this.document.getElementById("repassword");
+    inputPassword.addEventListener("blur",function(){
+        if (inputPassword.value == ""){
+            passwordVacio = true;
+            document.querySelector(".passwordVacio").style.display = "block"
+        }else{
+            passwordVacio = false;
+            document.querySelector(".passwordVacio").style.display = "none"
+        }
+    })
+    inputPassword.addEventListener("blur",function(){
+        if (inputPassword.value.length < 8){
+            passwordCorto = true;
+            document.querySelector(".passwordCorto").style.display = "block"
+        }else{
+            passwordCorto = false;
+            document.querySelector(".passwordCorto").style.display = "none"
+        }
+        if (inputPassword.value != inputRePassword.value){
+            passwordDistinto = true;
+            document.querySelector(".passwordDistinto").style.display = "block"
+        }else{
+            passwordDistinto = false;
+            document.querySelector(".passwordDistinto").style.display = "none"
+        }
+
+    })
+    inputRePassword.addEventListener("blur",function(){
+        if (inputPassword.value != inputRePassword.value){
+            passwordDistinto = true;
+            document.querySelector(".passwordDistinto").style.display = "block"
+        }else{
+            passwordDistinto = false;
+            document.querySelector(".passwordDistinto").style.display = "none"
+        }
+    })
+
+
     this.document.querySelector(".register").addEventListener("submit", function(e){
-        if (nombreCorto || nombreVacio || apellidoVacio || apellidoCorto || usuarioVacio || usuarioCorto){
+        if (nombreCorto || nombreVacio || apellidoVacio || apellidoCorto || usuarioVacio || usuarioCorto || emailVacio || emailInvalido || passwordCorto || passwordDistinto || passwordVacio){
             e.preventDefault();
         }
 

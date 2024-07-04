@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../css/users/register-styles.css">
         <link rel="stylesheet" href="../css/createProduct-styles">
         <script src="../js/validateUserRegister.js"></script>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </head>
 
 <body>
@@ -29,9 +30,14 @@
                     <p class="error usuarioCorto">El usuario debe tener al menos dos caracteres</p>
 
                     <input type="text" placeholder="E-mail*" name="email" id="email">
+                    <p class="error emailVacio">El E-mail no puede estar vacío</p>
+                    <p class="error emailInvalido">El E-mail es inválido</p>
 
                     <input type="password" placeholder="Contraseña*" name="password" id="password">
                     <input type="password" placeholder="Confirmar contraseña*" name="repassword" id="repassword">
+                    <p class="error passwordVacio">La contraseña no puede estar vacía</p>
+                    <p class="error passwordCorto">La contraseña debe tener al menos ocho caracteres</p>
+                    <p class="error passwordDistinto">Las contraseñas no coinciden</p>
 
                     <label for="imagenUsuario" class="label-form">Imagen de Perfil</label>
                     <input type="file" placeholder="imagen de perfil*" name="imagenUsuario" id="imagenUsuario">
