@@ -53,7 +53,7 @@ check("imagenUsuario").custom((value, { req }) => {
     let acceptedExtensions = [".jpg",".jpeg", ".png",".webp"]; 
     
     if (file) {
-        let fileExtension = path.extname(file.originalname);
+        let fileExtension = path.extname(file.originalname.toLowerCase());
         if (!acceptedExtensions.includes(fileExtension)) {
             throw new Error("Tiene que subir una imagen en formato " + acceptedExtensions)
         }    
