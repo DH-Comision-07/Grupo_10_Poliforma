@@ -133,6 +133,7 @@ window.addEventListener("load", function(){
     this.document.querySelector(".register").addEventListener("submit", function(e){
         if (nombreCorto || nombreVacio || apellidoVacio || apellidoCorto || usuarioVacio || usuarioCorto || emailVacio || emailInvalido || passwordCorto || passwordDistinto || passwordVacio){
             e.preventDefault();
+            alert("Revise los campos obligatorios marcados con *")
         }
 
     })
