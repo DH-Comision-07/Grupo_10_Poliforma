@@ -1,0 +1,86 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+        margin: 0px;
+        background-color: #FFFFFF;
+        font-family: "Montserrat", sans-serif;
+        background-image: url(/images/Patron-positivo-fondo.png);
+        background-size:auto;
+}
+
+
+.contenedor_padre{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 80px;
+    padding-bottom: 150px;
+}
+
+/*BODY*/
+
+.info{
+    width: 45%;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.logo_contact{
+    margin: auto;
+    height: 75px;
+    width: 40%;
+}
+
+.info h3{
+
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.info p{
+    margin-bottom: 60px;
+}
+
+.info i{
+    font-size: 2rem;
+}
+span{
+    display: block;
+}
+.titulo_info{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.form-contact{
+    width: 45%;
+    margin-top: 150px;
+}
+.input_info{
+    width: 50%;
+    padding: 5px;
+}
+
+.input_mensaje{
+    width: 90%;
+    height: 150px;
+    padding: 5px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+.enviar{
+    width: 10%;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #ff4c0c;
+    border: 1px black solid;
+    color: white;
+}
