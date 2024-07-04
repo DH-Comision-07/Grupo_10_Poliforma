@@ -37,7 +37,10 @@ const controller = {
         try {
             let resultValidations = validationResult(req);
             if(resultValidations.errors.length > 0){
-                res.redirect('/products/createProduct')
+                res.render('products/createProduct', {
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+            })
             }else{
             let newProduct = {
                 nombre: req.body.NombreProducto,
@@ -71,7 +74,11 @@ const controller = {
             let resultValidations = validationResult(req);
             console.log(resultValidations);
             if (resultValidations.errors.length > 0) {
-                return res.redirect('/products/editProduct/' + req.params.id)
+                return res.render('products/editProduct', {
+                    productToEdit: await productsService.getOneBy(req.params.id),
+                    errors: resultValidations.mapped,
+                    oldData: req.body
+                })
               }else{
             let product = await productsService.getOneBy(req.params.id);
             await productsService.update(product, req.body, req.params.id, req.file);
@@ -84,6 +91,7 @@ const controller = {
     delete: (req, res) => {
         productService.delete(req.params.id);
         res.redirect("/products/dashboard")
+        console.log("redireccionado al dashboard desp de borrar");
     },
     search: async function(req, res){
         try {

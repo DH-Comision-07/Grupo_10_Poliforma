@@ -222,13 +222,14 @@
     text-align: left;
 }
 
-.boton-catalogo{
+.ver-todos{
     background-color: transparent;
     border: 1px solid white;
     color: white;
     padding: 10px 16px;
     margin-bottom: 20px;
     margin-left: 16px;
+    text-decoration: none;
 }
 
 .contenedor{
@@ -237,17 +238,31 @@
     padding: 16px;
 }
 
+.contenedor::-webkit-scrollbar{
+    width: 0.3rem;
+    height: 0.5rem;
+}
+
+.contenedor::-webkit-scrollbar-thumb{
+    border-radius: 0.5rem;
+    background-color: rgba(223, 223, 223, 0.267);
+}
+
 .contenedor img{
     width: 200px;
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .producto{
     margin-right: 10px;
     position: relative;
 
+}
+
+.producto a{
+    cursor: pointer;
 }
 
 .info-producto{

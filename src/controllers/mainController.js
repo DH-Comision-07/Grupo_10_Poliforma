@@ -5,6 +5,7 @@ const mainController = {
     index: function(req,res){
         res.render("index");
     },
+
     allUsers: async function(req,res){
         try {
             let usuarios = await usersService.getAll();
@@ -79,8 +80,12 @@ const mainController = {
                 imagen: producto.imagen
             })
         } catch (error) {
-            
-        }
+            console.log(error)
+        },
+
+    contact: function(req, res){
+        res.render('contact')
+
     }
 }
 

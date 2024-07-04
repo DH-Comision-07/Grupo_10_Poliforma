@@ -1,6 +1,8 @@
+const Producto = require("./Producto");
+
 module.exports = (sequelize, DataTypes)=>{
 
-    let alias = 'Carrito';
+    let alias = 'Carrito_productos';
     let cols ={
         id:{
             type: DataTypes.INTEGER,
@@ -27,6 +29,13 @@ module.exports = (sequelize, DataTypes)=>{
     };
 
     let Carrito_productos = sequelize.define(alias, cols, config);
+
+    Carrito_productos.associate = function(models) {
+        Carrito_productos.belongsTo(models.Productos, {
+          foreignKey: 'productos_id',
+          as: 'carrito'
+        });
+    };
 
     return Carrito_productos;
 }
