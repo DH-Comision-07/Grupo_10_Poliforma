@@ -37,19 +37,31 @@
 
                     <div class="formularioLabel">
                         <label for="categoriaProducto" class="titulo-form">Categoría</label>
-                        <select id="categoria" name="categoria" required class="relleno-formulario">
+                        <select id="categoria" name="categoria" class="relleno-formulario">
                             <option value="">-Seleccione una categoría-</option>
-                            <option value="mates">Mates</option>
-                            <option value="jarron">Jarron</option>
-                            <option value="maceta">Maceta</option>
-                            <option value="figurita">Figurita</option>
+                            <option value="1">Mates</option>
+                            <option value="2">Jarron</option>
+                            <option value="3">Maceta</option>
+                            <option value="4">Figurita</option>
+                            <option value="5">Oficina</option>
+                            <option value="6">Lampara
+                                
+                            </option>
                         </select>
                     </div>
-
+                    <div class="formularioLabel">
+                        <label for="stock" class="titulo-form">Stock</label>
+                        <input type="number" name="stock" id="stock" class="relleno-formulario">
+                    </div>
+                    <div class="formularioLabel">
+                        <label for="descuento" class="titulo-form">Descuento</label>
+                        <input type="number" name="descuento" id="descuento" class="relleno-formulario">
+                    </div>
                     <div class="formularioLabel-ultimo">
                         <label for="precio" class="titulo-form">Precio</label>
                         <input type="number" name="precio" id="precio" class="relleno-formulario" step="0.01">
                     </div>
+
                     <button type="submit" class="crear-boton">Crear Producto</button>
                     <button type="submit" class="volver-boton">Volver</button>
                 </form>

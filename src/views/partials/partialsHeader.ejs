@@ -2,30 +2,36 @@
     <nav class="navbar">
         <div class="logo">
             <a href="/"><img src="/images/logos/Poliforma-horizontal-color.svg" alt=""></a>
-            <ul class="links">
-                <li><a href="/" class="link-navbar">Inicio</a></li>
-                <li><a href="/products" class="link-navbar">Productos</a></li>
-                <li><a href="/contact" class="link-navbar">Contacto</a></li>
-                <li><a href="/products/dashboard" class="link-navbar">Dashboard</a></li>
-            </ul>
+        </div>
+        <ul class="links">
+            <li><a href="/" class="link-navbar">Inicio</a></li>
+            <li><a href="/products" class="link-navbar">Productos</a></li>
+            <li><a href="/contact" class="link-navbar">Contacto</a></li>
+            <li><a href="/products/dashboard" 
+                class=<%= ( locals.userLogged && locals.userLogged.categoria == 'administrador') ? 'link-navbar-dashboard-on' : 'link-navbar-dashboard-off'%>>Dashboard</a></li>
+        </ul>
+        <div class="container">
+            <form action="/products/search" class="search-bar" method="GET">
+                <input type="text" placeholder="Buscar..." name="busqueda">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
         </div>
         <% if(locals.userLogged){ %>
             <div class="logged">
+                <a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="/users/profile/<%= locals.userLogged.id%>"><i class="fa-solid fa-user"></i></a>
                 <a href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
             </div>
-        <% }else{ %>
-            <div class="login">
-                <a href="/users/login" class="btn-login">Inicia Sesion</a> 
-                <a href="/users/register" class="btn-register">Registrate</a>
-            </div>
-        <% } %>
-        <div class="menu-hamburguesa">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="carrito">
-            <a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
+            <% }else{ %>
+                <div class="login">
+                    <a href="/users/login" class="btn-login">Inicia Sesion</a>
+                    <a href="/users/register" class="btn-register">Registrate</a>
+                </div>
+                <% } %>
+                    <div class="menu-hamburguesa">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
     </nav>
     <div class="dropdown_menu">
         <li><a href="/">Inicio</a></li>
@@ -36,4 +42,3 @@
         <li><a href="/users/register" class="btn-register">Registrate</a></li>
     </div>
 </header>
-

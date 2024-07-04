@@ -2,16 +2,38 @@ const fs = require('fs');
 const path = require('path');
 const productsJSON = require("../data/products.json")
 const productsFilePath = path.join(__dirname, "../data/products.json");
+const db = require('../model/db/models');
+const { Op } = require('sequelize');
 
 productService= {
     products: productsJSON,
 
-    getAll: function(){
-        return this.products;
+    getAll: async function(){
+        try {
+            return await db.Productos.findAll();
+        } catch (error) {
+            console.log(error);
+        }
     },
-    getOneBy: function(id){
-        return this.products.find(product => product.id == id)
+    getOneBy: async function(id){
+        try {
+            return await db.Productos.findByPk(id, {
+                include: [{association:'categoria'}, {association: 'tags'}]
+            }) 
+        } catch (error) {
+            console.log(error);
+        }
+
     },
+    findByField: async function (field, value) {
+        try {
+          const user = await db.Usuarios.findOne({ where: { [field]: value } });
+          return user;
+        } catch (error) {
+          console.log(error);
+          return null;
+        }
+      },
     save: function(product){
         this.products.push(product);
         fs.writeFileSync( path.join( __dirname, "/products.json"), JSON.stringify(this.products));
@@ -36,7 +58,21 @@ productService= {
         this.products = newProducts;
         fs.writeFileSync( path.join( __dirname, "products.json"), JSON.stringify(this.products));
         return newProducts;
+    },
+    search: async function(busqueda){
+        try {
+            return await db.Productos.findAll({
+              where: {
+                nombre: {
+                  [Op.like]: `${busqueda}%`
+                }
+              }
+            });
+          } catch (error) {
+            console.log(error);
+        }
     }
+    
 }
 
 module.exports = productService;

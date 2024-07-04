@@ -2,26 +2,54 @@ const fs = require('fs');
 const path = require('path');
 const usersJSON = require("../data/users.json")
 const productsFilePath = path.join(__dirname, "../data/users.json");
+const db = require('../model/db/models')
 
 usersService= {
     users: usersJSON,
 
-    getAll: function(){
-        return this.users;
+    getAll: async function(){
+        try {
+            return await db.Usuarios.findAll();
+        } catch (error) {
+            console.log(error);
+        }
+        
     },
-    getOneBy: function(id){
-        return this.users.find(user => user.id == id)
+    getOneBy: async function(id) {
+        try {
+            return await db.Usuarios.findByPk(id);
+        } catch (error) {
+            console.log(error);
+            return {
+                id: 0,
+                nombre: "No encontrado",
+                apellido: 0,
+                email: 0,
+                imagen: "usuario-vacio.jpg",
+                email: ""
+            }
+        } 
     },
 
-    save: function(user){
-        this.users.push(user);
-        fs.writeFileSync( path.join( __dirname, "/users.json"), JSON.stringify(this.users));
+    save: async function(user){
+        try {
+            db.Usuarios.create(user);
+        } catch (error) {
+            console.log(error);
+        }
+        
     },
 
 
-    getOneByField: function(field, text){
-        return this.users.find(user => user[field] === text)
-    },
+    getOneByField: async function (field, value) {
+        try {
+          const user = await db.Usuarios.findOne({ where: { [field]: value } });
+          return user;
+        } catch (error) {
+          console.log(error);
+          return null;
+        }
+      },
 
     update: function(user, idUser, imageFile){
         let userIndex = this.users.findIndex(user => user.id == idUser)
