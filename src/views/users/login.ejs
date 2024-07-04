@@ -16,7 +16,7 @@
                 <form action="/users/login" method="POST" class="login" id="loginForm">
                     <h1 class="titulo">Inicia Sesión</h1>
                     <input type="email" placeholder="Correo Electronico" name="email" id="email" 
-                    value="<%= locals.oldData ? oldData.email : null %>">>
+                    value="<%= locals.oldData ? oldData.email : null %>">
                     <span class="error email_vacio">El e-mail no puede estar vacío</span>
                     <span class="error email_invalido">El e-mail no es valido</span>
                     <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña"

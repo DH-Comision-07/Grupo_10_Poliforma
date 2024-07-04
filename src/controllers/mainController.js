@@ -81,7 +81,8 @@ const mainController = {
             })
         } catch (error) {
             console.log(error)
-        },
+        }
+    },
 
     contact: function(req, res){
         res.render('contact')
