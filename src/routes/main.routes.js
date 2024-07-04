@@ -1,8 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const main = require("../controllers/mainController");
+const mainController = require("../controllers/mainController");
 
-router.get("/", main.index);
-router.get('/contact', main.contact)
+router.get("/", mainController.index);
+router.get('/contact', mainController.contact)
+
+//APIS
+
+router.get('/api/users/', mainController.allUsers);
+router.get('/api/users/:id', mainController.oneUser);
+
+
+router.get('/api/products/', mainController.allProducts);
+router.get('/api/products/:id', mainController.oneProduct);
+
+
 
 module.exports = router;
