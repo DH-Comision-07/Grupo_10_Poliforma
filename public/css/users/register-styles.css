@@ -120,6 +120,16 @@ input:focus{
     font-weight: bold;
 }
 
+.error{
+    color: #ff4c0c;
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    display: none;
+}
+
 /*FOOTER*/
 
 footer {
